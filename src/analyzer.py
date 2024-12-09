@@ -47,6 +47,13 @@ class AudioQualityControl:
             noise_power = np.mean(noise**2) if np.any(noise) else 1e-10
             snr = 10 * np.log10(signal_power / noise_power)
             
+            print(f"\nAnalyzing {os.path.basename(audio_file)}:")
+            print(f"  Duration: {duration:.1f}s")
+            print(f"  Mean amplitude: {mean_amplitude:.1f}dB")
+            print(f"  Max amplitude: {max_amplitude:.1f}dB")
+            print(f"  Silence ratio: {silence_ratio*100:.1f}%")
+            print(f"  SNR: {snr:.1f}dB")
+            
             return {
                 'duration': duration,
                 'mean_amplitude_db': float(mean_amplitude),
@@ -107,7 +114,27 @@ class DatasetAnalytics:
             quality_issues = []
             recordings_with_issues = 0
             
-            for row in rows:
+            # Sentence complexity metrics
+            sentence_stats = {
+                'total_words': [],
+                'has_comma': 0,
+                'has_subordinating_conj': 0,
+                'has_coordinating_conj': 0,
+                'has_relative_pronouns': 0
+            }
+            
+            # Define markers for analysis
+            subordinating_conj = {'because', 'although', 'though', 'unless', 'while', 'whereas',
+                               'if', 'since', 'before', 'after', 'as', 'when', 'whenever', 'where',
+                               'wherever', 'whether', 'which', 'who', 'whoever', 'whom', 'whose'}
+            coordinating_conj = {'and', 'but', 'or', 'nor', 'for', 'yet', 'so'}
+            relative_pronouns = {'that', 'which', 'who', 'whom', 'whose', 'where', 'when'}
+            
+            print(f"\nAnalyzing {total_recordings} recordings...")
+            for i, row in enumerate(rows, 1):
+                print(f"\rProgress: {i}/{total_recordings} ({i/total_recordings*100:.1f}%)", end='', flush=True)
+                
+                # Audio quality analysis
                 audio_file = row['audio_filepath']
                 if os.path.exists(audio_file):
                     analysis = self.quality_control.analyze_recording(audio_file)
@@ -125,12 +152,51 @@ class DatasetAnalytics:
                                 'issues': analysis['quality_issues']
                             })
                             recordings_with_issues += 1
-                            
+                
+                # Sentence complexity analysis
+                text = row['text']
+                words = text.split()
+                sentence_stats['total_words'].append(len(words))
+                
+                if ',' in text:
+                    sentence_stats['has_comma'] += 1
+                    
+                if any(conj in text.lower() for conj in subordinating_conj):
+                    sentence_stats['has_subordinating_conj'] += 1
+                    
+                if any(conj in text.lower() for conj in coordinating_conj):
+                    sentence_stats['has_coordinating_conj'] += 1
+                    
+                if any(pron in text.lower() for pron in relative_pronouns):
+                    sentence_stats['has_relative_pronouns'] += 1
+            
+            print("\nAnalysis complete!")
+            
+            # Calculate sentence complexity metrics
+            avg_words = np.mean(sentence_stats['total_words'])
+            min_words = np.min(sentence_stats['total_words'])
+            max_words = np.max(sentence_stats['total_words'])
+            
+            # Calculate percentages
+            pct_with_comma = sentence_stats['has_comma'] / total_recordings * 100
+            pct_with_sub_conj = sentence_stats['has_subordinating_conj'] / total_recordings * 100
+            pct_with_coord_conj = sentence_stats['has_coordinating_conj'] / total_recordings * 100
+            pct_with_rel_pron = sentence_stats['has_relative_pronouns'] / total_recordings * 100
+            
             return {
                 'total_recordings': total_recordings,
                 'total_duration_minutes': total_duration / 60,
                 'recordings_with_issues': recordings_with_issues,
-                'quality_issues': quality_issues
+                'quality_issues': quality_issues,
+                'sentence_stats': {
+                    'avg_words': float(avg_words),
+                    'min_words': int(min_words),
+                    'max_words': int(max_words),
+                    'pct_with_comma': float(pct_with_comma),
+                    'pct_with_subordinating_conj': float(pct_with_sub_conj),
+                    'pct_with_coordinating_conj': float(pct_with_coord_conj),
+                    'pct_with_relative_pronouns': float(pct_with_rel_pron)
+                }
             }
             
         except Exception as e:

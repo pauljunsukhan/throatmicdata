@@ -1,283 +1,230 @@
-# Throat Mic Recording Tool & Dataset
+# 🎙 Throat Microphone Recording Tool
 
-Version: 0.1.0
+Create high-quality whisper fine-tuning datasets using a throat microphone! This tool helps you build clean, organized datasets by recording sentences from Common Voice or your own custom prompts.
 
-A high-quality dataset and recording tool for fine-tuning Whisper using throat microphone recordings. This dataset is specifically designed for training speech recognition models on throat microphone input.
+## ✨ Features
 
-## Dataset Characteristics
+- 🎤 Record audio using a throat microphone
+- 🔄 Download sentences from Common Voice
+- 📋 Add your own custom sentences
+- 🎯 Prevent duplicates and track progress
+- 🗑️ Trash difficult sentences with a single key
+- 🔢 Clean, sequential file organization
+- ⚡ Fast and easy dataset upload to Hugging Face
 
-- **Audio Format**: 16kHz mono WAV files
-- **Duration**: Each recording is approximately 10 seconds
-- **Recording Device**: Throat microphone (laryngophone)
-- **Language**: English
-- **Total Recordings**: 499 utterances
-- **Total Duration**: ~83 minutes
-- **Audio Quality**: High-quality recordings with consistent volume levels and minimal background noise
+## 🚀 Quick Start
 
-### Sentence Characteristics
+1. **Install Dependencies**
+```bash
+uv venv
+source .venv/bin/activate    # Linux/Mac
+# OR
+.venv\Scripts\activate      # Windows
 
-The dataset uses carefully selected sentences that are:
-- Complex enough for meaningful speech recognition training (12-25 words)
-- Include proper grammar and punctuation
-- Contain a mix of statement types (declarations, questions, etc.)
-- Include natural language patterns and varied vocabulary
-- Balanced in terms of phonetic content
+uv pip install -r requirements.txt
+```
 
-### Dataset Format
+2. **Configure Settings**
+```bash
+cp config.yaml.example config.yaml
+# Edit config.yaml with your settings
+```
 
-The dataset follows the standard format required for Whisper fine-tuning:
+3. **Get Some Sentences**
+```bash
+python record_audio.py
+# Choose option 4 > 1 to download from Common Voice
+# or option 4 > 2 to add your own
+```
+
+4. **Start Recording!**
+```bash
+python record_audio.py
+# Choose option 1 and follow the prompts
+```
+
+5. **Upload to Hugging Face**
+```bash
+python upload_dataset.py
+# Your dataset will be uploaded with proper metadata
+```
+
+## 🎯 How It Works
+
+### Recording Flow
+
+1. **See a sentence** → Read it in your head first
+2. **Press SPACE** → Start recording
+3. **Read clearly** → Take your time
+4. **Press SPACE** → Stop recording
+5. **Choose action:**
+   - **ENTER** → Keep and continue
+   - **r** → Retry recording
+   - **t** → Trash difficult sentence
+   - **q** → Take a break
+
+### Smart Features
+
+- 📝 **Sentence Management**
+  - Sentences flow through three pools: available → used → (optionally) trashed
+  - Hit 't' to move tricky sentences to the trash
+  - Trashed sentences won't come back in future downloads
+
+- 🔢 **Clean Organization**
+  - Files numbered sequentially (001.wav, 002.wav, etc.)
+  - No gaps even when sentences are trashed
+  - Perfect for training datasets
+
+- 📊 **Progress Tracking**
+  - See your total recording time
+  - Track completion percentage
+  - Review trashed sentences
+
+### File Structure
+
 ```
 data/
-├── recordings/           # WAV audio files (16kHz mono)
-│   └── *.wav            # Format: {index}_{text_preview}.wav
-├── metadata/            # Dataset tracking
-│   └── metadata.csv     # Format: audio_filepath,text,duration
-├── cache/               # Temporary files and download cache
-└── repository/          # Sentence pool management
-    ├── sentences.json   # Available sentences for recording
-    └── used_sentences.json  # Tracked recorded sentences
+├── recordings/     # Your audio files (001.wav, 002.wav, etc.)
+├── metadata/
+│   └── metadata.csv    # Dataset index (path,text,duration)
+├── repository/
+│   ├── sentences.json         # Available sentences
+│   ├── used_sentences.json    # Recorded sentences
+│   └── trashed_sentences.json # Difficult sentences
+└── throatmic.log      # Activity log
 ```
 
-## Features
+## 🛠️ CLI Commands
 
 ### Recording Tool
-- 🎤 Easy-to-use recording interface
-- 📝 Automatic prompt management
-- ✨ Proper audio format for Whisper (16kHz, mono)
-- 🔄 Progress saving and session management
-- 📊 Dataset quality analysis
-- 🔍 Real-time audio level monitoring
-- ⚡ Clipping detection
-- 🎵 Playback verification
 
-### Sentence Management
-- 🔄 Automatic sentence downloading from Common Voice
-- 📋 Custom sentence addition support
-- ✅ Quality filtering for suitable sentences
-- 📊 Progress tracking and statistics
-- 🎯 Prevents duplicate recordings
-- 📝 Maintains available and used sentence pools
-
-### Dataset Management
-- 🔄 Automatic synchronization with Hugging Face
-- 📥 Smart dataset downloading with duplicate detection
-- 📤 Efficient dataset uploading with change tracking
-- 🧹 Duplicate cleanup functionality
-- 📝 Automatic dataset card management
-- ✅ Data validation and quality checks
-
-## Getting Started
-
-### Initial Setup
-1. Use uv for project and venv management:
 ```bash
-source .venv/bin/activate
+python record_audio.py [OPTIONS]
+
+Options:
+  --analyze         Analyze existing recordings
+  --quality         Run audio quality analysis
+  --coverage        Analyze dataset coverage
+  --list-devices    List available audio devices
+  --output FILE     Output file for analysis results
+  --debug          Enable debug logging
 ```
 
-2. Install dependencies using uv (recommended) or pip:
-```bash
-# Using uv (faster)
-uv pip install -r requirements.txt
+### Dataset Download
 
-# Using pip
-pip install -r requirements.txt
+```bash
+python download_dataset.py [OPTIONS]
+
+Options:
+  --repo-id TEXT    Hugging Face repository ID
+                    (default: pauljunsukhan/throatmic_codered)
+  --token TEXT      Hugging Face API token
+                    (can also use HF_TOKEN environment variable)
+  --metadata TEXT   Path to metadata CSV file
+                    (default: data/metadata/metadata.csv)
+  --help           Show this help message
 ```
 
-3. Set up Hugging Face token (for dataset management):
+### Dataset Upload
+
 ```bash
-# Add to your shell configuration (e.g., .zshrc, .bashrc)
-export HF_TOKEN="your_hugging_face_token"
+python upload_dataset.py [OPTIONS]
+
+Options:
+  --repo-id TEXT     Hugging Face repository ID
+                     (default: pauljunsukhan/throatmic_codered)
+  --token TEXT       Hugging Face API token
+                     (can also use HF_TOKEN environment variable)
+  --metadata TEXT    Path to metadata CSV file
+                     (default: data/metadata/metadata.csv)
+  --dataset-card TEXT  Path to dataset card markdown file
+                     (default: DATASET_CARD.md)
+  --cleanup         Clean up duplicates in the dataset
+  --help            Show this help message
 ```
 
-### Recording Workflow
+## 🔍 Analysis Features
 
-1. **Prepare Sentences**:
-   First, you need sentences in your repository before recording:
-   ```bash
-   python record_audio.py
-   # Select option 4 (Manage sentences), then:
-   # - Option 1 to download sentences from Common Voice
-   # - Option 2 to add your own custom sentences
-   ```
-
-2. **Sync with Existing Dataset** (if continuing previous work):
-   ```bash
-   # Download existing recordings (if any)
-   python download_dataset.py
-   ```
-   The tool will automatically:
-   - Download existing recordings
-   - Skip any duplicates
-   - Sync the sentence repository
-   - Track what's been recorded
-
-3. **Start Recording**:
-   ```bash
-   python record_audio.py
-   # Select option 1 to start recording
-   ```
-   The tool will:
-   - Show sentences from your repository
-   - Track recording progress
-   - Prevent duplicate recordings
-   - Save recordings automatically
-
-4. **Upload to Hugging Face**:
-   ```bash
-   python upload_dataset.py
-   ```
-   The upload process:
-   - Detects new recordings
-   - Skips existing files
-   - Handles duplicates automatically
-   - Updates the dataset card
-
-### Additional Commands
+### Quality Analysis
 ```bash
-# List available audio devices
-python record_audio.py --list-devices
-
-# Analyze dataset quality
 python record_audio.py --analyze --quality
+```
+Checks recordings for:
+- Duration within limits
+- Proper amplitude levels
+- Silence ratio
+- Signal-to-noise ratio
 
-# Check dataset coverage
+### Coverage Analysis
+```bash
 python record_audio.py --analyze --coverage
-
-# Clean up duplicates in dataset
-python upload_dataset.py --cleanup
 ```
+Shows dataset statistics:
+- Total recordings and duration
+- Sentence length distribution
+- Sentence complexity metrics
+- Recording duration stats
 
-### Advanced Options
+## 📝 License
 
-**Custom Repository**:
-```bash
-# Use different Hugging Face repository
-python download_dataset.py --repo-id custom/repo
-python upload_dataset.py --repo-id custom/repo
-```
+MIT License - feel free to use and modify as needed!
 
-**File Locations**:
-```bash
-# Custom metadata file
-python download_dataset.py --metadata path/to/metadata.csv
-
-# Custom dataset card
-python upload_dataset.py --dataset-card path/to/card.md
-```
-
-**Authentication**:
-```bash
-# Provide token directly instead of environment variable
-python download_dataset.py --token YOUR_TOKEN
-python upload_dataset.py --token YOUR_TOKEN
-```
-
-## Dataset Quality Control
-
-Each recording undergoes several quality checks:
-1. Audio level monitoring during recording
-2. Clipping detection
-3. Playback verification
-4. Option to re-record if quality is unsatisfactory
-5. Automatic validation during dataset upload
-
-## License
-
-MIT License - see LICENSE file for details. 
-
-## Configuration
-
-The project settings can be customized by editing `config.yaml`. Key settings include:
-
-```yaml
-# Audio recording settings
-audio:
-  sample_rate: 16000      # Recording quality (Hz)
-  channels: 1             # Mono recording
-  duration: 10.0          # Recording length (seconds)
-  clipping_threshold: 0.95 # Prevents audio distortion
-  min_level_threshold: 0.1 # Minimum volume level
-
-# Dataset settings
-dataset:
-  repo_id: "pauljunsukhan/throatmic_codered"
-  metadata_file: "data/metadata/metadata.csv"
-  min_words: 12          # Minimum words per sentence
-  max_words: 25          # Maximum words per sentence
-  min_duration: 8.0      # Minimum recording length
-  max_duration: 12.0     # Maximum recording length
-
-# Logging settings
-logging:
-  level: "INFO"          # Log detail (DEBUG, INFO, WARNING, ERROR)
-  file: "data/throatmic.log"
-```
-
-See `config.yaml` for the complete list of configurable options with detailed comments. 
-
-## How It Works
-
-### Sentence Management
-The tool uses a sophisticated sentence management system to ensure high-quality recordings:
-
-1. **Sentence Sources**:
-   - Downloads sentences from Common Voice (Wikipedia and community-contributed)
-   - Supports adding custom sentences
-   - Filters sentences based on length and complexity
-
-2. **Quality Control**:
-   - Ensures sentences are suitable length (12-25 words)
-   - Validates grammar and punctuation
-   - Maintains consistent complexity level
-   - Filters out unsuitable content
-
-3. **Recording Flow**:
-   - Sentences are stored in `data/repository/sentences.json`
-   - Each recorded sentence is moved to `data/repository/used_sentences.json`
-   - Prevents accidental duplicate recordings
-   - Tracks progress and completion statistics
-
-4. **Management Features**:
-   - Download more sentences when needed
-   - Add custom sentences
-   - View recording progress
-   - Track total duration and completion
-
-## Sentence Selection Criteria
-
-The tool enforces strict criteria for sentence selection to ensure high-quality training data:
+## 📋 Sentence Criteria
 
 ### Basic Requirements
-1. **Length**: 12-25 words (targeting ~10 seconds of speech)
-2. **Format**: Must start with capital letter and end with proper punctuation (., !, ?)
-3. **Characters**: No numbers or special characters (except basic punctuation)
-4. **Capitalization**: No all-caps words except common acronyms (US, UK, EU, UN, NASA, FBI, CIA, WHO)
+
+- **Length**: 12-25 words per sentence
+- **Duration**: 8-12 seconds when spoken naturally
+- **Format**:
+  - Must start with capital letter
+  - Must end with proper punctuation (., !, ?)
+  - No special characters (except standard punctuation)
+  - No numbers (write them out as words)
+  - No all-caps (except common acronyms)
 
 ### Complexity Requirements
-Sentences must have at least two of the following complexity markers:
-1. **Proper Comma Usage**: Contains appropriate comma placement
-2. **Subordinating Conjunctions**: Uses words like:
-   - because, although, though, unless
-   - while, whereas, if, since
-   - before, after, as, when
-   - where, whether, which, who
 
-3. **Coordinating Conjunctions**: Uses words like:
-   - and, but, or, nor
-   - for, yet, so
+Each sentence should have at least two of these elements:
 
-4. **Complex Phrases**: Contains relative pronouns or markers:
-   - that, which, who, whom
-   - whose, where, when
+1. **Proper Comma Usage**
+   - Separating clauses
+   - After introductory phrases
+   - In lists
+   - Maximum 4 commas per sentence
 
-### Natural Language Rules
-1. Maximum 4 commas per sentence (prevents overly complex structures)
-2. No run-on sentences or excessive conjunctions
-3. Must maintain natural speech rhythm
-4. Balanced clause structure
+2. **Complex Structure**
+   - **Subordinating Conjunctions**:
+     - Time: before, after, when, whenever, while, since
+     - Cause/Effect: because, since, as, unless
+     - Contrast: although, though, whereas
+     - Condition: if, unless, whether
+   - **Coordinating Conjunctions**:
+     - and, but, or, nor, for, yet, so
+   - **Relative Pronouns**:
+     - that, which, who, whom, whose, where, when
 
-These criteria ensure sentences are:
-- Complex enough for meaningful training
-- Natural and speakable within 10 seconds
-- Suitable for speech recognition tasks
-- Consistent in quality and structure
+3. **Natural Flow**
+   - Balanced clause structure
+   - Natural speaking rhythm
+   - No run-on sentences
+   - Clear subject-verb relationships
+
+### Examples
+
+✅ Good Examples:
+- "Although the morning was cloudy, the afternoon brought unexpected sunshine that lifted everyone's spirits."
+- "When the team finished their project early, they decided to celebrate with a dinner at their favorite restaurant."
+- "The old library, which had served the community for decades, needed extensive renovations to preserve its historic charm."
+
+❌ Poor Examples:
+- "THE QUICK BROWN FOX jumped over 123 lazy dogs!!!" (formatting issues)
+- "Cat sat mat." (too simple, no complexity)
+- "The person went to the store and bought some things and then went home and made dinner and then watched TV." (run-on sentence)
+
+### Quality Thresholds
+
+Audio recordings must meet these criteria:
+- Duration: 8-12 seconds
+- Audio levels: -50dB to 0dB
+- Silence ratio: <30% of recording
+- Signal-to-noise ratio: >10dB

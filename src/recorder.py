@@ -343,6 +343,7 @@ class ThroatMicRecorder:
                           f"({stats['completion_percentage']:.1f}%)")
                     print(f"Total recording time: {stats['total_audio_time']:.1f} minutes")
                     print(f"Remaining sentences: {stats['remaining_sentences']}")
+                    print(f"Trashed sentences: {stats['trashed_sentences']}")
                 
                 elif choice == '3':
                     self.toggle_level_meter()
@@ -372,10 +373,15 @@ class ThroatMicRecorder:
                 print(f"Prompt {stats['recorded_sentences'] + 1}/{stats['total_sentences']}:")
                 print(f"\n{sentence}\n")
                 print("="*50)
-                print("\nPress Enter to start recording, or 'q' to quit to menu")
+                print("\nPress Enter to start recording, 't' to trash this sentence, or 'q' to quit to menu")
                 
-                if input().strip().lower() == 'q':
+                choice = input().strip().lower()
+                if choice == 'q':
                     recording_session = False
+                    continue
+                elif choice == 't':
+                    self.repo.trash_sentence(sentence)
+                    print(f"\nSentence moved to trash.")
                     continue
                 
                 # Record the prompt
@@ -395,7 +401,8 @@ class ThroatMicRecorder:
             print("1. Download more sentences")
             print("2. Add custom sentences")
             print("3. View sentence stats")
-            print("4. Back to main menu")
+            print("4. View trashed sentences")
+            print("5. Back to main menu")
             
             choice = input("\nSelect option: ").strip()
             
@@ -435,12 +442,21 @@ class ThroatMicRecorder:
                 print(f"Total sentences: {stats['total_sentences']}")
                 print(f"Available sentences: {stats['remaining_sentences']}")
                 print(f"Used sentences: {stats['recorded_sentences']}")
+                print(f"Trashed sentences: {stats['trashed_sentences']}")
             
             elif choice == '4':
+                if not self.repo.trashed_sentences:
+                    print("\nNo trashed sentences.")
+                else:
+                    print("\nTrashed Sentences:")
+                    for i, sentence in enumerate(self.repo.trashed_sentences, 1):
+                        print(f"{i}. {sentence}")
+            
+            elif choice == '5':
                 return
             
             else:
-                print("\nInvalid option. Please enter a number between 1 and 4.")
+                print("\nInvalid option. Please enter a number between 1 and 5.")
 
     def __del__(self) -> None:
         """Cleanup PyAudio"""

@@ -27,14 +27,17 @@ class SentenceRepository:
         self.repository_dir.mkdir(parents=True, exist_ok=True)
         self.sentences_file = self.repository_dir / "sentences.json"
         self.used_file = self.repository_dir / "used_sentences.json"
+        self.trash_file = self.repository_dir / "trashed_sentences.json"
         
         # Initialize empty lists
         self.sentences: List[str] = []
         self.used_sentences: List[str] = []
+        self.trashed_sentences: List[str] = []
         
         # Load existing sentences
         self._load_sentences()
         self._load_used_sentences()
+        self._load_trashed_sentences()
     
     def _load_sentences(self) -> None:
         """Load sentences from file."""
@@ -55,6 +58,16 @@ class SentenceRepository:
                     self.used_sentences = data if isinstance(data, list) else []
             except Exception as e:
                 logger.error(f"Error loading used sentences: {e}")
+
+    def _load_trashed_sentences(self) -> None:
+        """Load trashed sentences from file."""
+        if self.trash_file.exists():
+            try:
+                with open(self.trash_file) as f:
+                    data = json.load(f)
+                    self.trashed_sentences = data if isinstance(data, list) else []
+            except Exception as e:
+                logger.error(f"Error loading trashed sentences: {e}")
     
     def _save_sentences(self) -> None:
         """Save sentences to file."""
@@ -65,7 +78,29 @@ class SentenceRepository:
         """Save used sentences to file."""
         with open(self.used_file, 'w') as f:
             json.dump(self.used_sentences, f, indent=2)
-    
+
+    def _save_trashed_sentences(self) -> None:
+        """Save trashed sentences to file."""
+        with open(self.trash_file, 'w') as f:
+            json.dump(self.trashed_sentences, f, indent=2)
+
+    def trash_sentence(self, sentence: str) -> None:
+        """Move a sentence to the trash list.
+        
+        Args:
+            sentence: The sentence to trash
+        """
+        # Remove from available sentences if present
+        if sentence in self.sentences:
+            self.sentences.remove(sentence)
+            self._save_sentences()
+        
+        # Add to trashed sentences if not already there
+        if sentence not in self.trashed_sentences:
+            self.trashed_sentences.append(sentence)
+            self._save_trashed_sentences()
+            logger.info(f"Sentence moved to trash: {sentence}")
+
     def _is_good_sentence(self, sentence: str) -> bool:
         """Check if a sentence is suitable for Whisper fine-tuning.
         
@@ -74,6 +109,7 @@ class SentenceRepository:
         2. Complexity: Must have subordinate clauses or complex structure
         3. Natural language: Proper punctuation and structure
         4. No problematic content: No numbers, special chars, etc.
+        5. Limited proper nouns: Avoid sentences with too many uncommon names
         """
         words = sentence.split()
         
@@ -89,9 +125,28 @@ class SentenceRepository:
         if any(c.isdigit() or c in '[]{}()@#$%^&*' for c in sentence):
             return False
             
-        # No all-caps words except for common acronyms
-        allowed_caps = {'US', 'UK', 'EU', 'UN', 'NASA', 'FBI', 'CIA', 'WHO'}
-        if any(w.isupper() and w not in allowed_caps for w in words[1:]):
+        # Count proper nouns (words that start with capital letters, excluding sentence start)
+        proper_nouns = [w for w in words[1:] if w[0].isupper()]
+        
+        # Common proper nouns to allow
+        common_names = {
+            # Common English names
+            'John', 'James', 'Mary', 'Sarah', 'David', 'Michael', 'Elizabeth',
+            # Common place names
+            'America', 'Europe', 'Asia', 'Africa', 'London', 'Paris', 'Rome',
+            # Common organization names
+            'Congress', 'Parliament', 'University',
+            # Allowed acronyms
+            'US', 'UK', 'EU', 'UN', 'NASA', 'FBI', 'CIA', 'WHO'
+        }
+        
+        # Count uncommon proper nouns (not in our allowed list)
+        uncommon_names = [n for n in proper_nouns if n not in common_names]
+        if len(uncommon_names) > 1:  # Allow at most one uncommon name per sentence
+            return False
+            
+        # No all-caps words except allowed acronyms
+        if any(w.isupper() and w not in common_names for w in words[1:]):
             return False
             
         # Complexity requirements (at least two of these):
@@ -159,11 +214,12 @@ class SentenceRepository:
                     logger.warning(f"Error downloading from {url}: {e}")
                     continue
             
-            # Filter out any sentences we've already used or have
+            # Filter out any sentences we've already used, have, or trashed
             new_sentences = [
                 s for s in all_sentences 
                 if s not in self.used_sentences 
                 and s not in self.sentences
+                and s not in self.trashed_sentences
             ]
             
             # Shuffle and take requested number
@@ -249,11 +305,13 @@ class SentenceRepository:
         """Get repository statistics."""
         total = len(self.sentences) + len(self.used_sentences)
         recorded = len(self.used_sentences)
+        trashed = len(self.trashed_sentences)
         
         return {
             "total_sentences": total,
             "recorded_sentences": recorded,
             "remaining_sentences": len(self.sentences),
+            "trashed_sentences": trashed,
             "completion_percentage": (recorded / total * 100) if total > 0 else 0,
             "total_audio_time": recorded * 10 / 60  # Assuming 10 seconds per recording
         } 

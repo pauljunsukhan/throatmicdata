@@ -1,29 +1,19 @@
 # Audio recording settings
 audio:
-  # Audio format settings
   sample_rate: 16000  # Hz
   channels: 1         # Mono
   chunk_size: 4096    # Buffer size for recording
   format: 'wav'       # Audio file format
-  
-  # Recording parameters
   duration: 10.0      # Target recording duration in seconds
-  
-  # Quality thresholds
   clipping_threshold: 0.95   # Maximum amplitude (0.0-1.0)
   min_level_threshold: 0.1   # Minimum amplitude for valid recording
 
 # Dataset configuration
 dataset:
-  # Hugging Face settings
   repo_id: "pauljunsukhan/throatmic_codered"
-  dataset_card: "DATASET_CARD.md"
-  
-  # Local file paths
   metadata_file: "data/metadata/metadata.csv"
   recordings_dir: "data/recordings"
-  
-  # Recording requirements
+  dataset_card: "DATASET_CARD.md"
   min_words: 12       # Minimum words per sentence
   max_words: 25       # Maximum words per sentence
   min_duration: 8.0   # Minimum recording duration (seconds)
@@ -33,4 +23,4 @@ dataset:
 logging:
   level: "INFO"       # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
   format: "%(asctime)s - %(levelname)s - %(message)s"
-  file: "data/throatmic.log" 
+  file: "data/throatmic.log"

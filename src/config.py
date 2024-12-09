@@ -93,6 +93,6 @@ class Config:
         for dir in dirs:
             dir.mkdir(parents=True, exist_ok=True)
 
-# Global configuration instance
-config = Config()
+# Initialize global configuration
+config = Config.load()
 config.ensure_directories() 

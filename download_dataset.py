@@ -21,7 +21,12 @@ src_dir = str(Path(__file__).parent / "src")
 if src_dir not in sys.path:
     sys.path.insert(0, src_dir)
 
-from src import config, DownloadError, DataError
+from src.config import Config
+from src.exceptions import DownloadError, DataError
+
+# Initialize configuration
+config = Config.load()
+config.ensure_directories()
 
 def setup_logging():
     """Configure logging based on config settings."""
@@ -197,13 +202,25 @@ def download_dataset(repo_id: str, token: str, metadata_file: Path) -> pd.DataFr
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Download and inspect the throat microphone dataset"
+        description="Download and inspect the throat microphone dataset",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Download latest dataset
+  python download_dataset.py
+  
+  # Download from custom repository
+  python download_dataset.py --repo-id "your-username/your-dataset"
+  
+  # Save to custom metadata file
+  python download_dataset.py --metadata "path/to/metadata.csv"
+        """
     )
     parser.add_argument(
         "--repo-id",
         type=str,
-        default="pauljunsukhan/throatmic_codered",
-        help="Hugging Face repository ID"
+        default=config.dataset.repo_id,
+        help=f"Hugging Face repository ID (default: {config.dataset.repo_id})"
     )
     parser.add_argument(
         "--token",
@@ -214,11 +231,39 @@ def main():
     parser.add_argument(
         "--metadata",
         type=str,
-        default="data/metadata/metadata.csv",
-        help="Path to metadata CSV file"
+        default=config.dataset.metadata_file,
+        help=f"Path to metadata CSV file (default: {config.dataset.metadata_file})"
+    )
+    parser.add_argument(
+        "--help-more",
+        action="store_true",
+        help="Show detailed help about the download process"
     )
     
     args = parser.parse_args()
+    
+    if args.help_more:
+        print("""
+Detailed Download Process:
+------------------------
+1. Downloads the latest dataset from Hugging Face
+2. Converts to local format (WAV files + metadata CSV)
+3. Maintains sequential file numbering
+4. Skips existing recordings automatically
+
+File Organization:
+----------------
+- Recordings saved to: data/recordings/
+- Metadata saved to: data/metadata/metadata.csv
+- Files named as: 001_first_few_words.wav
+
+Environment Variables:
+--------------------
+HF_TOKEN: Your Hugging Face API token
+  - Get it from: https://huggingface.co/settings/tokens
+  - Or use --token to provide directly
+        """)
+        return 0
     
     # Validate token
     if not args.token:

@@ -22,7 +22,12 @@ src_dir = str(Path(__file__).parent / "src")
 if src_dir not in sys.path:
     sys.path.insert(0, src_dir)
 
-from src import config, UploadError, DataError
+from src.config import Config
+from src.exceptions import UploadError, DataError
+
+# Initialize configuration
+config = Config.load()
+config.ensure_directories()
 
 def setup_logging():
     """Configure logging based on config settings."""
@@ -243,13 +248,28 @@ def deduplicate_dataset(dataset: Dataset) -> Dataset:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Upload throat microphone dataset to Hugging Face"
+        description="Upload throat microphone dataset to Hugging Face",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Upload new recordings
+  python upload_dataset.py
+  
+  # Upload with custom repository
+  python upload_dataset.py --repo-id "your-username/your-dataset"
+  
+  # Clean up duplicates in dataset
+  python upload_dataset.py --cleanup
+  
+  # Use custom metadata file
+  python upload_dataset.py --metadata "path/to/metadata.csv"
+        """
     )
     parser.add_argument(
         "--repo-id",
         type=str,
-        default="pauljunsukhan/throatmic_codered",
-        help="Hugging Face repository ID"
+        default=config.dataset.repo_id,
+        help=f"Hugging Face repository ID (default: {config.dataset.repo_id})"
     )
     parser.add_argument(
         "--token",
@@ -260,22 +280,52 @@ def main():
     parser.add_argument(
         "--metadata",
         type=str,
-        default="data/metadata/metadata.csv",
-        help="Path to metadata CSV file"
+        default=config.dataset.metadata_file,
+        help=f"Path to metadata CSV file (default: {config.dataset.metadata_file})"
     )
     parser.add_argument(
         "--dataset-card",
         type=str,
-        default="DATASET_CARD.md",
-        help="Path to dataset card markdown file"
+        default=config.dataset.dataset_card,
+        help=f"Path to dataset card markdown file (default: {config.dataset.dataset_card})"
     )
     parser.add_argument(
         "--cleanup",
         action="store_true",
         help="Clean up duplicates in the dataset"
     )
+    parser.add_argument(
+        "--help-more",
+        action="store_true",
+        help="Show detailed help about the upload process"
+    )
     
     args = parser.parse_args()
+    
+    if args.help_more:
+        print("""
+Detailed Upload Process:
+-----------------------
+1. The tool first checks for existing recordings in your Hugging Face dataset
+2. It then compares with your local metadata to find new recordings
+3. New recordings are prepared and validated
+4. The dataset card (README) is uploaded first
+5. Finally, new recordings are uploaded and merged with existing data
+
+Quality Checks:
+--------------
+- Audio files must be 16kHz mono WAV format
+- Metadata must contain: audio_filepath, text, duration
+- Duplicates are automatically detected and handled
+- Failed uploads are logged for retry
+
+Environment Variables:
+--------------------
+HF_TOKEN: Your Hugging Face API token
+  - Get it from: https://huggingface.co/settings/tokens
+  - Or use --token to provide directly
+        """)
+        return 0
     
     # Validate token
     if not args.token:
