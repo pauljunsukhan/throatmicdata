@@ -38,6 +38,49 @@ python throatmicdata.py
    - Percentage complete
    - Next prompt to be recorded
 
+## Dataset Management
+
+### Using DVC (Data Version Control)
+
+1. Initialize DVC for your dataset:
+```bash
+python dataset_manager.py --setup-dvc
+```
+
+2. Add a remote storage (e.g., S3, Google Drive):
+```bash
+dvc remote add -d myremote s3://mybucket/path
+dvc remote modify myremote endpointurl https://...  # Optional
+```
+
+3. Push your dataset:
+```bash
+dvc push
+```
+
+### Uploading to Hugging Face
+
+1. Get your Hugging Face token from https://huggingface.co/settings/tokens
+
+2. Set your token (choose one method):
+   ```bash
+   # Method 1: Environment variable
+   export HF_TOKEN=your_token_here
+   
+   # Method 2: Pass as parameter
+   python dataset_manager.py --token your_token_here ...
+   ```
+
+3. Validate your dataset:
+```bash
+python dataset_manager.py --validate
+```
+
+4. Upload to Hugging Face:
+```bash
+python dataset_manager.py --repo your-dataset-name --private
+```
+
 ## Output
 
 - WAV files are saved in the `throatmic_data` directory
@@ -46,4 +89,25 @@ python throatmicdata.py
   - 16-bit PCM
   - Mono channel
 - `metadata.csv` contains the mapping between audio files and transcripts
-- Progress is saved in `recording_progress.json` 
+- Progress is saved in `recording_progress.json`
+
+## Dataset Format
+
+The dataset on Hugging Face will have the following structure:
+```python
+{
+    'audio': {
+        'path': 'path/to/audio.wav',
+        'array': np.array(...),  # The audio signal
+        'sampling_rate': 16000
+    },
+    'text': 'The transcription of the audio',
+    'duration': 10.0  # Duration in seconds
+}
+```
+
+This format is compatible with Whisper fine-tuning and can be loaded using:
+```python
+from datasets import load_dataset
+dataset = load_dataset("your-username/your-dataset-name")
+``` 
