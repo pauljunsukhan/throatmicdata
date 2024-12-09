@@ -1,8 +1,9 @@
 import requests
 import random
 import os
+import argparse
 
-def download_common_voice_sentences():
+def download_common_voice_sentences(num_sentences=180):
     """Download Common Voice sentences from the Mozilla repository"""
     # List of sentence sources in the Common Voice repository
     sources = [
@@ -37,16 +38,12 @@ def download_common_voice_sentences():
     # Filter out sentences that are too long or too short
     sentences = [s for s in sentences if 10 <= len(s.split()) <= 20]
     
-    # Calculate how many sentences we need for 30 minutes
-    # Assuming 10 seconds per recording
-    needed_sentences = int((30 * 60) / 10)  # 30 minutes * 60 seconds / 10 seconds per recording
-    
-    if len(sentences) < needed_sentences:
-        print(f"Warning: Only found {len(sentences)} suitable sentences, needed {needed_sentences}")
+    if len(sentences) < num_sentences:
+        print(f"Warning: Only found {len(sentences)} suitable sentences, needed {num_sentences}")
         selected_sentences = sentences
     else:
         # Select random sentences
-        selected_sentences = random.sample(sentences, needed_sentences)
+        selected_sentences = random.sample(sentences, num_sentences)
     
     # Save to prompts.txt
     with open('prompts.txt', 'w', encoding='utf-8') as f:
@@ -62,5 +59,49 @@ def download_common_voice_sentences():
     
     return True
 
+def main():
+    parser = argparse.ArgumentParser(description="Download and prepare Common Voice sentences")
+    parser.add_argument("--sentences", type=int, default=180,
+                      help="Number of sentences to download (default: 180)")
+    parser.add_argument("--append", action="store_true",
+                      help="Append to existing prompts.txt instead of overwriting")
+    
+    args = parser.parse_args()
+    
+    if args.append and os.path.exists('prompts.txt'):
+        # Read existing prompts
+        with open('prompts.txt', 'r', encoding='utf-8') as f:
+            existing_prompts = set(line.strip() for line in f)
+        print(f"Found {len(existing_prompts)} existing prompts")
+        
+        # Download new sentences
+        temp_file = 'prompts_temp.txt'
+        os.rename('prompts.txt', temp_file)
+        success = download_common_voice_sentences(args.sentences)
+        
+        if success:
+            # Combine old and new prompts
+            with open('prompts.txt', 'r', encoding='utf-8') as f:
+                new_prompts = set(line.strip() for line in f)
+            
+            # Merge prompts
+            all_prompts = existing_prompts.union(new_prompts)
+            
+            # Write back all prompts
+            with open('prompts.txt', 'w', encoding='utf-8') as f:
+                for prompt in all_prompts:
+                    f.write(f"{prompt}\n")
+            
+            print(f"\nTotal unique prompts after merging: {len(all_prompts)}")
+            
+            # Clean up
+            os.remove(temp_file)
+        else:
+            # Restore original file if download failed
+            os.rename(temp_file, 'prompts.txt')
+            print("Restored original prompts.txt due to download failure")
+    else:
+        download_common_voice_sentences(args.sentences)
+
 if __name__ == "__main__":
-    download_common_voice_sentences() 
+    main() 

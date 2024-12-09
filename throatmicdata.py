@@ -7,6 +7,7 @@ from typing import List, Dict
 import sounddevice as sd
 import json
 from pathlib import Path
+import numpy as np
 
 class ThroatMicRecorder:
     def __init__(self):
@@ -20,6 +21,12 @@ class ThroatMicRecorder:
         self.progress_file = "recording_progress.json"
         self.prompts_file = "prompts.txt"
         self.p = pyaudio.PyAudio()
+        
+        # Audio monitoring settings
+        self.CLIPPING_THRESHOLD = 0.95  # Normalized threshold for clipping
+        self.show_levels = True  # Can be toggled
+        self.clipping_window = 0.1  # Seconds to show clipping warning
+        self._last_clipping_time = 0
         
     def setup_directories(self):
         """Create necessary directories and files if they don't exist"""
@@ -86,45 +93,91 @@ class ThroatMicRecorder:
         numbers = [int(f.split('_')[0]) for f in existing_files]
         return max(numbers) + 1 if numbers else 1
 
-    def record_audio(self, device_index: int, prompt: str) -> str:
+    def _normalize_audio_chunk(self, chunk):
+        """Convert audio chunk to normalized float values"""
+        data = np.frombuffer(chunk, dtype=np.int16)
+        normalized = data.astype(np.float32) / 32768.0  # Normalize to [-1.0, 1.0]
+        return normalized
+        
+    def _check_clipping(self, chunk):
+        """Check if audio is clipping and return level info"""
+        normalized = self._normalize_audio_chunk(chunk)
+        peak = np.max(np.abs(normalized))
+        is_clipping = peak > self.CLIPPING_THRESHOLD
+        
+        return {
+            'is_clipping': is_clipping,
+            'peak_level': peak,
+            'level_indicator': self._get_level_indicator(peak)
+        }
+    
+    def _get_level_indicator(self, peak):
+        """Generate a visual level indicator"""
+        if peak > self.CLIPPING_THRESHOLD:
+            return "\r\033[91m█████ CLIPPING!\033[0m"  # Red warning
+        
+        level = int(peak * 20)  # 20 segments for visualization
+        bars = "█" * level + "░" * (20 - level)
+        
+        if peak > 0.8:
+            return f"\r\033[93m{bars}\033[0m"  # Yellow for high levels
+        return f"\r\033[92m{bars}\033[0m"  # Green for normal levels
+    
+    def _clear_line(self):
+        """Clear the current console line"""
+        print('\r', end='', flush=True)
+        
+    def record_audio(self, device_index: int, prompt: str, take_number: int = 1) -> str:
         """Record audio and save to file"""
         file_number = self.get_next_file_number()
-        filename = f"{file_number:03d}_{prompt[:30].lower().replace(' ', '_')}.wav"
+        take_suffix = f"_take{take_number}" if take_number > 1 else ""
+        filename = f"{file_number:03d}_{prompt[:30].lower().replace(' ', '_')}{take_suffix}.wav"
         filepath = os.path.join(self.data_dir, filename)
 
-        # Configure the stream with error handling
-        stream = self.p.open(
-            format=self.FORMAT,
-            channels=self.CHANNELS,
-            rate=self.RATE,
-            input=True,
-            input_device_index=device_index,
-            frames_per_buffer=self.CHUNK,
-            stream_callback=None
-        )
+        while True:
+            stream = self.p.open(
+                format=self.FORMAT,
+                channels=self.CHANNELS,
+                rate=self.RATE,
+                input=True,
+                input_device_index=device_index,
+                frames_per_buffer=self.CHUNK
+            )
 
-        print(f"\nRecording prompt: {prompt}")
-        print("3...")
-        time.sleep(1)
-        print("2...")
-        time.sleep(1)
-        print("1...")
-        time.sleep(1)
-        print("Recording...")
+            print(f"\nRecording prompt: {prompt}")
+            print("Starting in: ", end='', flush=True)
+            for count in [3, 2, 1]:
+                print(f"{count}...", end='', flush=True)
+                time.sleep(0.3)
+            print("\nRecording...")
+            if self.show_levels:
+                print("Level:", end='', flush=True)
 
-        frames = []
-        for _ in range(0, int(self.RATE / self.CHUNK * self.RECORD_SECONDS)):
+            frames = []
+            clipping_detected = False
             try:
-                data = stream.read(self.CHUNK, exception_on_overflow=False)
-                frames.append(data)
-            except OSError as e:
-                print(f"\nWarning: Buffer overflow detected - some audio may be lost")
-                # Continue recording despite the overflow
-                continue
+                for _ in range(0, int(self.RATE / self.CHUNK * self.RECORD_SECONDS)):
+                    try:
+                        chunk = stream.read(self.CHUNK, exception_on_overflow=False)
+                        frames.append(chunk)
+                        
+                        if self.show_levels:
+                            level_info = self._check_clipping(chunk)
+                            if level_info['is_clipping']:
+                                clipping_detected = True
+                            print(f"{level_info['level_indicator']}", end='', flush=True)
+                            
+                    except OSError as e:
+                        print(f"\nWarning: Buffer overflow detected - some audio may be lost")
+                        continue
+                        
+            except KeyboardInterrupt:
+                print("\nRecording stopped by user")
+                stream.stop_stream()
+                stream.close()
+                return self.record_audio(device_index, prompt, take_number)
 
-        print("Done recording!")
-
-        try:
+            print("\nDone recording!")
             stream.stop_stream()
             stream.close()
 
@@ -135,17 +188,52 @@ class ThroatMicRecorder:
                 wf.setframerate(self.RATE)
                 wf.writeframes(b''.join(frames))
 
-            return filepath
+            if clipping_detected:
+                print("\n⚠️  Warning: Clipping was detected in this recording!")
 
-        except Exception as e:
-            print(f"\nError saving recording: {e}")
-            if os.path.exists(filepath):
-                try:
-                    os.remove(filepath)
-                except:
-                    pass
-            raise
+            while True:
+                print("\nOptions: (press Enter to save and continue)")
+                print("1. Play recording")
+                print("2. Re-record")
+                print("3. Save and continue to next")
+                print("4. Save and quit to menu")
+                print("5. Discard and quit to menu")
+                
+                choice = input("\nSelect option: ").strip().lower()
+                
+                if choice == "" or choice == "3":  # Empty string for Enter key
+                    return filepath
+                    
+                elif choice == "1":
+                    print("\nPlaying back recording...")
+                    sd.play(np.frombuffer(b''.join(frames), dtype=np.int16), self.RATE)
+                    sd.wait()
+                    continue
+                    
+                elif choice == "2":
+                    print("\nRe-recording...")
+                    take_number += 1
+                    filename = f"{file_number:03d}_{prompt[:30].lower().replace(' ', '_')}_take{take_number}.wav"
+                    filepath = os.path.join(self.data_dir, filename)
+                    break
+                    
+                elif choice == "4":
+                    self.update_metadata(filepath, prompt)
+                    return None  # Signal to quit to menu
+                    
+                elif choice == "5":
+                    if os.path.exists(filepath):
+                        os.remove(filepath)
+                    return None  # Signal to quit to menu
+                    
+                else:
+                    print("Invalid option. Press Enter to continue, or select 1-5.")
 
+    def toggle_level_meter(self):
+        """Toggle the level meter display"""
+        self.show_levels = not self.show_levels
+        print(f"Level meter {'enabled' if self.show_levels else 'disabled'}")
+        
     def update_metadata(self, filepath: str, text: str):
         """Update the metadata CSV file"""
         file_exists = os.path.exists(self.metadata_file)
@@ -236,7 +324,8 @@ class ThroatMicRecorder:
             print("\nOptions:")
             print("1. Continue recording prompts")
             print("2. View progress")
-            print("3. Exit")
+            print("3. Toggle level meter")
+            print("4. Exit")
             
             choice = input("\nSelect option: ")
             
@@ -253,22 +342,23 @@ class ThroatMicRecorder:
                         break
                     
                     filepath = self.record_audio(device_index, prompt)
+                    if filepath is None:  # User chose to quit to menu
+                        break
+                        
                     self.update_metadata(filepath, prompt)
                     current_index += 1
                     self.save_progress(current_index)
                     
-                    if current_index < len(prompts):
-                        print("\nPress Enter for next prompt, or 'q' to quit to menu")
-                        if input().lower() == 'q':
-                            break
-                
                 if current_index >= len(prompts):
                     print("\nAll prompts have been recorded!")
                     
             elif choice == '2':
                 self.show_progress(prompts, current_index)
-                    
+            
             elif choice == '3':
+                self.toggle_level_meter()
+                    
+            elif choice == '4':
                 print("\nThank you for using Throat Mic Recording Tool!")
                 break
             
