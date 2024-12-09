@@ -54,9 +54,9 @@ data/
 
 ## Setup
 
-1. Create and activate a Python 3.9+ virtual environment:
+1. Use uv for project and venv management:
 ```bash
-python3 -m venv .venv
+uv init
 source .venv/bin/activate
 ```
 
