@@ -56,7 +56,6 @@ data/
 
 1. Use uv for project and venv management:
 ```bash
-uv init
 source .venv/bin/activate
 ```
 
@@ -132,3 +131,29 @@ Each recording undergoes several quality checks:
 ## License
 
 MIT License - see LICENSE file for details. 
+
+## Configuration
+
+The project settings can be customized by editing `config.yaml`:
+
+```yaml
+# Audio recording settings
+audio:
+  sample_rate: 16000    # Recording quality in Hz
+  duration: 10.0        # Recording length in seconds
+  clipping_threshold: 0.95   # Prevents audio distortion
+
+# Dataset settings
+dataset:
+  repo_id: "pauljunsukhan/throatmic_codered"   # Your Hugging Face repository
+  metadata_file: "data/metadata/metadata.csv"   # Where recordings are tracked
+  min_words: 12    # Minimum words per sentence
+  max_words: 25    # Maximum words per sentence
+
+# Logging settings
+logging:
+  level: "INFO"    # Log detail (DEBUG, INFO, WARNING, ERROR)
+  file: "data/throatmic.log"
+```
+
+Edit these values to match your needs. The configuration file is well-documented with comments explaining each option. 
