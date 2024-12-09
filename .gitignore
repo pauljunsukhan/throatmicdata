@@ -52,3 +52,10 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
