@@ -1,0 +1,4 @@
+pyaudio==0.2.13
+sounddevice==0.4.6
+requests==2.31.0
+wave==0.0.2 
