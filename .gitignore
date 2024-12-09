@@ -28,10 +28,12 @@ venv/
 ENV/
 
 # Project specific
-throatmic_data/
-prompts.txt
-metadata.csv
-recording_progress.json
+data/recordings/*.wav
+data/metadata/*.csv
+data/metadata/*.json
+!data/metadata/.gitkeep
+!data/recordings/.gitkeep
+!data/repository/.gitkeep
 
 # IDE
 .idea/

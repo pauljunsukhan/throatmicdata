@@ -1,129 +1,134 @@
-# Throat Mic Recording Tool
+# Throat Mic Recording Tool & Dataset
 
-A Python tool for creating a high-quality dataset for fine-tuning Whisper using throat microphone recordings. This tool helps you record and manage a dataset of throat microphone audio paired with transcriptions, using sentences from Mozilla's Common Voice dataset.
+A high-quality dataset and recording tool for fine-tuning Whisper using throat microphone recordings. This dataset is specifically designed for training speech recognition models on throat microphone input.
+
+## Dataset Characteristics
+
+- **Audio Format**: 16kHz mono WAV files
+- **Duration**: Each recording is approximately 10 seconds
+- **Recording Device**: Throat microphone (laryngophone)
+- **Language**: English
+- **Total Recordings**: 499 utterances
+- **Total Duration**: ~83 minutes
+- **Audio Quality**: High-quality recordings with consistent volume levels and minimal background noise
+
+### Sentence Characteristics
+
+The dataset uses carefully selected sentences that are:
+- Complex enough for meaningful speech recognition training (12-25 words)
+- Include proper grammar and punctuation
+- Contain a mix of statement types (declarations, questions, etc.)
+- Include natural language patterns and varied vocabulary
+- Balanced in terms of phonetic content
+
+### Dataset Format
+
+The dataset follows the standard format required for Whisper fine-tuning:
+```
+data/
+├── recordings/           # WAV audio files (16kHz mono)
+│   └── *.wav            # Format: {index}_{text_preview}.wav
+└── metadata/
+    └── metadata.csv     # Format: audio_filepath,text,duration
+```
 
 ## Features
 
+### Recording Tool
 - 🎤 Easy-to-use recording interface
-- 📝 Automatic prompt management from Common Voice
+- 📝 Automatic prompt management
 - ✨ Proper audio format for Whisper (16kHz, mono)
 - 🔄 Progress saving and session management
-- 🤗 Direct upload to Hugging Face Datasets
-- ✅ Dataset validation and quality checks
+- 📊 Dataset quality analysis
+- 🔍 Real-time audio level monitoring
+- ⚡ Clipping detection
+- 🎵 Playback verification
+
+### Dataset Management
+- 🔄 Automatic synchronization with Hugging Face
+- 📥 Smart dataset downloading with duplicate detection
+- 📤 Efficient dataset uploading with change tracking
+- 🧹 Duplicate cleanup functionality
+- 📝 Automatic dataset card management
+- ✅ Data validation and quality checks
 
 ## Setup
 
-1. Clone the repository:
+1. Create and activate a Python 3.9+ virtual environment:
 ```bash
-git clone https://github.com/yourusername/throatmicdata.git
-cd throatmicdata
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-2. Install the required packages:
+2. Install dependencies using uv (recommended) or pip:
 ```bash
+# Using uv (faster)
+uv pip install -r requirements.txt
+
+# Using pip
 pip install -r requirements.txt
 ```
 
-3. Download the Common Voice sentences:
+3. Set up Hugging Face token (for dataset management):
 ```bash
-python prepare_sentences.py
+# Add to your shell configuration (e.g., .zshrc, .bashrc)
+export HF_TOKEN="your_hugging_face_token"
 ```
 
-## Recording Process
+## Usage
 
-1. Start the recording tool:
+### Recording
 ```bash
-python throatmicdata.py
+# Start recording session
+python record_audio.py
+
+# List available audio devices
+python record_audio.py --list-devices
+
+# Analyze dataset quality
+python record_audio.py --analyze --quality
+
+# Check dataset coverage
+python record_audio.py --analyze --coverage
 ```
 
-2. The tool will:
-   - Create a `throatmic_data` directory for recordings
-   - Create a `metadata.csv` file for transcripts
-   - Let you select your throat microphone
-
-3. During recording:
-   - Each prompt is displayed clearly on screen
-   - Press Enter to start a 10-second recording
-   - Press 'q' to return to the main menu
-   - Progress is automatically saved
-
-4. Progress tracking shows:
-   - Number of completed recordings
-   - Total recording time
-   - Percentage complete
-   - Next prompt to record
-
-## Dataset Management
-
-### Uploading to Hugging Face
-
-1. Get your token from https://huggingface.co/settings/tokens
-
-2. Set your token:
+### Dataset Management
 ```bash
-export HF_TOKEN=your_token_here
+# Download dataset (automatically handles duplicates)
+python download_dataset.py
+
+# Upload to Hugging Face (only uploads new/changed files)
+python upload_dataset.py
+
+# Clean up duplicates in the dataset
+python upload_dataset.py --cleanup
+
+# Use custom repository
+python download_dataset.py --repo-id custom/repo
+python upload_dataset.py --repo-id custom/repo
 ```
 
-3. Validate your dataset:
+### Advanced Options
 ```bash
-python dataset_manager.py --validate
+# Specify custom metadata file location
+--metadata path/to/metadata.csv
+
+# Use different dataset card
+--dataset-card path/to/card.md
+
+# Provide Hugging Face token directly
+--token YOUR_TOKEN
 ```
 
-4. Upload to Hugging Face:
-```bash
-python dataset_manager.py --repo your-dataset-name --private
-```
+## Dataset Quality Control
 
-## Using the Dataset
-
-The dataset follows the Hugging Face audio dataset format, perfect for Whisper fine-tuning:
-
-```python
-from datasets import load_dataset
-
-# Load the dataset
-dataset = load_dataset("your-username/your-dataset-name", use_auth_token=True)
-
-# Access the data
-for item in dataset['train']:
-    audio = item['audio']  # Contains 'array' (audio signal) and 'sampling_rate'
-    text = item['text']    # The transcript
-    duration = item['duration']  # Audio length in seconds
-```
-
-## Dataset Format
-
-Each item in the dataset has this structure:
-```python
-{
-    'audio': {
-        'path': 'path/to/audio.wav',
-        'array': np.array(...),  # The audio signal
-        'sampling_rate': 16000
-    },
-    'text': 'The transcription of the audio',
-    'duration': 10.0  # Duration in seconds
-}
-```
-
-## Technical Details
-
-- Audio Format:
-  - Sample Rate: 16kHz
-  - Channels: Mono
-  - Bit Depth: 16-bit PCM
-  - Format: WAV
-
-- File Organization:
-  - `throatmic_data/`: Directory for WAV recordings
-  - `metadata.csv`: Maps audio files to transcripts
-  - `prompts.txt`: Recording prompts from Common Voice
-  - `recording_progress.json`: Saves session progress
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Each recording undergoes several quality checks:
+1. Audio level monitoring during recording
+2. Clipping detection
+3. Playback verification
+4. Option to re-record if quality is unsatisfactory
+5. Automatic validation during dataset upload
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+MIT License - see LICENSE file for details. 

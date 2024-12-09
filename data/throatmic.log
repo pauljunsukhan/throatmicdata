@@ -1,0 +1,46 @@
+2024-12-08 23:39:34,112 - __main__ - INFO - Starting recording session
+2024-12-08 23:41:56,114 - __main__ - INFO - Starting recording session
+2024-12-08 23:45:11,662 - src.sentences - ERROR - Error loading sentences: Expecting value: line 1 column 1 (char 0)
+2024-12-08 23:45:11,662 - src.sentences - ERROR - Error loading used sentences: Expecting value: line 1 column 1 (char 0)
+2024-12-08 23:45:11,709 - __main__ - INFO - Starting recording session
+2024-12-08 23:45:33,770 - src.sentences - INFO - Downloading 820 Common Voice sentences...
+2024-12-08 23:45:55,438 - src.sentences - INFO - Added 820 new sentences
+2024-12-08 23:49:57,824 - __main__ - INFO - Starting recording session
+2024-12-09 02:00:37,783 - INFO - Downloading dataset from Hugging Face...
+2024-12-09 02:00:37,919 - INFO - Downloaded to: /Users/ipaul/.cache/huggingface/hub/datasets--pauljunsukhan--throatmic_codered/snapshots/6cf6269484a4605de3abff5679d4b258a99b5be9/data/train-00000-of-00001.parquet
+2024-12-09 02:00:38,373 - INFO - Dataset shape: (499, 3)
+2024-12-09 02:00:38,373 - INFO - Columns: ['audio', 'text', 'duration']
+2024-12-09 02:00:38,392 - INFO - Found 499 existing recordings
+2024-12-09 02:00:38,393 - INFO - Processing recordings...
+2024-12-09 02:00:38,427 - INFO - Download complete! Added 0 new recordings, skipped 499 existing recordings
+2024-12-09 02:00:38,427 - INFO - Download and conversion complete!
+2024-12-09 02:00:51,062 - INFO - Found 499 existing recordings
+2024-12-09 02:00:51,062 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-09 02:00:51,065 - INFO - Preparing dataset for upload
+2024-12-09 02:00:51,070 - INFO - No new recordings to upload
+2024-12-09 02:00:51,071 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-09 02:00:51,071 - INFO - Uploading dataset card...
+2024-12-09 02:00:51,271 - WARNING - No files have been modified since last commit. Skipping to prevent empty commit.
+2024-12-09 02:00:51,420 - INFO - Dataset card uploaded successfully
+2024-12-09 02:00:52,476 - INFO - Found existing dataset with 499 examples
+2024-12-09 02:00:52,477 - INFO - No new data to upload
+2024-12-09 02:02:20,895 - INFO - Found 499 existing recordings
+2024-12-09 02:02:20,895 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-09 02:02:20,902 - INFO - Preparing dataset for upload
+2024-12-09 02:02:20,909 - INFO - No new recordings to upload
+2024-12-09 02:02:20,909 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-09 02:02:20,909 - INFO - Uploading dataset card...
+2024-12-09 02:02:21,080 - WARNING - No files have been modified since last commit. Skipping to prevent empty commit.
+2024-12-09 02:02:21,364 - INFO - Dataset card uploaded successfully
+2024-12-09 02:02:22,212 - INFO - Found existing dataset with 499 examples
+2024-12-09 02:02:22,212 - INFO - No new data to upload
+2024-12-09 02:02:31,475 - INFO - Found 499 existing recordings
+2024-12-09 02:02:31,475 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-09 02:02:31,479 - INFO - Preparing dataset for upload
+2024-12-09 02:02:31,482 - INFO - No new recordings to upload
+2024-12-09 02:02:31,482 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-09 02:02:31,482 - INFO - Uploading dataset card...
+2024-12-09 02:02:31,649 - WARNING - No files have been modified since last commit. Skipping to prevent empty commit.
+2024-12-09 02:02:31,766 - INFO - Dataset card uploaded successfully
+2024-12-09 02:02:32,623 - INFO - Found existing dataset with 499 examples
+2024-12-09 02:02:32,623 - INFO - No new data to upload
