@@ -1,0 +1,23 @@
+Dataset Analytics Report
+=====================
+
+Dataset Size:
+  Total Recordings: 180
+  Unique Sentences: 180
+  Vocabulary Size: 1145
+
+Average Metrics:
+  Words per Sentence: 13.7
+  Unique Phonemes: 64
+
+Most Common Words:
+  .: 180
+  the: 161
+  ,: 88
+  of: 69
+  a: 52
+  and: 49
+  in: 49
+  to: 39
+  was: 33
+  is: 32

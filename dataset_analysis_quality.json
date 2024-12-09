@@ -1,0 +1,2167 @@
+{
+  "total_recordings": 180,
+  "average_quality_score": 91.08853276353277,
+  "recordings_with_issues": 157,
+  "common_issues": [
+    [
+      "Excessive silence",
+      156
+    ],
+    [
+      "Audio clipping detected",
+      37
+    ]
+  ],
+  "recordings": [
+    {
+      "path": "throatmic_data/178_advocates_of_praxeology_also_s.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.77752685546875,
+      "rms_level": 0.0780973806977272,
+      "has_clipping": false,
+      "silence_percentage": 27.24358974358973,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/122_the_interior_floor_is_relative.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.857666015625,
+      "rms_level": 0.08576306700706482,
+      "has_clipping": false,
+      "silence_percentage": 35.256410256410255,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.94871794871796
+    },
+    {
+      "path": "throatmic_data/042_the_symbol_of_the_weizmann_ins.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.913360595703125,
+      "rms_level": 0.09161993861198425,
+      "has_clipping": false,
+      "silence_percentage": 45.83333333333333,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.83333333333333
+    },
+    {
+      "path": "throatmic_data/070_it_has_provided_me_with_unbeli.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.49267578125,
+      "rms_level": 0.06462404131889343,
+      "has_clipping": false,
+      "silence_percentage": 27.243589743589723,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/100_such_players_must_sit_out_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.861175537109375,
+      "rms_level": 0.07366910576820374,
+      "has_clipping": false,
+      "silence_percentage": 40.384615384615365,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.92307692307692
+    },
+    {
+      "path": "throatmic_data/031_maudslay_published_the_first_l.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.606719970703125,
+      "rms_level": 0.09059681743383408,
+      "has_clipping": false,
+      "silence_percentage": 19.871794871794872,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/068_major_general_william_h._c._wh.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.5723876953125,
+      "rms_level": 0.08982487767934799,
+      "has_clipping": false,
+      "silence_percentage": 25.64102564102564,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/005_most_candidates_for_heart-lung.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.88800048828125,
+      "rms_level": 0.07285221666097641,
+      "has_clipping": false,
+      "silence_percentage": 41.66666666666667,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.66666666666667
+    },
+    {
+      "path": "throatmic_data/033_spade_has_its_own_water_system.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.69158935546875,
+      "rms_level": 0.07717730104923248,
+      "has_clipping": false,
+      "silence_percentage": 26.92307692307691,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/160_one_should_not_wonder_that_eve.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.689239501953125,
+      "rms_level": 0.0701860636472702,
+      "has_clipping": false,
+      "silence_percentage": 66.02564102564102,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 92.7948717948718
+    },
+    {
+      "path": "throatmic_data/074_nadroga_is_famous_for_its_suns.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.70538330078125,
+      "rms_level": 0.06833195686340332,
+      "has_clipping": false,
+      "silence_percentage": 38.46153846153844,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.3076923076923
+    },
+    {
+      "path": "throatmic_data/107_the_rebbe_himself_does_not_vot.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.798187255859375,
+      "rms_level": 0.07551705092191696,
+      "has_clipping": false,
+      "silence_percentage": 45.192307692307686,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.96153846153847
+    },
+    {
+      "path": "throatmic_data/136_his_family_moved_to_flatbush,_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.833770751953125,
+      "rms_level": 0.08718810230493546,
+      "has_clipping": false,
+      "silence_percentage": 49.35897435897435,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.12820512820512
+    },
+    {
+      "path": "throatmic_data/135_the_ada_mills_bridge_links_the.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.8734130859375,
+      "rms_level": 0.0924929827451706,
+      "has_clipping": false,
+      "silence_percentage": 46.15384615384615,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.76923076923077
+    },
+    {
+      "path": "throatmic_data/059_thus,_many_deep-sea_species_gr.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.570159912109375,
+      "rms_level": 0.07282919436693192,
+      "has_clipping": false,
+      "silence_percentage": 34.615384615384606,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.07692307692308
+    },
+    {
+      "path": "throatmic_data/156_the_station_building_still_sta.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.74169921875,
+      "rms_level": 0.06987371295690536,
+      "has_clipping": false,
+      "silence_percentage": 57.692307692307686,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.46153846153847
+    },
+    {
+      "path": "throatmic_data/082_the_cost_of_such_hazardous_mat.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.556640625,
+      "rms_level": 0.058755237609148026,
+      "has_clipping": false,
+      "silence_percentage": 34.61538461538459,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.07692307692308
+    },
+    {
+      "path": "throatmic_data/075_the_school_is_home_to_a_number.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.858551025390625,
+      "rms_level": 0.08386892080307007,
+      "has_clipping": false,
+      "silence_percentage": 71.15384615384615,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 91.76923076923077
+    },
+    {
+      "path": "throatmic_data/155_mineral_ascorbates_are_used_as.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.997161865234375,
+      "rms_level": 0.10341254621744156,
+      "has_clipping": true,
+      "silence_percentage": 60.897435897435905,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 63.82051282051282
+    },
+    {
+      "path": "throatmic_data/167_additional_forensic_analysis_o.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.766571044921875,
+      "rms_level": 0.08214676380157471,
+      "has_clipping": false,
+      "silence_percentage": 23.07692307692307,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/087_the_third_dates_the_mound_back.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.96844482421875,
+      "rms_level": 0.0824207067489624,
+      "has_clipping": true,
+      "silence_percentage": 48.076923076923066,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.38461538461539
+    },
+    {
+      "path": "throatmic_data/006_the_network's_decision_was_cri.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.47723388671875,
+      "rms_level": 0.05655188858509064,
+      "has_clipping": false,
+      "silence_percentage": 41.98717948717948,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.6025641025641
+    },
+    {
+      "path": "throatmic_data/103_simply_making_a_false_promise_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.67303466796875,
+      "rms_level": 0.06247754395008087,
+      "has_clipping": false,
+      "silence_percentage": 33.33333333333331,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.33333333333334
+    },
+    {
+      "path": "throatmic_data/113_kerner_was_particularly_active.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.8912353515625,
+      "rms_level": 0.1012115553021431,
+      "has_clipping": false,
+      "silence_percentage": 35.57692307692307,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.88461538461539
+    },
+    {
+      "path": "throatmic_data/109_when_the_object_took_off,_witn.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.989898681640625,
+      "rms_level": 0.0744108259677887,
+      "has_clipping": true,
+      "silence_percentage": 37.82051282051281,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 68.43589743589745
+    },
+    {
+      "path": "throatmic_data/141_its_main_arch_was_once_a_cover.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.64862060546875,
+      "rms_level": 0.058029863983392715,
+      "has_clipping": false,
+      "silence_percentage": 38.46153846153844,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.3076923076923
+    },
+    {
+      "path": "throatmic_data/018_test_item_writers_are_instruct.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.98260498046875,
+      "rms_level": 0.08989330381155014,
+      "has_clipping": true,
+      "silence_percentage": 38.782051282051285,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 68.24358974358974
+    },
+    {
+      "path": "throatmic_data/114_the_identities_of_the_last_spe.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.856964111328125,
+      "rms_level": 0.09731487929821014,
+      "has_clipping": false,
+      "silence_percentage": 32.692307692307686,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.46153846153847
+    },
+    {
+      "path": "throatmic_data/108_media_watch_criticized_that_th.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.9427490234375,
+      "rms_level": 0.08068852871656418,
+      "has_clipping": false,
+      "silence_percentage": 64.42307692307693,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 93.11538461538461
+    },
+    {
+      "path": "throatmic_data/111_once_outside-of-the-walls,_the.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.673309326171875,
+      "rms_level": 0.08877183496952057,
+      "has_clipping": false,
+      "silence_percentage": 42.94871794871794,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.41025641025641
+    },
+    {
+      "path": "throatmic_data/134_in_this_way,_failure_of_one_mo.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.93377685546875,
+      "rms_level": 0.08114101737737656,
+      "has_clipping": false,
+      "silence_percentage": 42.94871794871794,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.41025641025641
+    },
+    {
+      "path": "throatmic_data/175_this_complex_mimics_one_turn_o.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.999542236328125,
+      "rms_level": 0.12208493053913116,
+      "has_clipping": true,
+      "silence_percentage": 48.3974358974359,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.32051282051282
+    },
+    {
+      "path": "throatmic_data/096_putnam_also_has_a_risk_parity_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.999755859375,
+      "rms_level": 0.08785755187273026,
+      "has_clipping": true,
+      "silence_percentage": 54.166666666666664,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 65.16666666666667
+    },
+    {
+      "path": "throatmic_data/168_robertson_then_trained_for_a_f.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.68878173828125,
+      "rms_level": 0.08782661706209183,
+      "has_clipping": false,
+      "silence_percentage": 50.64102564102563,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.87179487179488
+    },
+    {
+      "path": "throatmic_data/159_julian_believes_the_importance.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.998931884765625,
+      "rms_level": 0.12974977493286133,
+      "has_clipping": true,
+      "silence_percentage": 51.60256410256411,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 65.67948717948718
+    },
+    {
+      "path": "throatmic_data/161_there_are_two_of_the_most_impo.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.717681884765625,
+      "rms_level": 0.08236680924892426,
+      "has_clipping": false,
+      "silence_percentage": 62.82051282051282,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 93.43589743589743
+    },
+    {
+      "path": "throatmic_data/176_kawakami_was_married_to_tamiko.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.997711181640625,
+      "rms_level": 0.07734820991754532,
+      "has_clipping": true,
+      "silence_percentage": 40.064102564102555,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 67.98717948717949
+    },
+    {
+      "path": "throatmic_data/054_some_accounts_say_one_of_the_s.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.92431640625,
+      "rms_level": 0.06605671346187592,
+      "has_clipping": false,
+      "silence_percentage": 44.871794871794854,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.02564102564102
+    },
+    {
+      "path": "throatmic_data/076_the_team_retains_the_right_to_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.548858642578125,
+      "rms_level": 0.07175801694393158,
+      "has_clipping": false,
+      "silence_percentage": 27.564102564102555,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/081_he_was_quoted_celebrating_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.713165283203125,
+      "rms_level": 0.07617784291505814,
+      "has_clipping": false,
+      "silence_percentage": 45.83333333333333,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.83333333333333
+    },
+    {
+      "path": "throatmic_data/084_the_contemporary_turners'_comp.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.544769287109375,
+      "rms_level": 0.0687108114361763,
+      "has_clipping": false,
+      "silence_percentage": 32.371794871794854,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.52564102564102
+    },
+    {
+      "path": "throatmic_data/131_the_significance_of_this_secti.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.69287109375,
+      "rms_level": 0.07154364883899689,
+      "has_clipping": false,
+      "silence_percentage": 32.371794871794854,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.52564102564102
+    },
+    {
+      "path": "throatmic_data/077_over_the_following_centuries,_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.765228271484375,
+      "rms_level": 0.07856432348489761,
+      "has_clipping": false,
+      "silence_percentage": 47.11538461538461,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.57692307692308
+    },
+    {
+      "path": "throatmic_data/094_currently_it_can_generate_dots.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.765411376953125,
+      "rms_level": 0.08224658668041229,
+      "has_clipping": false,
+      "silence_percentage": 58.333333333333336,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.33333333333333
+    },
+    {
+      "path": "throatmic_data/171_the_saying_inspired_a_song_and.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.637786865234375,
+      "rms_level": 0.06649523973464966,
+      "has_clipping": false,
+      "silence_percentage": 45.83333333333332,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.83333333333334
+    },
+    {
+      "path": "throatmic_data/004_he_was_cremated_at_kensal_gree.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.93670654296875,
+      "rms_level": 0.07978369295597076,
+      "has_clipping": false,
+      "silence_percentage": 55.769230769230774,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.84615384615384
+    },
+    {
+      "path": "throatmic_data/046_the_city_provided_a_plaque_wit.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.7781982421875,
+      "rms_level": 0.08500170707702637,
+      "has_clipping": false,
+      "silence_percentage": 52.24358974358974,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.55128205128206
+    },
+    {
+      "path": "throatmic_data/078_the_following_day,_the_system_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.777740478515625,
+      "rms_level": 0.0829463005065918,
+      "has_clipping": false,
+      "silence_percentage": 32.69230769230768,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.46153846153847
+    },
+    {
+      "path": "throatmic_data/036_repeated_integration_by_parts_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99298095703125,
+      "rms_level": 0.09195345640182495,
+      "has_clipping": true,
+      "silence_percentage": 36.21794871794872,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 68.75641025641025
+    },
+    {
+      "path": "throatmic_data/144_he_started_by_cutting_the_gras.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.613037109375,
+      "rms_level": 0.06850440055131912,
+      "has_clipping": false,
+      "silence_percentage": 44.871794871794854,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.02564102564102
+    },
+    {
+      "path": "throatmic_data/040_various_sampradayas_emerged_fr.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.503173828125,
+      "rms_level": 0.07393322885036469,
+      "has_clipping": false,
+      "silence_percentage": 42.94871794871794,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.41025641025641
+    },
+    {
+      "path": "throatmic_data/037_its_mantle,_tail_and_upperwing.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.85101318359375,
+      "rms_level": 0.07701120525598526,
+      "has_clipping": false,
+      "silence_percentage": 33.0128205128205,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.3974358974359
+    },
+    {
+      "path": "throatmic_data/139_this_time_he_had_the_endorseme.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.669769287109375,
+      "rms_level": 0.07442570477724075,
+      "has_clipping": false,
+      "silence_percentage": 36.53846153846152,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.6923076923077
+    },
+    {
+      "path": "throatmic_data/071_in_general,_french_frigates_we.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.565093994140625,
+      "rms_level": 0.07870450615882874,
+      "has_clipping": false,
+      "silence_percentage": 33.0128205128205,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.3974358974359
+    },
+    {
+      "path": "throatmic_data/119_golden_eagles_and_hen_harriers.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.951416015625,
+      "rms_level": 0.09756308048963547,
+      "has_clipping": true,
+      "silence_percentage": 49.999999999999986,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.0
+    },
+    {
+      "path": "throatmic_data/013_in_blood_of_olympus_he_decides.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.54742431640625,
+      "rms_level": 0.05611594393849373,
+      "has_clipping": false,
+      "silence_percentage": 55.128205128205124,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.97435897435898
+    },
+    {
+      "path": "throatmic_data/043_above_the_helmet_and_the_coron.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.776458740234375,
+      "rms_level": 0.0825122818350792,
+      "has_clipping": false,
+      "silence_percentage": 41.66666666666665,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.66666666666667
+    },
+    {
+      "path": "throatmic_data/105_harris_has_appeared_in_the_fea.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.8187255859375,
+      "rms_level": 0.07365153729915619,
+      "has_clipping": false,
+      "silence_percentage": 50.64102564102563,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.87179487179488
+    },
+    {
+      "path": "throatmic_data/129_here,_piggy_plays_a_steamboat_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99835205078125,
+      "rms_level": 0.08932139724493027,
+      "has_clipping": true,
+      "silence_percentage": 56.730769230769226,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.65384615384616
+    },
+    {
+      "path": "throatmic_data/123_they_ultimately_had_seventeen_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99652099609375,
+      "rms_level": 0.10376624017953873,
+      "has_clipping": true,
+      "silence_percentage": 35.256410256410255,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 68.94871794871796
+    },
+    {
+      "path": "throatmic_data/017_the_propeller_was_found_in_bus.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.996307373046875,
+      "rms_level": 0.08560006320476532,
+      "has_clipping": true,
+      "silence_percentage": 59.93589743589743,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.01282051282051
+    },
+    {
+      "path": "throatmic_data/060_translink_ticketing_applies_to.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.64886474609375,
+      "rms_level": 0.06512854248285294,
+      "has_clipping": false,
+      "silence_percentage": 33.012820512820504,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.3974358974359
+    },
+    {
+      "path": "throatmic_data/120_in_these_cases_the_programme_c.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.996246337890625,
+      "rms_level": 0.09963669627904892,
+      "has_clipping": true,
+      "silence_percentage": 41.34615384615384,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 67.73076923076923
+    },
+    {
+      "path": "throatmic_data/073_the_wifi_utility_could_be_used.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.634246826171875,
+      "rms_level": 0.06891901046037674,
+      "has_clipping": false,
+      "silence_percentage": 53.84615384615385,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.23076923076923
+    },
+    {
+      "path": "throatmic_data/173_the_park_is_part_of_the_intern.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.742584228515625,
+      "rms_level": 0.09782585501670837,
+      "has_clipping": false,
+      "silence_percentage": 42.94871794871794,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.41025641025641
+    },
+    {
+      "path": "throatmic_data/020_it_is_part_of_the_hattiesburg,.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.464324951171875,
+      "rms_level": 0.06531059741973877,
+      "has_clipping": false,
+      "silence_percentage": 22.75641025641024,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/092_in_addition_there_is_a_notable.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.998565673828125,
+      "rms_level": 0.11120974272489548,
+      "has_clipping": true,
+      "silence_percentage": 57.37179487179487,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.52564102564102
+    },
+    {
+      "path": "throatmic_data/012_cypherpunks_also_participated,.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.657745361328125,
+      "rms_level": 0.08700248599052429,
+      "has_clipping": false,
+      "silence_percentage": 24.03846153846154,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/088_non-thermal_effects_in_solids_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.60174560546875,
+      "rms_level": 0.0729033574461937,
+      "has_clipping": false,
+      "silence_percentage": 31.730769230769212,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.65384615384616
+    },
+    {
+      "path": "throatmic_data/089_many_french_soldiers,_as_well_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.695831298828125,
+      "rms_level": 0.08245174586772919,
+      "has_clipping": false,
+      "silence_percentage": 41.34615384615384,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.73076923076923
+    },
+    {
+      "path": "throatmic_data/130_he_got_an_admission_to_the_chi.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.779693603515625,
+      "rms_level": 0.06854553520679474,
+      "has_clipping": false,
+      "silence_percentage": 39.423076923076906,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.11538461538461
+    },
+    {
+      "path": "throatmic_data/069_primary_neutrophilia_can_addit.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.692657470703125,
+      "rms_level": 0.09126973152160645,
+      "has_clipping": false,
+      "silence_percentage": 11.858974358974352,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/093_nevertheless,_many_of_these_cl.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.998199462890625,
+      "rms_level": 0.09908954799175262,
+      "has_clipping": true,
+      "silence_percentage": 64.1025641025641,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 63.179487179487175
+    },
+    {
+      "path": "throatmic_data/164_he_narrowly_missed_re-election.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.8009033203125,
+      "rms_level": 0.08242108672857285,
+      "has_clipping": false,
+      "silence_percentage": 55.128205128205124,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.97435897435898
+    },
+    {
+      "path": "throatmic_data/063_a_number_of_rich_families_comm.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.638580322265625,
+      "rms_level": 0.06773431599140167,
+      "has_clipping": false,
+      "silence_percentage": 38.46153846153844,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.3076923076923
+    },
+    {
+      "path": "throatmic_data/053_examples_are_in_buckingham_pal.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.616546630859375,
+      "rms_level": 0.07861854135990143,
+      "has_clipping": false,
+      "silence_percentage": 47.435897435897424,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.51282051282051
+    },
+    {
+      "path": "throatmic_data/024_the_badge_depicts_a_windmill_t.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.920135498046875,
+      "rms_level": 0.08432236313819885,
+      "has_clipping": false,
+      "silence_percentage": 9.935897435897445,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/177_the_flag_as_another_symbol_pla.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.705474853515625,
+      "rms_level": 0.08752001821994781,
+      "has_clipping": false,
+      "silence_percentage": 50.64102564102563,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.87179487179488
+    },
+    {
+      "path": "throatmic_data/025_it_is_host_to_the_archdiocese,.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.555694580078125,
+      "rms_level": 0.06740812212228775,
+      "has_clipping": false,
+      "silence_percentage": 36.858974358974336,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.62820512820514
+    },
+    {
+      "path": "throatmic_data/085_each_had_roughly_an_equal_amou.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.91046142578125,
+      "rms_level": 0.07978505641222,
+      "has_clipping": false,
+      "silence_percentage": 47.75641025641025,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.44871794871796
+    },
+    {
+      "path": "throatmic_data/045_they_would_be_hired_by_preside.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.982086181640625,
+      "rms_level": 0.09194950014352798,
+      "has_clipping": true,
+      "silence_percentage": 55.128205128205124,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.97435897435898
+    },
+    {
+      "path": "throatmic_data/086_the_pnakotic_manuscripts_are_n.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.763702392578125,
+      "rms_level": 0.08164994418621063,
+      "has_clipping": false,
+      "silence_percentage": 20.51282051282051,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/095_during_his_first_three_champio.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.990264892578125,
+      "rms_level": 0.09247621148824692,
+      "has_clipping": true,
+      "silence_percentage": 58.974358974358964,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.2051282051282
+    },
+    {
+      "path": "throatmic_data/062_boot_robopon_could_not_have_th.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.839569091796875,
+      "rms_level": 0.07232203334569931,
+      "has_clipping": false,
+      "silence_percentage": 68.91025641025641,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 92.21794871794872
+    },
+    {
+      "path": "throatmic_data/117_taillights_also_changed_to_a_n.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.80914306640625,
+      "rms_level": 0.09204654395580292,
+      "has_clipping": false,
+      "silence_percentage": 27.564102564102555,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/152_eighteen_people_died,_and_more.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.997314453125,
+      "rms_level": 0.09018248319625854,
+      "has_clipping": true,
+      "silence_percentage": 60.256410256410255,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 63.94871794871795
+    },
+    {
+      "path": "throatmic_data/007_the_original_station_was_the_u.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.54132080078125,
+      "rms_level": 0.06696869432926178,
+      "has_clipping": false,
+      "silence_percentage": 27.564102564102562,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/116_and_i_refuse_to_be_brazil's_sm.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.833740234375,
+      "rms_level": 0.07392134517431259,
+      "has_clipping": false,
+      "silence_percentage": 41.987179487179475,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.6025641025641
+    },
+    {
+      "path": "throatmic_data/027_the_college_had_its_fourth_pri.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.98956298828125,
+      "rms_level": 0.09160199016332626,
+      "has_clipping": true,
+      "silence_percentage": 17.948717948717945,
+      "issues": [
+        "Audio clipping detected"
+      ],
+      "quality_score": 70.0
+    },
+    {
+      "path": "throatmic_data/157_their_songs_are_often_rich_in_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.715545654296875,
+      "rms_level": 0.0879068449139595,
+      "has_clipping": false,
+      "silence_percentage": 38.78205128205126,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.24358974358975
+    },
+    {
+      "path": "throatmic_data/080_the_younger_man_developed_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.78802490234375,
+      "rms_level": 0.08250997215509415,
+      "has_clipping": false,
+      "silence_percentage": 47.75641025641025,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.44871794871796
+    },
+    {
+      "path": "throatmic_data/001_the_tourists_now_start_a_three.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99993896484375,
+      "rms_level": 0.099394790828228,
+      "has_clipping": true,
+      "silence_percentage": 48.717948717948715,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.25641025641026
+    },
+    {
+      "path": "throatmic_data/165_however_some_observed_phenomen.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.75848388671875,
+      "rms_level": 0.09257528185844421,
+      "has_clipping": false,
+      "silence_percentage": 37.499999999999986,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.5
+    },
+    {
+      "path": "throatmic_data/034_ramsey_is_co-author_of_teachin.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.681243896484375,
+      "rms_level": 0.10195683687925339,
+      "has_clipping": false,
+      "silence_percentage": 44.55128205128205,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.08974358974359
+    },
+    {
+      "path": "throatmic_data/028_the_next_day,_hubbell_and_his_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.448089599609375,
+      "rms_level": 0.04335193708539009,
+      "has_clipping": false,
+      "silence_percentage": 23.076923076923052,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/115_extended_coastal_prairies_supp.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.618072509765625,
+      "rms_level": 0.07121500372886658,
+      "has_clipping": false,
+      "silence_percentage": 27.564102564102555,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/098_the_word_\"sabellic\"_was_once_a.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.781951904296875,
+      "rms_level": 0.10358680784702301,
+      "has_clipping": false,
+      "silence_percentage": 35.57692307692307,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.88461538461539
+    },
+    {
+      "path": "throatmic_data/056_marsh_was_also_present_at_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.502166748046875,
+      "rms_level": 0.0538390651345253,
+      "has_clipping": false,
+      "silence_percentage": 34.615384615384606,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.07692307692308
+    },
+    {
+      "path": "throatmic_data/126_their_original_jerseys_were_co.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.9501953125,
+      "rms_level": 0.09810891002416611,
+      "has_clipping": true,
+      "silence_percentage": 35.897435897435884,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 68.82051282051282
+    },
+    {
+      "path": "throatmic_data/019_this_is_where_the_canine_breed.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.802734375,
+      "rms_level": 0.1011575385928154,
+      "has_clipping": false,
+      "silence_percentage": 45.51282051282052,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.8974358974359
+    },
+    {
+      "path": "throatmic_data/099_he_has_coauthored_a_trilogy_\"i.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.85699462890625,
+      "rms_level": 0.09835465252399445,
+      "has_clipping": false,
+      "silence_percentage": 42.94871794871794,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.41025641025641
+    },
+    {
+      "path": "throatmic_data/029_an_interactive_play_fountain_i.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.44329833984375,
+      "rms_level": 0.05392760410904884,
+      "has_clipping": false,
+      "silence_percentage": 41.987179487179475,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.6025641025641
+    },
+    {
+      "path": "throatmic_data/014_in_many_myths,_the_word_is_use.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.704071044921875,
+      "rms_level": 0.07982434332370758,
+      "has_clipping": false,
+      "silence_percentage": 65.06410256410257,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 92.98717948717949
+    },
+    {
+      "path": "throatmic_data/170_no_green_party_members_have_si.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.87872314453125,
+      "rms_level": 0.08487100154161453,
+      "has_clipping": false,
+      "silence_percentage": 51.28205128205128,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.74358974358975
+    },
+    {
+      "path": "throatmic_data/039_these_have_been_dynamic_open_t.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.924041748046875,
+      "rms_level": 0.08806968480348587,
+      "has_clipping": false,
+      "silence_percentage": 58.333333333333336,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.33333333333333
+    },
+    {
+      "path": "throatmic_data/172_there_are_four_binary_digits,_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.80938720703125,
+      "rms_level": 0.0706801787018776,
+      "has_clipping": false,
+      "silence_percentage": 45.19230769230768,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.96153846153847
+    },
+    {
+      "path": "throatmic_data/083_notable_examples_are_the_sound.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99163818359375,
+      "rms_level": 0.08211932331323624,
+      "has_clipping": true,
+      "silence_percentage": 48.71794871794871,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.25641025641026
+    },
+    {
+      "path": "throatmic_data/023_for_example,_the_current_rank_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99981689453125,
+      "rms_level": 0.11977435648441315,
+      "has_clipping": true,
+      "silence_percentage": 48.07692307692308,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.38461538461539
+    },
+    {
+      "path": "throatmic_data/047_the_recommended_dosage_was_sev.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.75860595703125,
+      "rms_level": 0.07345032691955566,
+      "has_clipping": false,
+      "silence_percentage": 52.24358974358974,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.55128205128206
+    },
+    {
+      "path": "throatmic_data/026_during_the_same_year_he_was_na.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.58392333984375,
+      "rms_level": 0.08807200193405151,
+      "has_clipping": false,
+      "silence_percentage": 43.269230769230774,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.34615384615384
+    },
+    {
+      "path": "throatmic_data/121_its_member_of_parliament_is_ma.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.900238037109375,
+      "rms_level": 0.08751512318849564,
+      "has_clipping": false,
+      "silence_percentage": 41.02564102564102,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.7948717948718
+    },
+    {
+      "path": "throatmic_data/003_the_absence_of_the_auditory_os.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.753936767578125,
+      "rms_level": 0.07554586231708527,
+      "has_clipping": false,
+      "silence_percentage": 33.33333333333333,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.33333333333333
+    },
+    {
+      "path": "throatmic_data/016_most_of_the_cargo,_which_inclu.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.774322509765625,
+      "rms_level": 0.09125577658414841,
+      "has_clipping": false,
+      "silence_percentage": 54.166666666666664,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.16666666666667
+    },
+    {
+      "path": "throatmic_data/150_many_early_united_states_settl.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.764373779296875,
+      "rms_level": 0.09464103728532791,
+      "has_clipping": false,
+      "silence_percentage": 31.08974358974359,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.78205128205128
+    },
+    {
+      "path": "throatmic_data/058_this_was_a_government_sponsore.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.687408447265625,
+      "rms_level": 0.0708981603384018,
+      "has_clipping": false,
+      "silence_percentage": 41.34615384615384,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.73076923076923
+    },
+    {
+      "path": "throatmic_data/065_carrickmore_has_the_smallest_t.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.733184814453125,
+      "rms_level": 0.07897141575813293,
+      "has_clipping": false,
+      "silence_percentage": 42.3076923076923,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.53846153846153
+    },
+    {
+      "path": "throatmic_data/049_this_is_an_endurance_style_eve.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.9871826171875,
+      "rms_level": 0.07874024659395218,
+      "has_clipping": true,
+      "silence_percentage": 53.20512820512819,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 65.35897435897436
+    },
+    {
+      "path": "throatmic_data/149_although_separate_organization.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.73321533203125,
+      "rms_level": 0.09005166590213776,
+      "has_clipping": false,
+      "silence_percentage": 43.9102564102564,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.21794871794872
+    },
+    {
+      "path": "throatmic_data/101_when_supergirl_moved_to_new_kr.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.793060302734375,
+      "rms_level": 0.08552546054124832,
+      "has_clipping": false,
+      "silence_percentage": 46.474358974358964,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.7051282051282
+    },
+    {
+      "path": "throatmic_data/064_there_has_been_substantial_inc.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.761260986328125,
+      "rms_level": 0.07441353052854538,
+      "has_clipping": false,
+      "silence_percentage": 47.75641025641025,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.44871794871796
+    },
+    {
+      "path": "throatmic_data/154_in_six_games_with_oklahoma_cit.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.768524169921875,
+      "rms_level": 0.0941796824336052,
+      "has_clipping": false,
+      "silence_percentage": 49.03846153846153,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.1923076923077
+    },
+    {
+      "path": "throatmic_data/022_joss_whedon's_feature_film_\"se.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.59991455078125,
+      "rms_level": 0.07230766117572784,
+      "has_clipping": false,
+      "silence_percentage": 35.256410256410255,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.94871794871796
+    },
+    {
+      "path": "throatmic_data/011_\"but_william,\"_he_said,_\"they_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.938507080078125,
+      "rms_level": 0.0661115050315857,
+      "has_clipping": false,
+      "silence_percentage": 68.58974358974359,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 92.28205128205128
+    },
+    {
+      "path": "throatmic_data/102_they_speak_of_a_single,_wise,_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.739715576171875,
+      "rms_level": 0.09136037528514862,
+      "has_clipping": false,
+      "silence_percentage": 19.871794871794872,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/180_roy's_history_is_altered,_incl.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.81964111328125,
+      "rms_level": 0.10639301687479019,
+      "has_clipping": false,
+      "silence_percentage": 43.26923076923077,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.34615384615384
+    },
+    {
+      "path": "throatmic_data/106_with_the_population_growing_fa.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.666412353515625,
+      "rms_level": 0.07062773406505585,
+      "has_clipping": false,
+      "silence_percentage": 36.53846153846152,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.6923076923077
+    },
+    {
+      "path": "throatmic_data/137_with_relative_peace_in_angola_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.8427734375,
+      "rms_level": 0.08203351497650146,
+      "has_clipping": false,
+      "silence_percentage": 25.96153846153846,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/140_roberts_also_played_for_bay_of.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.649383544921875,
+      "rms_level": 0.07119700312614441,
+      "has_clipping": false,
+      "silence_percentage": 54.48717948717948,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.1025641025641
+    },
+    {
+      "path": "throatmic_data/174_they_built_the_first_establish.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.79620361328125,
+      "rms_level": 0.07829057425260544,
+      "has_clipping": false,
+      "silence_percentage": 60.57692307692307,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 93.88461538461539
+    },
+    {
+      "path": "throatmic_data/066_for_his_diverse_and_distinguis.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.999237060546875,
+      "rms_level": 0.09189403057098389,
+      "has_clipping": true,
+      "silence_percentage": 33.33333333333333,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 69.33333333333333
+    },
+    {
+      "path": "throatmic_data/030_originally_from_lancashire,_hi.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.67974853515625,
+      "rms_level": 0.08497671037912369,
+      "has_clipping": false,
+      "silence_percentage": 25.64102564102564,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/044_at_that_time_the_junior_and_se.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.910980224609375,
+      "rms_level": 0.10025618970394135,
+      "has_clipping": false,
+      "silence_percentage": 53.84615384615385,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.23076923076923
+    },
+    {
+      "path": "throatmic_data/072_the_park_offers_cave_tours_thu.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.757415771484375,
+      "rms_level": 0.0704365074634552,
+      "has_clipping": false,
+      "silence_percentage": 33.01282051282049,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.3974358974359
+    },
+    {
+      "path": "throatmic_data/008_when_this_is_diagonalized,_the.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.38616943359375,
+      "rms_level": 0.05354927107691765,
+      "has_clipping": false,
+      "silence_percentage": 17.307692307692303,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/061_after_completing_graduate_stud.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.610870361328125,
+      "rms_level": 0.06878140568733215,
+      "has_clipping": false,
+      "silence_percentage": 10.897435897435889,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/118_this_wooded_mound_is_surrounde.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.92919921875,
+      "rms_level": 0.08376339077949524,
+      "has_clipping": false,
+      "silence_percentage": 52.88461538461537,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.42307692307692
+    },
+    {
+      "path": "throatmic_data/104_a_few_to_many_stamens_and_pist.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.9932861328125,
+      "rms_level": 0.07625967264175415,
+      "has_clipping": true,
+      "silence_percentage": 64.1025641025641,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 63.179487179487175
+    },
+    {
+      "path": "throatmic_data/145_the_sine_bar_is_placed_over_th.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.687103271484375,
+      "rms_level": 0.061095938086509705,
+      "has_clipping": false,
+      "silence_percentage": 29.48717948717948,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/050_one_was_credited_to_john_ross_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.552337646484375,
+      "rms_level": 0.07639269530773163,
+      "has_clipping": false,
+      "silence_percentage": 30.12820512820512,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.97435897435898
+    },
+    {
+      "path": "throatmic_data/132_the_result_was_to_make_them_in.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.852142333984375,
+      "rms_level": 0.08457721769809723,
+      "has_clipping": false,
+      "silence_percentage": 65.06410256410257,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 92.98717948717949
+    },
+    {
+      "path": "throatmic_data/169_having_said_this_he_rushed_tow.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.732757568359375,
+      "rms_level": 0.09061037749052048,
+      "has_clipping": false,
+      "silence_percentage": 31.730769230769223,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.65384615384616
+    },
+    {
+      "path": "throatmic_data/127_wakefield_was_named_after_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.7479248046875,
+      "rms_level": 0.07481976598501205,
+      "has_clipping": false,
+      "silence_percentage": 34.29487179487178,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.14102564102565
+    },
+    {
+      "path": "throatmic_data/138_the_film_has_been_disowned_by_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.73162841796875,
+      "rms_level": 0.07310875505208969,
+      "has_clipping": false,
+      "silence_percentage": 45.83333333333332,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.83333333333334
+    },
+    {
+      "path": "throatmic_data/147_he_was_the_first_underclassman.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.855560302734375,
+      "rms_level": 0.0826561227440834,
+      "has_clipping": false,
+      "silence_percentage": 52.564102564102555,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.48717948717949
+    },
+    {
+      "path": "throatmic_data/166_frank_attended_rose_park_prima.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99993896484375,
+      "rms_level": 0.11936879903078079,
+      "has_clipping": true,
+      "silence_percentage": 48.397435897435884,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.32051282051282
+    },
+    {
+      "path": "throatmic_data/148_natural_harbours_are_formed_by.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.761810302734375,
+      "rms_level": 0.08377368003129959,
+      "has_clipping": false,
+      "silence_percentage": 56.730769230769226,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.65384615384616
+    },
+    {
+      "path": "throatmic_data/052_this_incorporates_a_sculpture_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.890533447265625,
+      "rms_level": 0.072150819003582,
+      "has_clipping": false,
+      "silence_percentage": 48.076923076923066,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.38461538461539
+    },
+    {
+      "path": "throatmic_data/041_the_basics_of_mining_engineeri.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.73590087890625,
+      "rms_level": 0.08915652334690094,
+      "has_clipping": false,
+      "silence_percentage": 31.08974358974358,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.78205128205128
+    },
+    {
+      "path": "throatmic_data/125_reproductions_were_later_made,.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.997955322265625,
+      "rms_level": 0.10330063104629517,
+      "has_clipping": true,
+      "silence_percentage": 44.87179487179487,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 67.02564102564102
+    },
+    {
+      "path": "throatmic_data/038_cobbett_also_closely_observed_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.817901611328125,
+      "rms_level": 0.08301176875829697,
+      "has_clipping": false,
+      "silence_percentage": 62.5,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 93.5
+    },
+    {
+      "path": "throatmic_data/009_there_are_three_colour_combina.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.81585693359375,
+      "rms_level": 0.09013152122497559,
+      "has_clipping": false,
+      "silence_percentage": 44.230769230769226,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.15384615384616
+    },
+    {
+      "path": "throatmic_data/032_while_the_mainalo_is_densely_f.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.845458984375,
+      "rms_level": 0.0993955209851265,
+      "has_clipping": false,
+      "silence_percentage": 48.717948717948715,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.25641025641026
+    },
+    {
+      "path": "throatmic_data/035_all_tracks_written_and_compose.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.622802734375,
+      "rms_level": 0.07668130844831467,
+      "has_clipping": false,
+      "silence_percentage": 36.85897435897434,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.62820512820512
+    },
+    {
+      "path": "throatmic_data/179_taking_advantage_of_a_loophole.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.64947509765625,
+      "rms_level": 0.07487712800502777,
+      "has_clipping": false,
+      "silence_percentage": 39.10256410256409,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.17948717948718
+    },
+    {
+      "path": "throatmic_data/151_other_instructors_and_dive_sch.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.775390625,
+      "rms_level": 0.08594123274087906,
+      "has_clipping": false,
+      "silence_percentage": 31.08974358974358,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.78205128205128
+    },
+    {
+      "path": "throatmic_data/021_it_is_a_diastolic_murmur_which.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.98980712890625,
+      "rms_level": 0.12634886801242828,
+      "has_clipping": true,
+      "silence_percentage": 50.641025641025635,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 65.87179487179488
+    },
+    {
+      "path": "throatmic_data/146_although_privately_owned,_the_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99713134765625,
+      "rms_level": 0.12341294437646866,
+      "has_clipping": true,
+      "silence_percentage": 33.01282051282052,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 69.3974358974359
+    },
+    {
+      "path": "throatmic_data/143_textron_has_kept_both_the_beec.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99993896484375,
+      "rms_level": 0.08239561319351196,
+      "has_clipping": true,
+      "silence_percentage": 54.8076923076923,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 65.03846153846153
+    },
+    {
+      "path": "throatmic_data/124_augustus_was_raised_near_louis.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.838134765625,
+      "rms_level": 0.08971687406301498,
+      "has_clipping": false,
+      "silence_percentage": 23.397435897435884,
+      "issues": [],
+      "quality_score": 100
+    },
+    {
+      "path": "throatmic_data/048_researchers_have_put_this_lake.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99798583984375,
+      "rms_level": 0.08278867602348328,
+      "has_clipping": true,
+      "silence_percentage": 55.769230769230774,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 64.84615384615384
+    },
+    {
+      "path": "throatmic_data/153_the_tangram_is_a_popular_disse.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.917724609375,
+      "rms_level": 0.06651562452316284,
+      "has_clipping": false,
+      "silence_percentage": 34.93589743589741,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.01282051282051
+    },
+    {
+      "path": "throatmic_data/010_he_was_the_first_story-teller_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.68145751953125,
+      "rms_level": 0.07925816625356674,
+      "has_clipping": false,
+      "silence_percentage": 57.692307692307686,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 94.46153846153847
+    },
+    {
+      "path": "throatmic_data/163_one_aspect_of_this_is_the_lack.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.669281005859375,
+      "rms_level": 0.07140307873487473,
+      "has_clipping": false,
+      "silence_percentage": 60.256410256410255,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 93.94871794871796
+    },
+    {
+      "path": "throatmic_data/057_subsequently,_he_accused_his_a.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.692626953125,
+      "rms_level": 0.07647198438644409,
+      "has_clipping": false,
+      "silence_percentage": 39.1025641025641,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.17948717948718
+    },
+    {
+      "path": "throatmic_data/002_the_yeast_extract_will_typical.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.70550537109375,
+      "rms_level": 0.06429233402013779,
+      "has_clipping": false,
+      "silence_percentage": 50.32051282051282,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.93589743589743
+    },
+    {
+      "path": "throatmic_data/158_he_did,_though,_continue_to_ba.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.999420166015625,
+      "rms_level": 0.11247064173221588,
+      "has_clipping": true,
+      "silence_percentage": 46.47435897435897,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.7051282051282
+    },
+    {
+      "path": "throatmic_data/091_he_developed_a_hypothetical_ch.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.796173095703125,
+      "rms_level": 0.08886009454727173,
+      "has_clipping": false,
+      "silence_percentage": 45.512820512820504,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.8974358974359
+    },
+    {
+      "path": "throatmic_data/055_it_is_the_only_one_of_its_styl.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.49566650390625,
+      "rms_level": 0.054617177695035934,
+      "has_clipping": false,
+      "silence_percentage": 46.474358974358964,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.7051282051282
+    },
+    {
+      "path": "throatmic_data/128_there_are_a_total_of_seven_mil.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.987213134765625,
+      "rms_level": 0.0696433037519455,
+      "has_clipping": true,
+      "silence_percentage": 49.67948717948717,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.06410256410257
+    },
+    {
+      "path": "throatmic_data/112_botanical_names_have_also_been.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.99639892578125,
+      "rms_level": 0.09297756850719452,
+      "has_clipping": true,
+      "silence_percentage": 48.397435897435884,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 66.32051282051282
+    },
+    {
+      "path": "throatmic_data/090_vincent_gallo_directed_a_video.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.75177001953125,
+      "rms_level": 0.07717210054397583,
+      "has_clipping": false,
+      "silence_percentage": 49.03846153846153,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 96.1923076923077
+    },
+    {
+      "path": "throatmic_data/110_after_ten_years_he_opted_to_be.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.6717529296875,
+      "rms_level": 0.07358741760253906,
+      "has_clipping": false,
+      "silence_percentage": 35.57692307692306,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.88461538461539
+    },
+    {
+      "path": "throatmic_data/142_after_his_wife_amelia_betrayed.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.989227294921875,
+      "rms_level": 0.0872240886092186,
+      "has_clipping": true,
+      "silence_percentage": 30.12820512820512,
+      "issues": [
+        "Audio clipping detected",
+        "Excessive silence"
+      ],
+      "quality_score": 69.97435897435898
+    },
+    {
+      "path": "throatmic_data/051_he_was_commissioned_as_a_colon.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.66033935546875,
+      "rms_level": 0.0709405466914177,
+      "has_clipping": false,
+      "silence_percentage": 43.26923076923075,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 97.34615384615385
+    },
+    {
+      "path": "throatmic_data/079_other_officers_serving_on_roya.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.61285400390625,
+      "rms_level": 0.08235786110162735,
+      "has_clipping": false,
+      "silence_percentage": 34.29487179487179,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.14102564102564
+    },
+    {
+      "path": "throatmic_data/133_lebesgue_spaces_have_applicati.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.902191162109375,
+      "rms_level": 0.08162566274404526,
+      "has_clipping": false,
+      "silence_percentage": 37.5,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 98.5
+    },
+    {
+      "path": "throatmic_data/015_however,_the_duchies_were_not_.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.48260498046875,
+      "rms_level": 0.07205356657505035,
+      "has_clipping": false,
+      "silence_percentage": 50.64102564102563,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.87179487179488
+    },
+    {
+      "path": "throatmic_data/067_a_handicap-access_fishing_area.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.663726806640625,
+      "rms_level": 0.07438062131404877,
+      "has_clipping": false,
+      "silence_percentage": 33.33333333333332,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 99.33333333333334
+    },
+    {
+      "path": "throatmic_data/162_the_former_has_met_severe_crit.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.786773681640625,
+      "rms_level": 0.0877816304564476,
+      "has_clipping": false,
+      "silence_percentage": 54.166666666666664,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.16666666666667
+    },
+    {
+      "path": "throatmic_data/097_the_return_to_creditors_is_oft.wav",
+      "duration": 9.984,
+      "peak_amplitude": 0.735443115234375,
+      "rms_level": 0.08456971496343613,
+      "has_clipping": false,
+      "silence_percentage": 50.32051282051281,
+      "issues": [
+        "Excessive silence"
+      ],
+      "quality_score": 95.93589743589743
+    }
+  ]
+}
