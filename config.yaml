@@ -1,12 +1,12 @@
 # Audio recording settings
 audio:
-  sample_rate: 16000  # Hz
-  channels: 1         # Mono
-  chunk_size: 4096    # Buffer size for recording
-  format: 'wav'       # Audio file format
-  duration: 10.0      # Target recording duration in seconds
-  clipping_threshold: 0.95   # Maximum amplitude (0.0-1.0)
-  min_level_threshold: 0.1   # Minimum amplitude for valid recording
+  sample_rate: 16000
+  channels: 1
+  chunk_size: 4096
+  format: 'wav'
+  duration: 10.0
+  clipping_threshold: 0.95
+  min_level_threshold: 0.1
 
 # Dataset configuration
 dataset:
@@ -14,13 +14,30 @@ dataset:
   metadata_file: "data/metadata/metadata.csv"
   recordings_dir: "data/recordings"
   dataset_card: "DATASET_CARD.md"
-  min_words: 12       # Minimum words per sentence
-  max_words: 25       # Maximum words per sentence
-  min_duration: 8.0   # Minimum recording duration (seconds)
-  max_duration: 12.0  # Maximum recording duration (seconds)
+  min_words: 12
+  max_words: 25
+  min_duration: 8.0
+  max_duration: 12.0
+
+# Sentence filtering configuration
+sentence_filter:
+  min_chars: 60
+  max_chars: 200
+  min_words: 5
+  max_words: 30
+  max_entities: 3
+  max_persons: 2
+  max_locations: 1
+  max_organizations: 2
+  min_complexity_score: 2
+  min_total_complexity: 3
+  pos_ratios:
+    VERB: [0.1, 0.35]
+    NOUN: [0.2, 0.45]
+    ADJ: [0.05, 0.25]
 
 # Logging configuration
 logging:
-  level: "INFO"       # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: "INFO"
   format: "%(asctime)s - %(levelname)s - %(message)s"
   file: "data/throatmic.log"

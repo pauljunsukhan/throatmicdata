@@ -4497,3 +4497,561 @@ Sentence Complexity Coverage:
 2024-12-09 03:36:08,421 - INFO - Combined dataset will have 506 examples
 2024-12-09 03:36:20,170 - INFO - Successfully uploaded dataset!
 2024-12-09 03:36:37,505 - INFO - Starting recording session
+2024-12-14 23:49:20,042 - INFO - Starting recording session
+2024-12-14 23:49:29,540 - INFO - Starting recording session
+2024-12-14 23:53:45,827 - INFO - Starting recording session
+2024-12-15 07:36:48,100 - INFO - Sentence moved to trash: After hockey, Vadnais worked as a real estate agent in the Montreal area.
+2024-12-15 07:51:26,117 - INFO - Sentence moved to trash: Colwyn Trevarthen has researched the musicality of babies, including its use in communication.
+2024-12-15 07:51:29,440 - INFO - Sentence moved to trash: Espinosa began to write critiques of Cuban economic policy which he published overseas.
+2024-12-15 07:53:26,505 - INFO - Found 506 existing recordings
+2024-12-15 07:53:26,506 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-15 07:53:26,512 - INFO - Preparing dataset for upload
+2024-12-15 07:53:26,519 - INFO - Found 84 new recordings to upload
+2024-12-15 07:53:26,544 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-15 07:53:26,544 - INFO - Uploading dataset card...
+2024-12-15 07:53:27,216 - INFO - Dataset card uploaded successfully
+2024-12-15 07:53:29,480 - INFO - Found existing dataset with 506 examples
+2024-12-15 07:53:29,487 - INFO - Combined dataset will have 590 examples
+2024-12-15 07:53:40,743 - INFO - Starting recording session
+2024-12-15 07:53:46,387 - INFO - Successfully uploaded dataset!
+2024-12-15 07:57:22,715 - INFO - Found 590 existing recordings
+2024-12-15 07:57:22,715 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-15 07:57:22,723 - INFO - Preparing dataset for upload
+2024-12-15 07:57:22,733 - INFO - Found 14 new recordings to upload
+2024-12-15 07:57:22,752 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-15 07:57:22,752 - INFO - Uploading dataset card...
+2024-12-15 07:57:23,528 - INFO - Dataset card uploaded successfully
+2024-12-15 07:57:26,486 - INFO - Found existing dataset with 590 examples
+2024-12-15 07:57:26,493 - INFO - Combined dataset will have 604 examples
+2024-12-15 07:57:45,357 - INFO - Successfully uploaded dataset!
+2024-12-24 04:38:56,328 - INFO - Starting recording session
+2024-12-24 04:40:12,343 - INFO - Starting recording session
+2024-12-24 05:50:00,059 - ERROR - Unexpected error: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 330, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 177, in __init__
+    self.nlp = spacy.load("en_core_web_sm")
+  File "/Users/ipaul/Desktop/throatmicdata/.venv/lib/python3.9/site-packages/spacy/__init__.py", line 51, in load
+    return util.load_model(
+  File "/Users/ipaul/Desktop/throatmicdata/.venv/lib/python3.9/site-packages/spacy/util.py", line 472, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+2024-12-24 05:50:49,875 - ERROR - Unexpected error: 'Config' object has no attribute 'sentence_filter'
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 330, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 180, in __init__
+    self.config = Config.load().sentence_filter
+AttributeError: 'Config' object has no attribute 'sentence_filter'
+2024-12-24 05:52:34,151 - ERROR - Missing sentence_filter section in config
+2024-12-24 05:52:34,151 - ERROR - Unexpected error: Missing sentence_filter configuration
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 340, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 188, in __init__
+    raise ValueError("Missing sentence_filter configuration")
+ValueError: Missing sentence_filter configuration
+2024-12-24 05:53:25,525 - ERROR - Missing sentence_filter section in config.yaml
+2024-12-24 05:53:25,526 - ERROR - Available config sections: ['__annotations__', '__class__', '__dataclass_fields__', '__dataclass_params__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'audio', 'dataset', 'ensure_directories', 'load', 'logging', 'save']
+2024-12-24 05:53:25,526 - ERROR - Unexpected error: Missing sentence_filter configuration
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 345, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 194, in __init__
+    raise ValueError("Missing sentence_filter configuration")
+ValueError: Missing sentence_filter configuration
+2024-12-24 05:54:48,227 - ERROR - Missing sentence_filter section in config.yaml
+2024-12-24 05:54:48,227 - ERROR - Available config sections: ['__annotations__', '__class__', '__dataclass_fields__', '__dataclass_params__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'audio', 'dataset', 'ensure_directories', 'load', 'logging', 'save']
+2024-12-24 05:54:48,227 - ERROR - Unexpected error: Missing sentence_filter configuration
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 345, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 194, in __init__
+    raise ValueError("Missing sentence_filter configuration")
+ValueError: Missing sentence_filter configuration
+2024-12-24 05:56:34,065 - ERROR - Unexpected error: argument of type 'SentenceFilterConfig' is not iterable
+Traceback (most recent call last):
+  File "/Users/ipaul/Desktop/throatmicdata/record_audio.py", line 148, in main
+    recorder = ThroatMicRecorder()
+  File "/Users/ipaul/Desktop/throatmicdata/src/recorder.py", line 55, in __init__
+    self.repo = SentenceRepository(base_dir)
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 345, in __init__
+    self.sentence_filter = SentenceFilter()
+  File "/Users/ipaul/Desktop/throatmicdata/src/sentences.py", line 197, in __init__
+    if 'pos_ratios' in self.config:
+TypeError: argument of type 'SentenceFilterConfig' is not iterable
+2024-12-24 05:57:26,874 - INFO - Starting recording session
+2024-12-24 05:58:08,391 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 05:58:20,587 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt: 'ComplexityAnalyzer' object has no attribute 'nlp_sci'
+2024-12-24 05:58:21,653 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt: 'ComplexityAnalyzer' object has no attribute 'nlp_sci'
+2024-12-24 05:58:21,656 - INFO - Added 0 new sentences
+2024-12-24 05:59:54,241 - INFO - Starting recording session
+2024-12-24 06:00:09,894 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:00:13,332 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt: 'ComplexityAnalyzer' object has no attribute '_analyze_discourse'
+2024-12-24 06:00:13,642 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt: 'ComplexityAnalyzer' object has no attribute '_analyze_discourse'
+2024-12-24 06:00:13,644 - INFO - Added 0 new sentences
+2024-12-24 06:02:57,061 - INFO - Starting recording session
+2024-12-24 06:03:06,896 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:03:10,388 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt: 'SentenceFilterConfig' object is not subscriptable
+2024-12-24 06:03:10,718 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt: 'SentenceFilterConfig' object is not subscriptable
+2024-12-24 06:03:10,719 - INFO - Added 0 new sentences
+2024-12-24 06:06:21,354 - INFO - Starting recording session
+2024-12-24 06:07:01,847 - INFO - Starting recording session
+2024-12-24 06:07:13,024 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:07:16,581 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:16,758 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:16,799 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:16,814 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:16,880 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:16,933 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:16,963 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,000 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,012 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,087 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,115 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,136 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,151 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,176 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,190 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,288 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,443 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,455 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,467 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,482 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,508 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,525 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,564 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,576 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,588 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,712 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,766 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:17,779 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:17,875 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:18,485 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:18,501 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:18,761 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:18,795 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:18,882 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:18,909 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:18,920 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:18,932 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,000 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,052 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,089 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,178 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,192 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,208 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,234 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,263 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,277 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,306 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,380 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,392 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,459 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,542 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,603 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,822 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:19,941 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:19,967 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,038 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,050 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,061 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,390 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,402 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,429 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,443 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,652 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,662 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,674 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,781 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,834 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,860 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,874 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:20,888 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,927 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,955 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:20,967 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:21,103 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,115 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:21,155 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,165 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,289 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:21,420 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,435 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,504 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,529 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,771 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,825 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,839 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:21,863 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:22,009 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,130 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,140 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,265 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,318 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,444 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,458 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,534 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,629 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,639 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,666 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,854 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,869 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:22,881 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:22,953 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,002 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,016 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,139 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,357 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,411 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,422 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,432 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,445 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,650 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,663 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,673 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:23,726 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,751 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,764 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,774 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,821 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,835 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,850 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,879 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,926 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,940 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,952 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,963 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,973 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:23,986 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,000 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,027 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,039 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,052 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,066 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,080 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,157 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,237 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,367 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,381 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,426 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,617 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,754 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,834 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:24,910 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:24,925 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:25,075 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:25,087 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:25,521 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:25,601 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:25,750 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:25,763 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:25,891 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:25,905 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,003 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,229 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,284 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,340 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,396 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,471 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,492 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,547 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,558 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,626 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:26,687 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,710 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,749 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:26,788 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,000 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:27,012 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:27,101 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:27,351 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,613 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,626 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,640 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:27,738 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:27,792 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,833 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,862 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:27,917 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,129 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,153 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:28,165 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,191 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:28,279 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,414 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,444 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,532 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:28,765 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:28,838 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,214 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,303 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,426 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,562 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,575 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,590 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,605 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,620 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,633 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,775 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,801 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,813 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:29,839 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,865 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,878 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,902 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,915 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:29,926 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,092 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,104 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,163 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,179 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,220 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,232 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,271 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,282 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,296 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,376 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,396 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,408 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,442 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,454 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,549 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,561 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,585 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,627 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,641 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,731 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,757 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,821 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,887 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:30,930 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:30,985 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,016 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,043 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,065 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,081 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,136 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,190 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,216 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,258 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,347 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,365 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,441 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,511 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,525 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,572 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,598 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,712 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,740 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,754 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,782 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,807 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,823 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,918 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:31,945 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:31,984 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,030 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,186 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,248 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,322 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,399 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,435 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,459 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,705 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,734 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,777 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,824 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,836 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,901 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,941 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:32,955 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:32,990 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,066 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,081 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,106 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,145 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,173 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,201 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,229 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,306 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,348 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,388 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,538 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,562 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,641 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,664 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,691 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:33,733 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,785 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,861 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,873 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,887 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,938 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:33,953 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,062 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:34,112 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,206 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,312 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,326 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,542 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,632 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:34,662 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,859 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:34,866 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,880 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,906 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:34,917 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:35,181 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,272 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,312 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,437 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:35,501 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:35,557 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:35,647 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,756 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:35,768 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,783 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:35,882 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,108 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,180 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:36,243 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,255 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,395 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,456 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:36,498 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,510 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,525 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,590 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:36,662 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:36,671 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,687 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,713 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:36,849 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,110 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,205 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,219 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,356 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,425 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,510 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,528 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,571 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,669 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,702 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,776 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:37,819 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,844 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,857 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:37,952 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,964 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:37,978 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:37,993 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:38,256 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:38,268 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:38,289 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:38,313 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:38,381 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:07:38,393 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_gpes'
+2024-12-24 06:07:38,441 - WARNING - Error in _is_good_sentence: 'SentenceFilterConfig' object has no attribute 'max_orgs'
+2024-12-24 06:08:32,154 - INFO - Starting recording session
+2024-12-24 06:08:43,016 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:13:57,151 - INFO - Starting recording session
+2024-12-24 06:14:09,510 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:14:09,512 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:14:12,209 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:14:12,370 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt: 'SentenceRepository' object has no attribute 'config'
+2024-12-24 06:14:12,414 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt
+2024-12-24 06:14:12,769 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:14:12,781 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt: 'SentenceRepository' object has no attribute 'config'
+2024-12-24 06:14:12,783 - INFO - Added 0 new sentences
+2024-12-24 06:14:51,036 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:14:51,038 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:14:53,403 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:14:53,573 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt: 'SentenceRepository' object has no attribute 'config'
+2024-12-24 06:14:53,604 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt
+2024-12-24 06:14:53,779 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:14:53,786 - WARNING - Error downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt: 'SentenceRepository' object has no attribute 'config'
+2024-12-24 06:14:53,788 - INFO - Added 0 new sentences
+2024-12-24 06:15:02,274 - INFO - Starting recording session
+2024-12-24 06:15:11,872 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:15:11,873 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:15:14,269 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:15:14,754 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:15:14,754 - INFO - Stage 2: Full validation...
+2024-12-24 06:24:43,058 - INFO - Starting recording session
+2024-12-24 06:24:53,923 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:24:53,924 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:24:58,826 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:24:59,326 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:24:59,326 - INFO - Stage 2: Full validation...
+2024-12-24 06:26:33,269 - INFO - Starting recording session
+2024-12-24 06:26:41,537 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:26:41,538 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:26:44,840 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:26:45,309 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:26:45,309 - INFO - Stage 2: Full validation...
+2024-12-24 06:28:16,924 - INFO - Starting recording session
+2024-12-24 06:28:29,735 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:28:29,736 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:28:33,202 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:28:33,686 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:28:33,700 - INFO - Processing random sample of 1000 sentences
+2024-12-24 06:28:33,700 - INFO - Stage 2: Full validation...
+2024-12-24 06:28:37,489 - INFO - Quick validation passed: 0
+2024-12-24 06:28:37,489 - INFO - Full validation passed: 0
+2024-12-24 06:28:37,489 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt
+2024-12-24 06:28:37,819 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:28:37,848 - INFO - Found 10834 potential sentences after basic filtering
+2024-12-24 06:28:37,849 - INFO - Processing random sample of 1000 sentences
+2024-12-24 06:28:37,849 - INFO - Stage 2: Full validation...
+2024-12-24 06:28:41,293 - INFO - Quick validation passed: 0
+2024-12-24 06:28:41,293 - INFO - Full validation passed: 0
+2024-12-24 06:28:41,295 - INFO - Added 0 new sentences
+2024-12-24 06:29:29,532 - INFO - Starting recording session
+2024-12-24 06:29:38,676 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:29:38,677 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:29:42,063 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:29:42,560 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:29:42,574 - INFO - Processing random sample of 1000 sentences
+2024-12-24 06:29:42,574 - INFO - Stage 2: Full validation...
+2024-12-24 06:29:46,274 - INFO - Quick validation passed: 0
+2024-12-24 06:29:46,274 - INFO - Full validation passed: 0
+2024-12-24 06:29:46,274 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/sentence-collector.txt
+2024-12-24 06:29:46,480 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:29:46,506 - INFO - Found 10834 potential sentences after basic filtering
+2024-12-24 06:29:46,507 - INFO - Processing random sample of 1000 sentences
+2024-12-24 06:29:46,507 - INFO - Stage 2: Full validation...
+2024-12-24 06:29:49,917 - INFO - Quick validation passed: 0
+2024-12-24 06:29:49,917 - INFO - Full validation passed: 0
+2024-12-24 06:29:49,918 - INFO - Added 0 new sentences
+2024-12-24 06:33:49,027 - INFO - Starting recording session
+2024-12-24 06:33:57,524 - INFO - Downloading 100 Common Voice sentences...
+2024-12-24 06:33:57,526 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-24 06:34:01,733 - INFO - Stage 1: Quick filtering...
+2024-12-24 06:34:02,295 - INFO - Found 799742 potential sentences after basic filtering
+2024-12-24 06:34:02,308 - INFO - Processing random sample of 1000 sentences
+2024-12-24 06:34:02,308 - INFO - Stage 2: Full validation...
+2024-12-24 06:34:07,793 - INFO - Quick validation passed: 200
+2024-12-24 06:34:07,793 - INFO - Full validation passed: 200
+2024-12-24 06:34:07,795 - INFO - Added 100 new sentences

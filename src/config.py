@@ -38,46 +38,65 @@ class LoggingConfig:
     file: str = "data/throatmic.log"
 
 @dataclass
+class SentenceFilterConfig:
+    min_chars: int = 60
+    max_chars: int = 200
+    min_words: int = 5
+    max_words: int = 30
+    max_entities: int = 3
+    max_persons: int = 2
+    max_locations: int = 1
+    max_organizations: int = 2
+    min_complexity_score: int = 2
+    min_total_complexity: int = 3
+    pos_ratios: dict = None
+
+    def __post_init__(self):
+        if self.pos_ratios is None:
+            self.pos_ratios = {
+                'VERB': [0.1, 0.35],
+                'NOUN': [0.2, 0.45],
+                'ADJ': [0.05, 0.25]
+            }
+
+@dataclass
 class Config:
     """Global configuration."""
     audio: AudioConfig = AudioConfig()
     dataset: DatasetConfig = DatasetConfig()
     logging: LoggingConfig = LoggingConfig()
+    sentence_filter: SentenceFilterConfig = SentenceFilterConfig()
     
     def save(self, path: str = "config.yaml"):
         """Save configuration to YAML file."""
         with open(path, 'w') as f:
             yaml.dump(asdict(self), f)
     
-    @classmethod
-    def load(cls, path: str = "config.yaml") -> 'Config':
-        """Load configuration from YAML file.
+    @staticmethod
+    def load():
+        """Load configuration from YAML file."""
+        config_path = Path(__file__).parent.parent / "config.yaml"
         
-        If no config file exists, returns default configuration.
-        If environment variables are set, they override file settings.
-        """
-        config = cls()
-        
-        # Load from file if it exists
-        if os.path.exists(path):
-            with open(path, 'r') as f:
-                data = yaml.safe_load(f)
-                if data and isinstance(data, dict):
-                    if 'audio' in data:
-                        config.audio = AudioConfig(**data['audio'])
-                    if 'dataset' in data:
-                        config.dataset = DatasetConfig(**data['dataset'])
-                    if 'logging' in data:
-                        config.logging = LoggingConfig(**data['logging'])
-        
-        # Environment variables override file settings
-        if os.getenv('THROATMIC_REPO_ID'):
-            config.dataset.repo_id = os.getenv('THROATMIC_REPO_ID')
-        if os.getenv('THROATMIC_LOG_LEVEL'):
-            config.logging.level = os.getenv('THROATMIC_LOG_LEVEL')
-        if os.getenv('THROATMIC_SAMPLE_RATE'):
-            config.audio.sample_rate = int(os.getenv('THROATMIC_SAMPLE_RATE'))
-        
+        if not config_path.exists():
+            raise FileNotFoundError(f"Config file not found: {config_path}")
+            
+        with open(config_path) as f:
+            config_dict = yaml.safe_load(f)
+            
+        # Convert dictionaries to dataclass objects
+        if 'audio' in config_dict:
+            config_dict['audio'] = AudioConfig(**config_dict['audio'])
+        if 'dataset' in config_dict:
+            config_dict['dataset'] = DatasetConfig(**config_dict['dataset'])
+        if 'logging' in config_dict:
+            config_dict['logging'] = LoggingConfig(**config_dict['logging'])
+        if 'sentence_filter' in config_dict:
+            config_dict['sentence_filter'] = SentenceFilterConfig(**config_dict['sentence_filter'])
+            
+        config = Config()
+        for key, value in config_dict.items():
+            setattr(config, key, value)
+            
         return config
     
     def ensure_directories(self):

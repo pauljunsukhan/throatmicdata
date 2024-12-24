@@ -22,6 +22,7 @@ source .venv/bin/activate    # Linux/Mac
 .venv\Scripts\activate      # Windows
 
 uv pip install -r requirements.txt
+uv pip install "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl"
 ```
 
 2. **Configure Settings**
@@ -150,10 +151,10 @@ Options:
 python record_audio.py --analyze --quality
 ```
 Checks recordings for:
-- Duration within limits
-- Proper amplitude levels
-- Silence ratio
-- Signal-to-noise ratio
+- Duration within limits (8-12 seconds)
+- Proper amplitude levels (-50dB to 0dB)
+- Silence ratio (<30%)
+- Signal-to-noise ratio (>10dB)
 
 ### Coverage Analysis
 ```bash
@@ -165,9 +166,58 @@ Shows dataset statistics:
 - Sentence complexity metrics
 - Recording duration stats
 
-## 📝 License
+## 📝 Sentence Selection Pipeline
 
-MIT License - feel free to use and modify as needed!
+### Stage 1: Quick Text Filtering
+- Capitalization check (must start with capital letter)
+- Punctuation check (must end with ., !, or ?)
+- Character length (20-150 chars)
+- Basic formatting validation
+
+### Stage 2: spaCy-based Quick Validation
+- Word count (5-25 words)
+- Named Entity limits (using spaCy's NER):
+  - Max 2 persons (PERSON)
+  - Max 2 locations (GPE)
+  - Max 2 organizations (ORG)
+  - Max 3 total entities
+- Basic complexity check (using spaCy's dependency parser):
+  - Must have either:
+    - Coordinating conjunction (dep_ == 'cc')
+    - Subordinating clause marker (dep_ == 'mark')
+
+### Stage 3: Full Complexity Analysis
+- Uses spaCy's medium English model (en_core_web_md)
+- Minimum complexity score of 2
+- Minimum total complexity score of 3
+- Part-of-speech ratio requirements:
+  - NOUN: 20% of content words
+  - VERB: 15% of content words
+  - ADJ: 10% of content words
+
+### Example Sentences
+✅ Good Examples:
+- "Although the harmonic series does diverge, it does so very slowly."
+  - Has subordinate clause marker (dep_ == 'mark')
+  - Good POS distribution
+  - Natural scientific language
+
+- "Nick confesses everything to his mother, who tells him that he can't 'control everything'."
+  - Has relative clause
+  - Multiple clauses
+  - Good entity balance (one PERSON)
+
+❌ Rejected Examples:
+- Too simple: "Bronze tools were sharper and harder than those made of stone."
+- Too many entities: "Emperor Akbar granted them mansabs and their ancestral domains were treated as jagirs."
+- Unnatural language: "They look through garbage and human waste on the outskirts of human cities."
+
+### Sentence Sources
+1. Common Voice Wikipedia Extracts
+2. Common Voice Community Contributions
+3. Custom user-added sentences
+
+Each source goes through the same validation pipeline to ensure consistent quality and usability for throat mic recording.
 
 ## 📋 Sentence Criteria
 
@@ -209,18 +259,6 @@ Each sentence should have at least two of these elements:
    - No run-on sentences
    - Clear subject-verb relationships
 
-### Examples
-
-✅ Good Examples:
-- "Although the morning was cloudy, the afternoon brought unexpected sunshine that lifted everyone's spirits."
-- "When the team finished their project early, they decided to celebrate with a dinner at their favorite restaurant."
-- "The old library, which had served the community for decades, needed extensive renovations to preserve its historic charm."
-
-❌ Poor Examples:
-- "THE QUICK BROWN FOX jumped over 123 lazy dogs!!!" (formatting issues)
-- "Cat sat mat." (too simple, no complexity)
-- "The person went to the store and bought some things and then went home and made dinner and then watched TV." (run-on sentence)
-
 ### Quality Thresholds
 
 Audio recordings must meet these criteria:
@@ -228,3 +266,18 @@ Audio recordings must meet these criteria:
 - Audio levels: -50dB to 0dB
 - Silence ratio: <30% of recording
 - Signal-to-noise ratio: >10dB
+
+## 🛠️ Technical Details
+
+- Uses spaCy's medium English model (en_core_web_md) for linguistic analysis
+- Multi-stage sentence validation pipeline:
+  1. Quick text filtering (regex/string operations)
+  2. Entity and complexity validation (spaCy)
+  3. Full linguistic analysis (spaCy)
+- Efficient batch processing with random sampling
+- Comprehensive audio quality checks
+- Automated metadata generation for Hugging Face datasets
+
+## 📝 License
+
+MIT License - feel free to use and modify as needed!
