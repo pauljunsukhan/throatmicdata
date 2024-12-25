@@ -27,12 +27,26 @@ dataset_info:
 
 # Throat Microphone Dataset
 
+🤗 **Hugging Face**: [pauljunsukhan/throatmic_codered](https://huggingface.co/datasets/pauljunsukhan/throatmic_codered)  
+📦 **GitHub**: [pauljunsukhan/throatmicdata](https://github.com/pauljunsukhan/throatmicdata)
+
+🚀 **Fine-tuned Model**:
+- 🤗 [pauljunsukhan/throatmic_subvocalization_whisper](https://huggingface.co/pauljunsukhan/throatmic_subvocalization_whisper)
+- 📦 [pauljunsukhan/whisper_finetuning](https://github.com/pauljunsukhan/whisper_finetuning)
+
 ## Dataset Description
 
-- **Homepage:** [GitHub Repository](https://github.com/pauljunsukhan/throatmic_codered)
+- **Homepage:** [GitHub Repository](https://github.com/pauljunsukhan/throatmicdata)
 - **Repository:** [Hugging Face Repository](https://huggingface.co/datasets/pauljunsukhan/throatmic_codered)
 - **Paper:** N/A
 - **Point of Contact:** Paul Han
+
+### Hardware Setup
+
+- **Throat Microphone**: [CodeRed Assault MOD Tactical Throat Mic Headset](https://coderedheadsets.com/assault-mod-tactical-throat-mic-headset/)
+  - Uses standard 3.5mm audio jack
+  - Direct connection to MacBook Air's 3.5mm port
+  - Note: Many USB-C to 3.5mm microphone adapters are not compatible with throat microphones
 
 ### Dataset Summary
 

@@ -1,5 +1,18 @@
 # 🎙 Throat Microphone Recording Tool
 
+🤗 **Hugging Face Dataset**: [pauljunsukhan/throatmic_codered](https://huggingface.co/datasets/pauljunsukhan/throatmic_codered)  
+📦 **GitHub Repository**: [pauljunsukhan/throatmicdata](https://github.com/pauljunsukhan/throatmicdata)
+
+🚀 **Fine-tuned Whisper Model**:
+- 🤗 **Model**: [pauljunsukhan/throatmic_subvocalization_whisper](https://huggingface.co/pauljunsukhan/throatmic_subvocalization_whisper)
+- 📦 **Training Code**: [pauljunsukhan/whisper_finetuning](https://github.com/pauljunsukhan/whisper_finetuning)
+
+🎧 **Hardware Used**:
+- **Throat Microphone**: [CodeRed Assault MOD Tactical Throat Mic Headset](https://coderedheadsets.com/assault-mod-tactical-throat-mic-headset/)
+  - Uses standard 3.5mm audio jack
+  - Tested with MacBook Air's built-in 3.5mm port
+  - ⚠️ Warning: Many USB-C to 3.5mm microphone adapters do not work with throat microphones
+
 Create high-quality whisper fine-tuning datasets using a throat microphone! This tool helps you build clean, organized datasets by recording sentences from Common Voice or your own custom prompts.
 
 ## ✨ Features
