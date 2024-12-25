@@ -256,6 +256,8 @@ python cleanup_dataset.py
 - 🔄 Replace deleted recordings with new ones
 - 📊 Automatic metadata management
 - 🔢 Smart file renumbering (supports both 3-digit and 5-digit formats)
+- 🔍 Validate dataset metadata consistency
+- 🧹 Clean up orphaned recordings, convert British spellings to American, & list duplicates
 
 ### Usage
 
@@ -276,11 +278,23 @@ python cleanup_dataset.py
    - Dataset duration
    - Recent changes
 
+4. **Validate Dataset**
+   - Check for gaps in numeric sequence
+   - Verify all audio files exist
+   - Ensure metadata text entries are in used_sentences.json
+   - Automatically fix missing used_sentences entries
+
+5. **Cleanup Operations**
+   - Remove orphaned recordings (WAV files without metadata)
+   - Identify duplicate text entries in metadata
+   - Convert British to American spellings
+
 The tool maintains dataset integrity by:
 - Preserving sequential file numbering
 - Updating metadata automatically
 - Moving replacement recordings to correct positions
 - Handling both 3-digit and 5-digit filename formats
+- Ensuring consistency between metadata.csv and JSON files
 
 ## 🔍 Analysis Features
 
