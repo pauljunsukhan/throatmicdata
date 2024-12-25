@@ -4,7 +4,9 @@ audio:
   channels: 1
   chunk_size: 4096
   format: 'wav'
-  duration: 10.0
+  buffer_ratio: 1.2  # 20% extra time for slower readers
+  min_duration: 6.0
+  max_duration: 30.0  # Updated from 15.0 to 30.0
   clipping_threshold: 0.95
   min_level_threshold: 0.1
 
@@ -14,27 +16,43 @@ dataset:
   metadata_file: "data/metadata/metadata.csv"
   recordings_dir: "data/recordings"
   dataset_card: "DATASET_CARD.md"
-  min_words: 12
-  max_words: 25
-  min_duration: 8.0
-  max_duration: 12.0
 
 # Sentence filtering configuration
 sentence_filter:
-  min_chars: 60
-  max_chars: 200
-  min_words: 5
-  max_words: 30
-  max_entities: 3
-  max_persons: 2
-  max_locations: 1
-  max_organizations: 2
-  min_complexity_score: 2
-  min_total_complexity: 3
+  # Basic Length Constraints
+  min_chars: 40        # Lower minimum to allow good short sentences
+  max_chars: 250       # Higher maximum for natural variation
+  min_words: 5         # Lower minimum for natural short sentences
+  max_words: 35        # Higher maximum for natural long sentences
+  
+  # Entity Limits - increased for natural speech patterns
+  max_entities: 5        # Allow more named entities total
+  max_persons: 3         # Common to reference multiple people
+  max_locations: 2       # Often compare/contrast locations
+  max_organizations: 3   # Organizations often mentioned together
+  
+  # Complexity Requirements (keep these!)
+  min_complexity_score: 2     # Ensures some structural complexity
+  min_total_complexity: 3     # Ensures overall sentence quality
+  
+  # POS Ratios - widened for natural variation
   pos_ratios:
-    VERB: [0.1, 0.35]
-    NOUN: [0.2, 0.45]
-    ADJ: [0.05, 0.25]
+    VERB: [0.05, 0.45]   # Allow more action-heavy sentences
+    NOUN: [0.10, 0.60]   # Allow more descriptive/technical content
+    ADJ: [0.00, 0.35]    # Some sentences naturally use few adjectives
+  
+  # Structural Complexity (wider ranges)
+  complexity_ranges:
+    clause_count: [1, 5]      # Wider range - more natural variation
+    word_length: [2, 15]      # Wider range - more vocabulary
+    tree_depth: [2, 6]        # Wider range - more structure types
+  
+  # Add timing configuration
+  timing:
+    syllable_duration: 0.25    # Duration per syllable in seconds
+    word_boundary_pause: 0.05  # Pause between words in seconds
+    long_word_penalty: 0.1     # Extra time for words > 6 chars
+    comprehension_buffer: 1.2  # Overall timing multiplier
 
 # Logging configuration
 logging:

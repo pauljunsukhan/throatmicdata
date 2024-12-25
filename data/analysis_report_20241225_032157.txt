@@ -1,0 +1,3022 @@
+Dataset Analysis Report
+Generated: 2024-12-25 03:21:57
+
+Quality Analysis:
+Total Recordings: 731
+Total Duration: 121.1 minutes
+Recordings with Issues: 731 (100.0%)
+
+Duration Statistics:
+  Mean: 9.9s
+  Median: 10.0s
+  Range: 5.9s - 11.0s
+  Std Dev: 0.4s
+
+Duration Distribution:
+  <6s:    1 recordings (0.1%)
+  6-8s:   8 recordings (1.1%)
+  8-10s:  719 recordings (98.4%)
+  10-12s: 3 recordings (0.4%)
+  12-15s: 0 recordings (0.0%)
+  >15s:   0 recordings (0.0%)
+
+Coverage Analysis:
+Vocabulary:
+  Total Words: 9425
+  Unique Words: 3657
+  Vocabulary Density: 0.39
+
+Top 20 Most Frequent Words:
+  the: 597
+  and: 357
+  of: 246
+  a: 200
+  in: 193
+  was: 175
+  to: 159
+  is: 129
+  for: 103
+  as: 95
+  are: 90
+  he: 85
+  it: 71
+  by: 70
+  his: 60
+  with: 58
+  on: 55
+  that: 53
+  also: 45
+  this: 42
+
+Sentence Structure:
+  Average Length: 13.0 words
+  Length Range: 9 - 18 words
+  Unique Patterns: 731
+
+Part of Speech Distribution:
+  ADJ: 862 (9.1%)
+  ADP: 1078 (11.4%)
+  ADV: 404 (4.3%)
+  AUX: 603 (6.4%)
+  CCONJ: 426 (4.5%)
+  DET: 932 (9.8%)
+  NOUN: 2132 (22.5%)
+  NUM: 95 (1.0%)
+  PART: 156 (1.6%)
+  PRON: 491 (5.2%)
+  PROPN: 1151 (12.1%)
+  SCONJ: 117 (1.2%)
+  VERB: 1042 (11.0%)
+
+Sentence Complexity:
+Average Complexity Score: 8.0
+
+Complexity Distribution:
+  Simple: 0 sentences
+  Moderate: 47 sentences
+  Complex: 437 sentences
+  Very Complex: 247 sentences
+
+Syntactic Features:
+  Average Tree Depth: 5.5
+  Subordinate Clauses: 9.6%
+  Relative Clauses: 9.6%
+  Adverbial Clauses: 14.5%
+
+Vocabulary Features:
+  Average Rare Words: 1.6
+  Average Technical Terms: 2.4
+  Average Abstract Concepts: 1.4
+  Average Word Length: 6.8
+
+Logical Features:
+  Causal Relations: 2.6%
+  Comparisons: 0.0%
+  Conditionals: 0.7%
+
+Quality Issues:
+001_the_tourists_now_start_a_three.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+002_the_yeast_extract_will_typical.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+003_the_absence_of_the_auditory_os.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+004_he_was_cremated_at_kensal_gree.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+005_most_candidates_for_heartlung.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+006_the_networks_decision_was_cri.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+007_the_original_station_was_the_u.wav:
+  - Recording too quiet (mean -29.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+008_when_this_is_diagonalized_the.wav:
+  - Recording too quiet (mean -28.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+009_there_are_three_colour_combina.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+010_he_was_the_first_storyteller_.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+011_but_william_he_said_they_.wav:
+  - Recording too quiet (mean -37.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+012_cypherpunks_also_participated.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+013_in_blood_of_olympus_he_decides.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+014_in_many_myths_the_word_is_use.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+015_however_the_duchies_were_not_.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+016_most_of_the_cargo_which_inclu.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+017_the_propeller_was_found_in_bus.wav:
+  - Recording too quiet (mean -36.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+018_test_item_writers_are_instruct.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+019_this_is_where_the_canine_breed.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+020_it_is_part_of_the_hattiesburg.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+021_it_is_a_diastolic_murmur_which.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+022_joss_whedons_feature_film_se.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+023_for_example_the_current_rank_.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+024_the_badge_depicts_a_windmill_t.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+025_it_is_host_to_the_archdiocese.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+026_during_the_same_year_he_was_na.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+027_the_college_had_its_fourth_pri.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+028_the_next_day_hubbell_and_his_.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+029_an_interactive_play_fountain_i.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+030_originally_from_lancashire_hi.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+031_maudslay_published_the_first_l.wav:
+  - Recording too quiet (mean -27.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+032_while_the_mainalo_is_densely_f.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+033_spade_has_its_own_water_system.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+034_ramsey_is_coauthor_of_teachin.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+035_all_tracks_written_and_compose.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+036_repeated_integration_by_parts_.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+037_its_mantle_tail_and_upperwing.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+038_cobbett_also_closely_observed_.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+039_these_have_been_dynamic_open_t.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+040_various_sampradayas_emerged_fr.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+041_the_basics_of_mining_engineeri.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+042_the_symbol_of_the_weizmann_ins.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+043_above_the_helmet_and_the_coron.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+044_at_that_time_the_junior_and_se.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+045_they_would_be_hired_by_preside.wav:
+  - Recording too quiet (mean -34.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+046_the_city_provided_a_plaque_wit.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+047_the_recommended_dosage_was_sev.wav:
+  - Recording too quiet (mean -35.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+048_researchers_have_put_this_lake.wav:
+  - Recording too quiet (mean -36.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+049_this_is_an_endurance_style_eve.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+050_one_was_credited_to_john_ross_.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+051_he_was_commissioned_as_a_colon.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+052_this_incorporates_a_sculpture_.wav:
+  - Recording too quiet (mean -36.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+053_examples_are_in_buckingham_pal.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+054_some_accounts_say_one_of_the_s.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+055_it_is_the_only_one_of_its_styl.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+056_marsh_was_also_present_at_the_.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+057_subsequently_he_accused_his_a.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+058_this_was_a_government_sponsore.wav:
+  - Recording too quiet (mean -34.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+059_thus_many_deepsea_species_gr.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+060_translink_ticketing_applies_to.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+061_after_completing_graduate_stud.wav:
+  - Recording too quiet (mean -29.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+062_boot_robopon_could_not_have_th.wav:
+  - Recording too quiet (mean -37.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+063_a_number_of_rich_families_comm.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+064_there_has_been_substantial_inc.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+065_carrickmore_has_the_smallest_t.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+066_for_his_diverse_and_distinguis.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+067_a_handicapaccess_fishing_area.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+068_major_general_william_h_c_wh.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+069_primary_neutrophilia_can_addit.wav:
+  - Recording too quiet (mean -27.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+070_it_has_provided_me_with_unbeli.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+071_in_general_french_frigates_we.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+072_the_park_offers_cave_tours_thu.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+073_the_wifi_utility_could_be_used.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+074_nadroga_is_famous_for_its_suns.wav:
+  - Recording too quiet (mean -34.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+075_the_school_is_home_to_a_number.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+076_the_team_retains_the_right_to_.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+077_over_the_following_centuries_.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+078_the_following_day_the_system_.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+079_other_officers_serving_on_roya.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+080_the_younger_man_developed_the_.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+081_he_was_quoted_celebrating_the_.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+082_the_cost_of_such_hazardous_mat.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+083_notable_examples_are_the_sound.wav:
+  - Recording too quiet (mean -37.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+084_the_contemporary_turners_comp.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+085_each_had_roughly_an_equal_amou.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+086_the_pnakotic_manuscripts_are_n.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+087_the_third_dates_the_mound_back.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+088_nonthermal_effects_in_solids_.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+089_many_french_soldiers_as_well_.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+090_vincent_gallo_directed_a_video.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+091_he_developed_a_hypothetical_ch.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+092_in_addition_there_is_a_notable.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+093_nevertheless_many_of_these_cl.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+094_currently_it_can_generate_dots.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+095_during_his_first_three_champio.wav:
+  - Recording too quiet (mean -37.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+096_putnam_also_has_a_risk_parity_.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+097_the_return_to_creditors_is_oft.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+098_the_word_sabellic_was_once_a.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+099_he_has_coauthored_a_trilogy_i.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+100_such_players_must_sit_out_the_.wav:
+  - Recording too quiet (mean -36.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+101_when_supergirl_moved_to_new_kr.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+102_they_speak_of_a_single_wise_.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+103_simply_making_a_false_promise_.wav:
+  - Recording too quiet (mean -34.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+104_a_few_to_many_stamens_and_pist.wav:
+  - Recording too quiet (mean -36.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+105_harris_has_appeared_in_the_fea.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+106_with_the_population_growing_fa.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+107_the_rebbe_himself_does_not_vot.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+108_media_watch_criticized_that_th.wav:
+  - Recording too quiet (mean -36.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+109_when_the_object_took_off_witn.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+110_after_ten_years_he_opted_to_be.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+111_once_outsideofthewalls_the.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+112_botanical_names_have_also_been.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+113_kerner_was_particularly_active.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+114_the_identities_of_the_last_spe.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+115_extended_coastal_prairies_supp.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+116_and_i_refuse_to_be_brazils_sm.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+117_taillights_also_changed_to_a_n.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+118_this_wooded_mound_is_surrounde.wav:
+  - Recording too quiet (mean -36.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+119_golden_eagles_and_hen_harriers.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+120_in_these_cases_the_programme_c.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+121_its_member_of_parliament_is_ma.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+122_the_interior_floor_is_relative.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+123_they_ultimately_had_seventeen_.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+124_augustus_was_raised_near_louis.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+125_reproductions_were_later_made.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+126_their_original_jerseys_were_co.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+127_wakefield_was_named_after_the_.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+128_there_are_a_total_of_seven_mil.wav:
+  - Recording too quiet (mean -38.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+129_here_piggy_plays_a_steamboat_.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+130_he_got_an_admission_to_the_chi.wav:
+  - Recording too quiet (mean -36.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+131_the_significance_of_this_secti.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+132_the_result_was_to_make_them_in.wav:
+  - Recording too quiet (mean -37.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+133_lebesgue_spaces_have_applicati.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+134_in_this_way_failure_of_one_mo.wav:
+  - Recording too quiet (mean -35.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+135_the_ada_mills_bridge_links_the.wav:
+  - Recording too quiet (mean -33.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+136_his_family_moved_to_flatbush_.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+137_with_relative_peace_in_angola_.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+138_the_film_has_been_disowned_by_.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+139_this_time_he_had_the_endorseme.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+140_roberts_also_played_for_bay_of.wav:
+  - Recording too quiet (mean -36.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+141_its_main_arch_was_once_a_cover.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+142_after_his_wife_amelia_betrayed.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+143_textron_has_kept_both_the_beec.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+144_he_started_by_cutting_the_gras.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+145_the_sine_bar_is_placed_over_th.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+146_although_privately_owned_the_.wav:
+  - Recording too quiet (mean -29.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+147_he_was_the_first_underclassman.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+148_natural_harbours_are_formed_by.wav:
+  - Recording too quiet (mean -34.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+149_although_separate_organization.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+150_many_early_united_states_settl.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+151_other_instructors_and_dive_sch.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+152_eighteen_people_died_and_more.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+153_the_tangram_is_a_popular_disse.wav:
+  - Recording too quiet (mean -37.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+154_in_six_games_with_oklahoma_cit.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+155_mineral_ascorbates_are_used_as.wav:
+  - Recording too quiet (mean -36.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+156_the_station_building_still_sta.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+157_their_songs_are_often_rich_in_.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+158_he_did_though_continue_to_ba.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+159_julian_believes_the_importance.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+160_one_should_not_wonder_that_eve.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+161_there_are_two_of_the_most_impo.wav:
+  - Recording too quiet (mean -34.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+162_the_former_has_met_severe_crit.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+163_one_aspect_of_this_is_the_lack.wav:
+  - Recording too quiet (mean -34.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+164_he_narrowly_missed_reelection.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+165_however_some_observed_phenomen.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+166_frank_attended_rose_park_prima.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+167_additional_forensic_analysis_o.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+168_robertson_then_trained_for_a_f.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+169_having_said_this_he_rushed_tow.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+170_no_green_party_members_have_si.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+171_the_saying_inspired_a_song_and.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+172_there_are_four_binary_digits_.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+173_the_park_is_part_of_the_intern.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+174_they_built_the_first_establish.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+175_this_complex_mimics_one_turn_o.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+176_kawakami_was_married_to_tamiko.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+177_the_flag_as_another_symbol_pla.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+178_advocates_of_praxeology_also_s.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+179_taking_advantage_of_a_loophole.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+180_roys_history_is_altered_incl.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+181_however,_there_are_articles_on.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+182_the_duty_to_warn_only_arises_w.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+183_both_waxed_and_bare_cartridges.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+184_calheta_is_located_west_of_san.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+185_in_basketball,_he_won_all-sier.wav:
+  - Recording too quiet (mean -29.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+186_for_toland,_reason_and_toleran.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+187_after_success_in_television_an.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+188_it_comprises_the_traffic_manag.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+189_westerners_defected_to_the_eas.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+190_in_australia,_disney_released_.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+191_it_is_hard_to_think_of_any_col.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+192_these_are_replaced_by_other_fe.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+193_there_are_now_more_parks,_path.wav:
+  - Recording too quiet (mean -35.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+194_after_thirteen_years,_the_firs.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+195_this_area_is_dominated_by_stee.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+196_most_of_the_skaters_were_russi.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+197_these_newscasts_are_produced_a.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+198_most_greywater_should_be_assum.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+199_they_encounter_only_one_surviv.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+200_lipid_profiling_techniques_hav.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+201_since_that_time_many_more_comp.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+202_there_is_less_support_in_breme.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+203_the_name_change_was_driven_by_.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+204_this_definitive_form_has_a_wid.wav:
+  - Recording too quiet (mean -35.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+205_a_bar_or_tavern_is_an_"on_sale.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+206_they_can_set_the_due_date,_pri.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+207_similarly,_the_growth_of_onlin.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+208_it_was_co-written_by_alex_farr.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+209_when_a_high-power_appliance_sw.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+210_the_couple_were_poorly_matched.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+211_in_art,_it_is_traditionally_re.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+212_the_original_station_was_renam.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+213_since_then,_technopark_has_bee.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+214_another_dye_that_is_used_to_id.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+215_his_interests_also_include_nea.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+216_public_buildings_including_tow.wav:
+  - Recording too quiet (mean -29.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+217_it_was_also_the_platform_on_wh.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+218_these_games_included_"simplex".wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+219_this_allowed_him_to_specialize.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+220_their_true_strength_is_in_thei.wav:
+  - Recording too quiet (mean -36.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+221_the_use_of_the_term_"corollary.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+222_the_south_circular_has_been_cr.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+223_he_wasn't_hit,_but_was_given_a.wav:
+  - Recording too quiet (mean -37.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+224_throughout_the_redevelopment,_.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+225_alejandro_sanz_was_honored_wit.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+226_the_population_has_shown_negat.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+227_the_stations_were_owned_and_op.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+228_they_are_leased_to_navajo_indi.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+229_in_addition,_haswell-smith_rec.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+230_four_organizations_that_repres.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+231_the_high_command_was_not_a_gov.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+232_it_is_omnivorous_however,_supp.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+233_in_ukraine_and_russia,_people_.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+234_its_six_panel_door_has_a_mould.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+235_he_decides_to_reboot_the_compu.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+236_after_borges's_death,_kodama_r.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+237_contributors_included_alex_rob.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+238_for_accuracy,_it_is_important_.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+239_the_next_morning,_hyder_and_ri.wav:
+  - Recording too quiet (mean -37.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+240_on_his_death_the_titles_passed.wav:
+  - Recording too quiet (mean -36.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+241_in_his_career,_he_has_recorded.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+242_at_this_time,_the_road_was_und.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+243_her_unborn_child,_a_girl,_was_.wav:
+  - Recording too quiet (mean -36.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+244_risks_and_threats_of_outsourci.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+245_you_may_be_able_to_recover_the.wav:
+  - Recording too quiet (mean -36.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+246_invisible_on_the_surface,_it_i.wav:
+  - Recording too quiet (mean -37.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+247_they'd_probably_vote_landlocke.wav:
+  - Recording too quiet (mean -37.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+248_there_is_a_cellphone-use_free_.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+249_it_is_classified_as_a_c-type_a.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+250_the_album_was_also_licensed_to.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+251_they_are_plunge-divers_that_fe.wav:
+  - Recording too quiet (mean -36.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+252_a_significant_number_of_foreig.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+253_the_shudra,_states_marvin_davi.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+254_however,_yefremov_decided_to_t.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+255_additional_credit_hours_may_be.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+256_during_the_daytime,_japanese_p.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+257_norfolk_has_won_the_minor_coun.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+258_he_was_subsequently_selected_a.wav:
+  - Recording too quiet (mean -36.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+259_devastated,_he_attempts_to_exp.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+260_most_are_named_after_figures_f.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+261_players_control_one_character_.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+262_after_the_civil_war,_he_was_na.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+263_the_air_masses_separated_by_a_.wav:
+  - Recording too quiet (mean -36.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+264_incidentally,_chikushi_is_know.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+265_in_other_cases,_a_small,_upper.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+266_i_was_wired_for_sound_and_upon.wav:
+  - Recording too quiet (mean -28.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+267_rosas_was_elected_governor_of_.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+268_after_sending_a_packet,_it_exp.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+269_energy_is_measured_in_joules,_.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+270_during_the_composer's_life,_it.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+271_the_structure_was_erected_in_t.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+272_the_original_music_for_the_fil.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+273_kitamoto_has_eight_elementary_.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+274_boris_sidis_eventually_opposed.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+275_however,_it_is_presumed_that_t.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+276_the_all-caps_rendering_is_typi.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+277_within_major_archiepiscopal_ch.wav:
+  - Recording too quiet (mean -27.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+278_this_earth_is_referred_to_as_o.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+279_he_acknowledges_that_this_excl.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+280_the_penteli_mountains_that_are.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+281_along_with_most_british_transp.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+282_sir_robert_vivian,_illegitimat.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+283_he_decides_to_put_his_philosop.wav:
+  - Recording too quiet (mean -36.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+284_parts_of_jamestown_are_located.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+285_it_established_structural_raci.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+286_with_certain_types_of_cord,_th.wav:
+  - Recording too quiet (mean -36.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+287_he_has_two_children_with_clayb.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+288_radburn_residents_vote_for_a_b.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+289_he_started_all_four_games_as_a.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+290_the_story_takes_place_in_the_h.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+291_while_he_was_serving_on_the_"s.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+292_he_then_joined_the_civil_servi.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+293_in_other_words,_nice_guys_want.wav:
+  - Recording too quiet (mean -35.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+294_clymer_was_a_member_of_the_hie.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+295_previously,_it_was_known_as_"l.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+296_candice_bergen_and_faith_ford_.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+297_despite_being_a_"fantasy_quest.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+298_the_neolithic_period_marked_th.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+299_ashanti_sings_"take_me_to_love.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+300_none_of_the_adjacent_structure.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+301_born_in_sussex,_he_attended_br.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+302_it_was_very_popular_with_class.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+303_theyanoguin_was_born_to_a_moha.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+304_accordingly,_most_modern_maras.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+305_initially_the_park_was_very_fa.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+306_korgoth_is_last_seen_walking_a.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+307_in_addition_to_group_stage_and.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+308_his_romantic_feelings_for_her_.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+309_where_locomotives_were_upgrade.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+310_sexual_medicine_interested_him.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+311_the_only_serum_that_could_stop.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+312_the_station_has_a_centre_platf.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+313_after_the_war,_the_department_.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+314_other_leaders_include_hadi_ali.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+315_he_founded_the_personal_tech_s.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+316_the_mermaids_are_amazed_that_t.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+317_after_finishing_school,_orman_.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+318_devos_has_also_supported_the_c.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+319_it_had_a_cabin_in_the_fuselage.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+320_no_mention_was_made_of_the_sav.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+321_harris_was_an_assistant_coach_.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+322_if_the_engine_on_a_single-engi.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+323_she_returned_to_the_brooklyn_n.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+324_other_asynchronous_latches_pro.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+325_the_falklands_were_then_settle.wav:
+  - Recording too quiet (mean -30.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+326_there_are_also_a_large_number_.wav:
+  - Recording too quiet (mean -27.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+327_grimlock_is_not_pleased,_and_i.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+328_summers_are_warm_and_dry_while.wav:
+  - Recording too quiet (mean -36.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+329_while_brownies_are_more_peacef.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+330_in_addition,_it_provides_an_im.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+331_yet_other_terms_include_"prema.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+332_the_weather_was_poor,_with_rai.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+333_it_was_the_first_english_cookb.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+334_jack_also_got_masters_of_jimmy.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+335_the_system_came_to_be_known_as.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+336_while_her_father_was_born_in_j.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+337_he_steered_an_even_course_betw.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+338_while_matthew_continues_to_sol.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+339_it_is_a_nocturnal_solitary_ani.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+340_however,_chiang_did_release_tw.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+341_of_the_two_brothers,_thomas_ro.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+342_it's_a_style_that_most_black_m.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+343_later,_shipbuilding_and_box_ma.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+344_grace_is_described_by_the_doct.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+345_among_departments,_it_has_the_.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+346_the_film_title_is_a_parody_of_.wav:
+  - Recording too quiet (mean -35.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+347_in_teamplay,_players_are_split.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+348_the_headstock_end_may_use_poin.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+349_the_video_was_filmed_in_guadal.wav:
+  - Recording too quiet (mean -34.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+350_apart_from_its_traditional_imp.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+351_she_then_asks_him_out_for_drin.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+352_the_adult_antarctic_petrel_has.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+353_the_two_symbols_of_the_town_ar.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+354_fish_boils,_offered_at_many_do.wav:
+  - Recording too quiet (mean -30.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+355_he_was_the_brother_of_the_firs.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+356_her_assistant_resigned_and_so_.wav:
+  - Recording too quiet (mean -30.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+357_michelet_abhorred_the_middle_a.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+358_instead_of_being_given_a_stell.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+359_as_time_went_on,_the_organizat.wav:
+  - Recording too quiet (mean -24.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+360_at_that_time_the_district_was_.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+361_in_uruguay,_the_dominant_flavo.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+362_the_franc_was_also_used_within.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+363_in_the_end,_cody_regains_his_s.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+364_however,_"the_flintstone_kids".wav:
+  - Recording too quiet (mean -27.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+365_frederic's_early_studies_were_.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+366_marketers_and_agencies_commonl.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+367_the_ghostly_spirit_of_jupiter_.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+368_several_other_songs_were_recor.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+369_the_facts,_so_far_as_they_can_.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+370_a_small_shop,_mostly_combined_.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+371_medically,_when_used_on_its_ow.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+372_the_site_was_originally_a_fiel.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+373_the_pilots_were_debriefed_by_u.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+374_the_situation_became_quite_con.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+375_the_california_tiger_salamande.wav:
+  - Recording too quiet (mean -28.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+376_he_gained_critical_acclaim_and.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+377_after_returning_to_venice_he_p.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+378_nevertheless,_"saint_vicent_pa.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+379_simulations_can_identify_weakn.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+380_after_congress,_he_resumed_the.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+381_britain_strongly_objected,_esp.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+382_the_second_pair_of_walking_leg.wav:
+  - Recording too quiet (mean -28.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+383_some_crews_must_row_for_hours,.wav:
+  - Recording too quiet (mean -29.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+384_when_using_binary_or_gray_code.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+385_she_later_learned,_however,_th.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+386_a_linear_park_is_a_park_that_h.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+387_as_defined,_a_"synthetic_intel.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+388_the_project_was_counting_on_fe.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+389_the_legend_of_these_actions_is.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+390_many_legal_systems_assume_chil.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+391_the_state_lasted_for_one_year_.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+392_billingham_synthonia_football_.wav:
+  - Recording too quiet (mean -27.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+393_he_established_himself_in_the_.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+394_while_most_spiders_have_six_sp.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+395_sapient_government_services_of.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+396_however,_divination_became_vie.wav:
+  - Recording too quiet (mean -29.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+397_they_are_family-friendly,_and_.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+398_it_was_a_home_of_diplomat_cale.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+399_many_trees_are_stunted_because.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+400_strickland's_researches_were_l.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+401_the_most_distinctive_landforms.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+402_in_addition,_they_contain_neur.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+403_this_act,_in_turn,_was_enacted.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+404_the_artefacts_show_the_intrica.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+405_the_labour_party_defended_the_.wav:
+  - Recording too quiet (mean -34.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+406_while_majoring_in_business_adm.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+407_other_features_of_the_island_i.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+408_as_the_buckets_fill,_the_weigh.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+409_malevich_also_painted_"white_o.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+410_king_recorded_a_few_songs_for_.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+411_the_lifeguard_and_park_service.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+412_many_sites_are_farmed,_foreste.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+413_at_that_time,_external_involve.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+414_they_are_nocturnal_and_many_ar.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+415_the_proportion_of_berkeley_sch.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+416_sigma_psi_zeta_is_a_cultural,_.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+417_the_episodes_were_directed_by_.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+418_webster,_whose_practice_was_ba.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+419_it_uses_scout_rules,_which_sho.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+420_in_its_more_absolute_form,_the.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+421_he_also_attended_camp_androsco.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+422_after_the_war,_he_served_in_th.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+423_when_he_delivered_the_drug_to_.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+424_this_standard_is_adopted_in_wh.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+425_she_chronicles_his_obsessive_l.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+426_a_landing-pier,_long_and_wide,.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+427_the_landscape_covers_meadows,_.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+428_nicholas_is_the_younger_brothe.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+429_he_married_chief_justice_john_.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+430_the_discussion_page_for_list_o.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+431_he_was_the_son_of_hirsch_strau.wav:
+  - Recording too quiet (mean -34.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+432_notably,_these_series_provide_.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+433_both_italian_and_english_versi.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+434_the_fear_is_that_if_they_do,_i.wav:
+  - Recording too quiet (mean -37.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+435_at_the_time_of_the_film's_rele.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+436_large_sassarese-speaking_commu.wav:
+  - Recording too quiet (mean -27.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+437_programmers_use_and_build_upon.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+438_a_puzzle_mug_is_a_mug_which_ha.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+439_his_friends_persuaded_him_to_m.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+440_this_camouflage_was_made_up_of.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+441_the_cid,_however,_succeeded_in.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+442_it_is_now_known_as_the_castle_.wav:
+  - Recording too quiet (mean -34.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+443_lee_brovitz_was_the_primary_so.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+444_the_book_concluded_that_"the_c.wav:
+  - Recording too quiet (mean -34.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+445_he_mentions_her_whenever_he_ca.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+446_therefore,_equilibrium_in_the_.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+447_in_the_western_isles_of_scotla.wav:
+  - Recording too quiet (mean -36.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+448_he_had_suffered_from_vascular_.wav:
+  - Recording too quiet (mean -38.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+449_mokelumne_river_water_was_brou.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+450_he_had_five_sons,_three_of_who.wav:
+  - Recording too quiet (mean -35.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+451_carbide_inserts_are_the_most_c.wav:
+  - Recording too quiet (mean -35.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+452_elliott_umpired_seven_test_mat.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+453_however,_cincinnati's_hope_of_.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+454_just_six_days_later,_the_mayor.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+455_he_had_frequently_stated_that_.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+456_the_practice_is_actually_quite.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+457_he_was_also_featured_in_the_mu.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+458_augusta_lies_in_the_kittatinny.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+459_polarization_can_be_used_to_fi.wav:
+  - Recording too quiet (mean -35.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+460_much_trade_in_the_stores_was_b.wav:
+  - Recording too quiet (mean -34.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+461_this_process_continued_after_t.wav:
+  - Recording too quiet (mean -35.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+462_little_green_bag_is_used_as_th.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+463_cartwright_was_born_at_northwa.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+464_this_oily_liquid_is_colourless.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+465_she_made_a_living_printing_sta.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+466_the_lake_was_originally_named_.wav:
+  - Recording too quiet (mean -29.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+467_lamb_shared_his_idea_with_seve.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+468_the_film_screened_on_french_te.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+469_he_is_also_a_guest_lecturer_at.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+470_it_generally_serves_the_area_c.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+471_he_was_also_talented_in_painti.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+472_foulkes_was_born_in_chicago,_i.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+473_not_all_of_these_improvements_.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+474_hareid_is_regarded_as_the_cult.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+475_but_lizardo's_powers_make_him_.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+476_he_was_hospitalised_due_to_mal.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+477_during_early_life,_the_bathtub.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+478_roberts,_the_founder_of_both_t.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+479_after_the_season_ended,_the_ba.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+480_the_city_is,_therefore,_well-d.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+481_baldacci,_merrill_and_lamarche.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+482_the_release_included_the_origi.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+483_his_honking_and_screeching_emp.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+484_this_viewpoint_was_supported_b.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+485_he_is_known_for_work_in_the_ge.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+486_louisy_retired_from_politics_a.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+487_the_first,_east_of_the_chicago.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+488_over_time,_circumlocutions_bec.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+489_temperatures_are_generally_ver.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+490_it_is_wrapped_in_paper_and_ser.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+491_celebrities_who_stayed_at_bree.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+492_lucky_issues_also_included_acc.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+493_from_the_sublime_to_the_trivia.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+494_there_is_also_pointed_medical_.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+495_the_spanish_built_several_gove.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+496_the_litany_was_probably_publis.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+497_peculiar_among_rotifers,_males.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+498_eventually_the_work_was_substa.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+499_the_elder_storz_was_named_pres.wav:
+  - Recording too quiet (mean -28.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+500_in_theory,_competitive_dressag.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+501_it_is_currently_used_for_high_.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+502_rustaveli_thinks_that_pure_and.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+503_heinz_salad_cream_was_the_firs.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+504_further,_his_majesty's_governm.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+505_she_is_loyal_to_her_husband_an.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+506_it_had_a_long_tail,_although_i.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+507_bach_sometimes_returned_to_com.wav:
+  - Recording too quiet (mean -28.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+508_some_of_the_properties_are_ope.wav:
+  - Recording too quiet (mean -36.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+509_born_in_macau,_his_father_was_.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+510_dave_marshall_briefly_performe.wav:
+  - Recording too quiet (mean -33.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+511_nontron_also_manufacture_a_var.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+512_they_tend_to_live_in_colder_wa.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+513_further_aircraft_were_wet-leas.wav:
+  - Recording too quiet (mean -32.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+514_later,_lucas_cranach_the_young.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+515_stone_curb,_often_made_from_gr.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+516_many_people_know_him_best_for_.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+517_he_had_been_suffering_ever_sin.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+518_she_sighted_nine_unidentified_.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+519_she_has_appeared_in_urdu_and_p.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+520_suraj_is_injured_in_an_air_cra.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+521_with_edgar_she_was_cordial,_bu.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+522_little_did_he_know,_his_son_ha.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+523_this_type_is_different_from_co.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+524_it_is_located_east_of_the_ahma.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+525_despite_the_renaming,_etrog's_.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+526_also_included_are_various_chas.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+527_others_may_be_found_at_belan,_.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+528_alice_was_sorry_for_this,_as_s.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+529_the_cats_are_discussed_in_chuc.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+530_having_denounced_cromwell_for_.wav:
+  - Recording too quiet (mean -27.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+531_as_the_country_became_urbanize.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+532_it_also_has_several_rivers,_fa.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+533_outside_the_town_was_a_large_b.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+534_an_early_working_title_for_the.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+535_there_were_also_different_cart.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+536_it_serves_elizabeth_township,_.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+537_after_an_operation,_john_dicke.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+538_as_the_album_was_being_recorde.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+539_abbot_leo_engaged_architects_a.wav:
+  - Recording too quiet (mean -27.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+540_he_was_educated_at_leo_street_.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+541_the_best-qualified_graduates_w.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+542_her_younger_sister,_pavena,_is.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+543_she_campaigned_strongly_for_wo.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+544_guidelines_may_lose_their_clin.wav:
+  - Recording too quiet (mean -27.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+545_data_in_each_queue_are_only_se.wav:
+  - Recording too quiet (mean -27.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+546_the_firm_has_offices_in_new_yo.wav:
+  - Recording too quiet (mean -27.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+547_the_predellas,_with_five_scene.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+548_bush_even_felt_he_was_being_pu.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+549_in_these_two_extreme_cases_the.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+550_the_lone_exception_is_mumu.b,_.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+551_as_the_series_has_grown,_major.wav:
+  - Recording too quiet (mean -27.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+552_for_this_reason,_cupping_sets_.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+553_by_sending_a_mix_of_different_.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+554_highland_airways_was_under_tal.wav:
+  - Recording too quiet (mean -31.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+555_today_they_are_the_bible_of_th.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+556_lee_devises_training_methods_t.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+557_the_son_of_a_famous_marabout,_.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+558_held_by_determined_defenders,_.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+559_the_mastering_was_done_by_hank.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+560_in_the_new_testament,_the_firs.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+561_it_was_mensforth_had_arranged_.wav:
+  - Recording too quiet (mean -27.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+562_the_company_focuses_on_the_pub.wav:
+  - Recording too quiet (mean -28.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+563_it_derives_its_fibers_from_the.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+564_sea_turtles_are_frequent_visit.wav:
+  - Recording too quiet (mean -26.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+565_gaits_are_generally_classed_as.wav:
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+566_it_typically_entails_support_f.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+567_he_went_to_work_for_eveready_b.wav:
+  - Recording too quiet (mean -30.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+568_near_the_coast,_part_of_the_ri.wav:
+  - Recording too quiet (mean -31.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+569_hillhouse_was_also_a_regular_c.wav:
+  - Recording too quiet (mean -27.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+570_born_to_jacob_krigsner,_a_poli.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+571_he_was_a_native_of_regensburg,.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+572_each_of_these_sub-systems_are_.wav:
+  - Recording too quiet (mean -26.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+573_he_was_born_in_laugharne,_carm.wav:
+  - Recording too quiet (mean -26.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+574_he_produced_stories_about_disn.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+575_the_missile_also_has_a_mechani.wav:
+  - Recording too quiet (mean -29.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+576_in_order_to_simplify_the_task,.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+577_cyril's_title,_and_by_extensio.wav:
+  - Recording too quiet (mean -27.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+578_the_district_includes_eastern_.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+579_most_notably,_the_scout_moveme.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+580_noseworthy_was_an_active_parli.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+581_however,_their_stomachs_are_ab.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+582_individual_members_of_orpheus_.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+583_tupper_also_served_as_presiden.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+584_his_political_base_is_founded_.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+585_belvidere_is_known_as_the_"cit.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+586_conflict_gripped_the_city_and_.wav:
+  - Recording too quiet (mean -32.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+587_after_george_is_shot_by_a_suic.wav:
+  - Recording too quiet (mean -30.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+588_the_garrison_of_men_and_was_in.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+589_in_"deadly_beloved"_we_finally.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+590_as_foreign_minister,_livni_was.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+591_the_project_installed_wider_an.wav:
+  - Recording too quiet (mean -26.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+592_crewdson's_photographs_usually.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+593_consequently,_chord_charts_for.wav:
+  - Recording too quiet (mean -28.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+594_in_canada,_most_meat_purveyors.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+595_in_this_system,_relatives_are_.wav:
+  - Recording too quiet (mean -29.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+596_often_biological_systems_are_i.wav:
+  - Recording too quiet (mean -27.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+597_much_later,_euler_proved_that_.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+598_typically,_the_interest_rate_i.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+599_earland_was_born_in_philadelph.wav:
+  - Recording too quiet (mean -28.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+600_as_organist_and_choirmaster_at.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+601_playgrounds,_softball_fields,_.wav:
+  - Recording too quiet (mean -28.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+602_as_in_the_rest_of_brazil,_foot.wav:
+  - Recording too quiet (mean -31.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+603_state_schools_teach_students_a.wav:
+  - Recording too quiet (mean -29.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+604_an_example_of_an_everyday_devi.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+605_writer_guy_endore,_who_worked_.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+606_visitors_may_have_a_special_pl.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+607_before_these_tests,_however,_p.wav:
+  - Recording too quiet (mean -31.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+608_see_the_table_in_the_variants_.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+609_tutwiler_was_also_the_childhoo.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+610_much_of_the_german_advance_was.wav:
+  - Recording too quiet (mean -34.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+611_by_creating_more_affordable_vo.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+612_this_is_basically_a_double-or-.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+613_a_historically_important_venue.wav:
+  - Recording too quiet (mean -28.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+614_she_was_remarkable_for_her_con.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+615_but_her_step_father_strongly_o.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+616_this_species_later_was_reassig.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+617_the_garden_highlighted_the_fra.wav:
+  - Recording too quiet (mean -30.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+618_the_yellow_ribbon_was_worn_in_.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+619_the_mine_and_surrounding_areas.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+620_the_following_season,_the_dagg.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+621_she_was_so_severe_the_women_pr.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+622_tideman's_academic_interests_i.wav:
+  - Recording too quiet (mean -30.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+623_he_worked_on_his_father's_plan.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+624_aspar's_wife_was_an_ostrogoth,.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+625_however,_the_israelis_continue.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+626_excavations_as_part_of_the_wor.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+627_they_have_access_to_the_clubho.wav:
+  - Recording too quiet (mean -35.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+628_mckellen_was_nominated_for_an_.wav:
+  - Recording too quiet (mean -30.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+629_inside_the_cottage_was_a_statu.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+630_after_metaweb,_bollacker_worke.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+631_she_is_the_recipient_of_the_am.wav:
+  - Recording too quiet (mean -30.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+632_the_bible_is_still_loved_by_mi.wav:
+  - Recording too quiet (mean -35.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+633_however,_it_is_not_harmless_an.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+634_wet_season_crops_include_rice,.wav:
+  - Recording too quiet (mean -28.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+635_however,_it_induces_greater_no.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+636_during_five_years_they_release.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+637_sosondowah_was_captured_by_daw.wav:
+  - Recording too quiet (mean -33.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+638_some_of_those_early_bands_were.wav:
+  - Recording too quiet (mean -31.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+639_she_appeared_on_"will_and_grac.wav:
+  - Recording too quiet (mean -33.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+640_the_skull_was_sent_to_the_natu.wav:
+  - Recording too quiet (mean -36.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+641_both_approaches_give_players_t.wav:
+  - Recording too quiet (mean -28.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+642_there_is_an_equivalent_way_to_.wav:
+  - Recording too quiet (mean -30.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+643_the_weather_was_calm_with_ligh.wav:
+  - Recording too quiet (mean -35.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+644_it_used_to_be_common_in_europe.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+645_when_in_the_british_virgin_isl.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+646_many_different_celebrities_and.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+647_with_his_wife_lori_and_son_car.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+648_however,_the_outer_arch_was_se.wav:
+  - Recording too quiet (mean -33.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+649_the_montour_trail_has_four_bra.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+650_his_inspiration,_karen,_has_gi.wav:
+  - Recording too quiet (mean -32.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+651_the_dunfermline_constituency_w.wav:
+  - Recording too quiet (mean -28.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+652_newwave_featured_icons,_schedu.wav:
+  - Recording too quiet (mean -37.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+653_however,_this_translation_was_.wav:
+  - Recording too quiet (mean -31.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+654_a_b-side_to_the_single_entitle.wav:
+  - Recording too quiet (mean -36.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+655_common_products_that_are_flipp.wav:
+  - Recording too quiet (mean -32.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+656_the_finished_product_was_trans.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+657_the_tournament_was_won_by_irel.wav:
+  - Recording too quiet (mean -35.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+658_when_governor_littleton_waller.wav:
+  - Recording too quiet (mean -28.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+659_in_particular,_the_notion_of_s.wav:
+  - Recording too quiet (mean -36.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+660_the_groups_rotate_actively,_so.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+661_generally,_two_grams_cause_ser.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+662_because_of_this,_the_requireme.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+663_it_postulates_that_man,_rather.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+664_lomax_and_his_wife,_cheryl_fer.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+665_the_principle_was_originally_s.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+666_after_listening_to_the_orchest.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+667_the_vessel_was_turned_and_push.wav:
+  - Recording too quiet (mean -36.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+668_returning_to_palestine,_he_soo.wav:
+  - Recording too quiet (mean -33.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+669_these_transfers_will_expand_th.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+670_within_a_few_decades_of_wences.wav:
+  - Recording too quiet (mean -35.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+671_it_gradually_became_a_resort_t.wav:
+  - Recording too quiet (mean -30.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+672_with_grayson_secured,_a_joint_.wav:
+  - Recording too quiet (mean -31.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+673_following_ike's_slap,_tina_rec.wav:
+  - Recording too quiet (mean -28.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+674_it_was_founded_by_current_arti.wav:
+  - Recording too quiet (mean -29.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+675_the_task_force_then_moved_on_e.wav:
+  - Recording too quiet (mean -34.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+676_the_chiricahua_mountains_are_a.wav:
+  - Recording too quiet (mean -32.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+677_summer_starts_off_dry,_but_pro.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+678_antigonus_was_killed,_and_deme.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+679_no_blame_was_attached_to_shent.wav:
+  - Recording too quiet (mean -34.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+680_soon_after,_he_converted_to_ch.wav:
+  - Recording too quiet (mean -34.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+681_using_extortion_and_forced_lab.wav:
+  - Recording too quiet (mean -32.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+682_elder's_political_views_are_ph.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+683_kapur's_original_choice_for_th.wav:
+  - Recording too quiet (mean -32.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+684_however,_even_in_areas_that_ar.wav:
+  - Recording too quiet (mean -33.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+685_he_was_a_learned_alchemist,_ep.wav:
+  - Recording too quiet (mean -36.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+686_emperor_akbar_granted_them_man.wav:
+  - Recording too quiet (mean -30.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+687_the_area_is_primarily_resident.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+688_the_book_sparked_other_books_a.wav:
+  - Recording too quiet (mean -31.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+689_although_the_harmonic_series_d.wav:
+  - Recording too quiet (mean -36.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+690_he_uses_kites_and_rockets_to_r.wav:
+  - Recording too quiet (mean -35.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+691_duncombe's_men_also_dispersed_.wav:
+  - Recording too quiet (mean -32.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+692_michael_nyman_composed_the_mus.wav:
+  - Recording too quiet (mean -31.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+693_it_is_most_visible_in_dark_or_.wav:
+  - Recording too quiet (mean -35.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+694_however,_only_one_change_of_fo.wav:
+  - Recording too quiet (mean -33.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+695_hours_of_certain_events_and_ro.wav:
+  - Recording too quiet (mean -33.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+696_additional_instrumentation_inc.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+697_the_most_popular_spectator_spo.wav:
+  - Recording too quiet (mean -34.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+698_nick_confesses_everything_to_h.wav:
+  - Recording too quiet (mean -33.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+699_screven's_first_businessman_an.wav:
+  - Recording too quiet (mean -35.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+700_it_was_one_of_the_most_famous_.wav:
+  - Recording too quiet (mean -32.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+701_the_table_below_shows_the_comp.wav:
+  - Recording too quiet (mean -34.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+702_the_great_russian_poet_nikolay.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+703_pat_prescott_introduced_segmen.wav:
+  - Recording too quiet (mean -30.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+704_portnoy_comes_from_a_jewish_fa.wav:
+  - Recording too quiet (mean -34.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+705_his_brother,_patrick_snedden,_.wav:
+  - Recording too quiet (mean -32.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+706_novelist_john_updike_wrote,_al.wav:
+  - Recording too quiet (mean -34.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+707_however,_it_seems_that_the_sto.wav:
+  - Recording too quiet (mean -36.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+708_it_again_becomes_cheam_road_an.wav:
+  - Recording too quiet (mean -35.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+709_due_to_heavy_rain,_the_jeep_cr.wav:
+  - Recording too quiet (mean -31.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+710_these_findings_have_not_been_i.wav:
+  - Recording too quiet (mean -26.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+711_this_was_the_beginning_of_a_ne.wav:
+  - Recording too quiet (mean -26.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+712_he_painted_history_and_orienta.wav:
+  - Recording too quiet (mean -28.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+713_the_simons_were_at_once_succes.wav:
+  - Recording too quiet (mean -26.5dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+714_but_our_sin_involves_investing.wav:
+  - Recording too quiet (mean -26.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+715_local_people_attended_the_pari.wav:
+  - Recording too short (5.9s < 6.0s)
+  - Recording too quiet (mean -29.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+716_terrestrial_species_include_wh.wav:
+  - Recording too quiet (mean -27.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+717_they_all,_however,_share_a_the.wav:
+  - Recording too quiet (mean -27.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+718_some_academics_and_writers_als.wav:
+  - Recording too quiet (mean -26.8dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+719_pocky_can_be_found_in_dozens_o.wav:
+  - Recording too quiet (mean -29.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+720_however,_tuning_has_varied_ove.wav:
+  - Recording too quiet (mean -29.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+721_there_was_also_a_version_with_.wav:
+  - Recording too quiet (mean -29.3dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+722_this_is_supplemented_by_signif.wav:
+  - Recording too quiet (mean -27.6dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+723_his_film_credits_include_"wron.wav:
+  - Recording too quiet (mean -26.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+724_therefore,_beams_do_not_usuall.wav:
+  - Recording too quiet (mean -27.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+725_admiral_lord_nelson_appeared_i.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+726_it_is_also_known_for_its_white.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+727_nights_and_weekends,_the_stati.wav:
+  - Recording too quiet (mean -29.9dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+728_phil_kramer_is_promoted_to_kin.wav:
+  - Recording too quiet (mean -25.2dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+729_an_additional_contract_and_roy.wav:
+  - Recording too quiet (mean -27.4dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+730_stage_roles_became_infrequent_.wav:
+  - Recording too quiet (mean -26.1dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
+731_the_original_kumru_was_ring-sh.wav:
+  - Recording too quiet (mean -26.7dB < 0.1dB)
+  - Too much silence (100.0% > 30.0%)
+  - Poor signal-to-noise ratio (0.0dB < 10.0dB)

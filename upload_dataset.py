@@ -70,31 +70,14 @@ def load_metadata(metadata_file: Path) -> pd.DataFrame:
     except Exception as e:
         raise DataError(f"Failed to load metadata: {str(e)}")
 
-def audio_file_to_bytes(filepath: Path) -> bytes:
-    """Convert audio file to bytes while ensuring 16kHz mono format."""
-    data, samplerate = sf.read(filepath)
-    
-    # Convert to mono if stereo
-    if len(data.shape) > 1:
-        data = data.mean(axis=1)
-    
-    # Resample to 16kHz if needed
-    if samplerate != 16000:
-        # You might want to add resampling logic here
-        raise ValueError(f"Audio file {filepath} has sample rate {samplerate}, expected 16000")
-    
-    # Convert to bytes
-    bytes_io = io.BytesIO()
-    sf.write(bytes_io, data, samplerate, format='WAV')
-    return bytes_io.getvalue()
-
-def prepare_dataset(metadata_df: pd.DataFrame, base_dir: Path, existing_paths: list[str] = None) -> Dataset:
+def prepare_dataset(metadata_df: pd.DataFrame, base_dir: Path, existing_paths: list[str] = None, replace: bool = False) -> Dataset:
     """Prepare the dataset in the format expected by Hugging Face.
     
     Args:
         metadata_df: DataFrame containing metadata
         base_dir: Base directory for audio files
         existing_paths: List of existing audio file paths to skip
+        replace: If True, prepare all files without checking existing
         
     Returns:
         Dataset: Prepared dataset for upload
@@ -106,7 +89,7 @@ def prepare_dataset(metadata_df: pd.DataFrame, base_dir: Path, existing_paths: l
     
     try:
         # Skip files that are already in the dataset
-        if existing_paths:
+        if existing_paths and not replace:
             # Normalize paths for comparison
             metadata_df['normalized_path'] = metadata_df['audio_filepath'].apply(
                 lambda x: str(Path(x).name)
@@ -120,6 +103,8 @@ def prepare_dataset(metadata_df: pd.DataFrame, base_dir: Path, existing_paths: l
                 return None
             logger.info(f"Found {len(new_files)} new recordings to upload")
             metadata_df = new_files
+        elif replace:
+            logger.info(f"Preparing all {len(metadata_df)} recordings for upload")
         
         def generator():
             for _, row in tqdm(metadata_df.iterrows(), total=len(metadata_df)):
@@ -144,7 +129,7 @@ def prepare_dataset(metadata_df: pd.DataFrame, base_dir: Path, existing_paths: l
     except Exception as e:
         raise DataError(f"Failed to prepare dataset: {str(e)}")
 
-def upload_to_huggingface(dataset: Dataset, repo_id: str, token: str, dataset_card: Path = Path("DATASET_CARD.md")):
+def upload_to_huggingface(dataset: Dataset, repo_id: str, token: str, dataset_card: Path = Path("DATASET_CARD.md"), replace: bool = False):
     """Upload the dataset to Hugging Face.
     
     Args:
@@ -152,6 +137,7 @@ def upload_to_huggingface(dataset: Dataset, repo_id: str, token: str, dataset_ca
         repo_id: Hugging Face repository ID
         token: Hugging Face API token
         dataset_card: Path to dataset card markdown file
+        replace: If True, replace the entire dataset instead of concatenating
         
     Raises:
         UploadError: If upload fails
@@ -176,26 +162,32 @@ def upload_to_huggingface(dataset: Dataset, repo_id: str, token: str, dataset_ca
             raise UploadError(f"Failed to upload dataset card: {str(e)}")
         
         # Handle dataset upload
+        dataset_to_upload = dataset
         try:
-            existing_dataset = load_dataset(repo_id, split='train', token=token)
-            logger.info(f"Found existing dataset with {len(existing_dataset)} examples")
-            
-            # If no new data to upload, return early
-            if dataset is None:
-                logger.info("No new data to upload")
-                return
-            
-            # Combine existing and new datasets
-            combined_dataset = concatenate_datasets([existing_dataset, dataset])
-            logger.info(f"Combined dataset will have {len(combined_dataset)} examples")
+            if not replace:
+                existing_dataset = load_dataset(repo_id, split='train', token=token)
+                logger.info(f"Found existing dataset with {len(existing_dataset)} examples")
+                
+                # If no new data to upload, return early
+                if dataset is None:
+                    logger.info("No new data to upload")
+                    return
+                
+                # Combine existing and new datasets
+                dataset_to_upload = concatenate_datasets([existing_dataset, dataset])
+                logger.info(f"Combined dataset will have {len(dataset_to_upload)} examples")
+            else:
+                logger.info("Replacing entire dataset with local version")
+                if dataset is None:
+                    logger.warning("No data to upload - this will clear the remote dataset")
             
         except Exception as e:
-            logger.info(f"Creating new dataset (no existing dataset found: {str(e)})")
-            combined_dataset = dataset
+            if not replace:
+                logger.info(f"Creating new dataset (no existing dataset found: {str(e)})")
         
         # Push to the Hub
         try:
-            combined_dataset.push_to_hub(
+            dataset_to_upload.push_to_hub(
                 repo_id,
                 token=token,
                 private=False,
@@ -258,6 +250,9 @@ Examples:
   # Upload with custom repository
   python upload_dataset.py --repo-id "your-username/your-dataset"
   
+  # Replace entire dataset with local version
+  python upload_dataset.py --replace
+  
   # Clean up duplicates in dataset
   python upload_dataset.py --cleanup
   
@@ -293,6 +288,11 @@ Examples:
         "--cleanup",
         action="store_true",
         help="Clean up duplicates in the dataset"
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Replace entire dataset with local version instead of concatenating"
     )
     parser.add_argument(
         "--help-more",
@@ -344,33 +344,14 @@ HF_TOKEN: Your Hugging Face API token
                 cleaned_dataset = deduplicate_dataset(existing_dataset)
                 
                 if len(cleaned_dataset) < len(existing_dataset):
-                    # Upload dataset card first
-                    logger.info("Uploading dataset card...")
-                    api = HfApi()
-                    try:
-                        api.upload_file(
-                            path_or_fileobj=args.dataset_card,
-                            path_in_repo="README.md",
-                            repo_id=args.repo_id,
-                            repo_type="dataset",
-                            token=args.token
-                        )
-                        logger.info("Dataset card uploaded successfully")
-                    except Exception as e:
-                        raise UploadError(f"Failed to upload dataset card: {str(e)}")
-                    
-                    # Push cleaned dataset
-                    logger.info("Uploading cleaned dataset...")
-                    try:
-                        cleaned_dataset.push_to_hub(
-                            args.repo_id,
-                            token=args.token,
-                            private=False,
-                            split='train'
-                        )
-                    except Exception as e:
-                        raise UploadError(f"Failed to push cleaned dataset: {str(e)}")
-                        
+                    # Use upload_to_huggingface with replace=True for cleanup
+                    upload_to_huggingface(
+                        dataset=cleaned_dataset,
+                        repo_id=args.repo_id,
+                        token=args.token,
+                        dataset_card=Path(args.dataset_card),
+                        replace=True
+                    )
                     logger.info("Successfully cleaned and uploaded dataset!")
                 
                 return 0
@@ -379,23 +360,26 @@ HF_TOKEN: Your Hugging Face API token
                 logger.error(f"Error during cleanup: {str(e)}")
                 return 1
         
-        # Get existing dataset paths
-        existing_dataset = load_dataset(args.repo_id, split='train', token=args.token)
-        existing_paths = [example['audio']['path'] for example in existing_dataset]
-        logger.info(f"Found {len(existing_paths)} existing recordings")
+        # Get existing dataset paths only if not replacing
+        existing_paths = None
+        if not args.replace:
+            existing_dataset = load_dataset(args.repo_id, split='train', token=args.token)
+            existing_paths = [example['audio']['path'] for example in existing_dataset]
+            logger.info(f"Found {len(existing_paths)} existing recordings")
         
         # Load metadata
         metadata_df = load_metadata(Path(args.metadata))
         
-        # Prepare dataset (only new files)
-        dataset = prepare_dataset(metadata_df, Path('.'), existing_paths)
+        # Prepare dataset
+        dataset = prepare_dataset(metadata_df, Path('.'), existing_paths, replace=args.replace)
         
         # Upload to Hugging Face
         upload_to_huggingface(
             dataset=dataset,
             repo_id=args.repo_id,
             token=args.token,
-            dataset_card=Path(args.dataset_card)
+            dataset_card=Path(args.dataset_card),
+            replace=args.replace
         )
         
     except (UploadError, DataError) as e:

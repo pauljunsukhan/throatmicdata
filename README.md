@@ -171,46 +171,65 @@ Shows dataset statistics:
 ### Stage 1: Quick Text Filtering
 - Capitalization check (must start with capital letter)
 - Punctuation check (must end with ., !, or ?)
-- Character length (20-150 chars)
+- Character length (60-200 chars)
 - Basic formatting validation
 
 ### Stage 2: spaCy-based Quick Validation
-- Word count (5-25 words)
+- Word count (5-30 words)
 - Named Entity limits (using spaCy's NER):
   - Max 2 persons (PERSON)
-  - Max 2 locations (GPE)
+  - Max 1 location (GPE)
   - Max 2 organizations (ORG)
   - Max 3 total entities
-- Basic complexity check (using spaCy's dependency parser):
-  - Must have either:
-    - Coordinating conjunction (dep_ == 'cc')
-    - Subordinating clause marker (dep_ == 'mark')
 
 ### Stage 3: Full Complexity Analysis
-- Uses spaCy's medium English model (en_core_web_md)
-- Minimum complexity score of 2
-- Minimum total complexity score of 3
-- Part-of-speech ratio requirements:
-  - NOUN: 20% of content words
-  - VERB: 15% of content words
-  - ADJ: 10% of content words
+Uses spaCy's medium English model (en_core_web_md) with flexible ranges:
+
+1. **Part-of-Speech Distribution**
+   - Verbs: 10-35% of content words
+   - Nouns: 20-45% of content words
+   - Adjectives: 5-25% of content words
+
+2. **Structural Complexity**
+   - Clause count: 1-4 clauses
+   - Parse tree depth: 2-5 levels
+   - Average word length: 3-12 characters
+
+3. **Required Elements** (must have at least one):
+   - Coordinating conjunction (dep_ == 'cc')
+   - Subordinating clause marker (dep_ == 'mark')
+   - Relative clause (dep_ == 'relcl')
 
 ### Example Sentences
 ✅ Good Examples:
 - "Although the harmonic series does diverge, it does so very slowly."
-  - Has subordinate clause marker (dep_ == 'mark')
-  - Good POS distribution
-  - Natural scientific language
+  - Has subordinate clause ("Although...")
+  - Verb ratio: 0.25 (within 0.1-0.35 range)
+  - Noun ratio: 0.25 (within 0.2-0.45 range)
+  - 2 clauses (within 1-4 range)
+  - Parse tree depth: 3 (within 2-5 range)
 
 - "Nick confesses everything to his mother, who tells him that he can't 'control everything'."
-  - Has relative clause
-  - Multiple clauses
-  - Good entity balance (one PERSON)
+  - Has relative clause ("who tells...")
+  - Multiple clauses (3, within 1-4 range)
+  - Good POS distribution
+  - One PERSON entity (within limits)
+  - Parse tree depth: 4 (within 2-5 range)
 
 ❌ Rejected Examples:
 - Too simple: "Bronze tools were sharper and harder than those made of stone."
+  - Only one clause (below minimum)
+  - No required complex structures
+  - Parse tree depth: 2 (at minimum)
+
 - Too many entities: "Emperor Akbar granted them mansabs and their ancestral domains were treated as jagirs."
-- Unnatural language: "They look through garbage and human waste on the outskirts of human cities."
+  - Multiple PERSON and LOC entities (exceeds limits)
+  - Too many named entities total (>3)
+
+- Poor POS distribution: "The big red dog ran quickly and jumped high and barked loudly."
+  - Too many verbs (>35% of content words)
+  - Too many adjectives (>25% of content words)
+  - Too many coordinating conjunctions
 
 ### Sentence Sources
 1. Common Voice Wikipedia Extracts
@@ -218,6 +237,37 @@ Shows dataset statistics:
 3. Custom user-added sentences
 
 Each source goes through the same validation pipeline to ensure consistent quality and usability for throat mic recording.
+
+### Configuration
+All sentence selection criteria can be adjusted in `config.yaml`:
+```yaml
+sentence_filter:
+  min_chars: 60
+  max_chars: 200
+  min_words: 5
+  max_words: 30
+  max_entities: 3
+  max_persons: 2
+  max_locations: 1
+  max_organizations: 2
+  pos_ratios:
+    VERB: [0.1, 0.35]
+    NOUN: [0.2, 0.45]
+    ADJ: [0.05, 0.25]
+  complexity_ranges:
+    clause_count: [1, 4]
+    word_length: [3, 12]
+    tree_depth: [2, 5]
+```
+
+### Technical Implementation
+- Uses spaCy's medium English model (en_core_web_md)
+- Multi-stage validation for efficiency:
+  1. Quick text filtering (regex/string operations)
+  2. Basic spaCy checks (entities, length)
+  3. Full linguistic analysis (POS, complexity)
+- Comprehensive error handling and logging
+- Configurable ranges for natural language variation
 
 ## 📋 Sentence Criteria
 
@@ -262,10 +312,26 @@ Each sentence should have at least two of these elements:
 ### Quality Thresholds
 
 Audio recordings must meet these criteria:
-- Duration: 8-12 seconds
+- Duration: 6-30 seconds (automatically adjusted based on sentence complexity)
 - Audio levels: -50dB to 0dB
 - Silence ratio: <30% of recording
 - Signal-to-noise ratio: >10dB
+
+### Variable Recording Length
+
+The tool automatically adjusts recording duration based on sentence complexity:
+
+- Analyzes sentence structure, syllables, and pauses
+- Estimates natural speaking time for each prompt
+- Adds buffer time for comfortable pacing
+- Supports sentences from 6-30 seconds (matching Whisper's capabilities)
+- Smart timing features:
+  - Syllable-based duration calculation
+  - Pause detection for punctuation
+  - Word boundary timing
+  - Natural speech rhythm adaptation
+
+This ensures recordings are neither rushed nor padded with silence, leading to more natural speech patterns and better training data.
 
 ## 🛠️ Technical Details
 

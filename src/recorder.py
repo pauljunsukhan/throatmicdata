@@ -10,28 +10,58 @@ import time
 import csv
 from pathlib import Path
 from typing import Optional, List, Dict, Tuple, Set, Any
-from src.sentences import SentenceRepository
+from .sentence_repo import SentenceRepository
+from .sentence_filter import SentenceFilter
+from .config import Config, config
 import argparse
 import os
 import json
-from src.config import config
 import soundfile as sf
+from datetime import datetime
+from tqdm import tqdm
+import logging
+from .analyzer import DatasetAnalytics, DatasetAnalyzer
+import sys, tty, termios
+
+# Setup logger
+logger = logging.getLogger(__name__)
+
+def list_audio_devices():
+    """List all available audio input devices."""
+    p = pyaudio.PyAudio()
+    info = []
+    
+    for i in range(p.get_device_count()):
+        device_info = p.get_device_info_by_index(i)
+        if device_info['maxInputChannels'] > 0:  # Only input devices
+            info.append(device_info)
+            print(f"{i}: {device_info['name']}")
+            
+    p.terminate()
+    return info
 
 class ThroatMicRecorder:
-    def __init__(self, base_dir: Optional[Path] = None):
+    def __init__(self, config: Config = None):
+        """Initialize recorder with configuration.
+        
+        Args:
+            config (Config, optional): Configuration instance. If None, uses default config.
+        """
+        self.config = config or config  # Use passed config or default
+        self.p = pyaudio.PyAudio()
+        self.audio_config = self.config.audio
+        self.sentence_filter = SentenceFilter()
         # Audio settings
-        self.CHUNK = config.audio.chunk_size
+        self.CHUNK = self.config.audio.chunk_size
         self.FORMAT = pyaudio.paInt16
-        self.CHANNELS = config.audio.channels
-        self.RATE = config.audio.sample_rate
-        self.RECORD_SECONDS = config.audio.duration
-        self.CLIPPING_THRESHOLD = config.audio.clipping_threshold
+        self.CHANNELS = self.config.audio.channels
+        self.RATE = self.config.audio.sample_rate
+        self.RECORD_SECONDS = self.config.audio.duration
+        self.CLIPPING_THRESHOLD = self.config.audio.clipping_threshold
         
         # Initialize paths
-        if base_dir is None:
-            base_dir = Path(__file__).parent.parent
-        self.base_dir = base_dir
-        self.data_dir = base_dir / "data"
+        self.base_dir = Path(__file__).parent.parent
+        self.data_dir = self.base_dir / "data"
         self.recordings_dir = self.data_dir / "recordings"
         self.metadata_dir = self.data_dir / "metadata"
         self.cache_dir = self.data_dir / "cache"
@@ -48,11 +78,8 @@ class ThroatMicRecorder:
                 writer = csv.writer(f, quoting=csv.QUOTE_ALL)
                 writer.writerow(['audio_filepath', 'text', 'duration'])
         
-        # Initialize audio
-        self.p = pyaudio.PyAudio()
-        
         # Initialize repository
-        self.repo = SentenceRepository(base_dir)
+        self.repo = SentenceRepository(self.base_dir)
         
         # Load dataset cache and sync with metadata
         self.dataset_cache = self._load_dataset_cache()
@@ -60,6 +87,9 @@ class ThroatMicRecorder:
         
         # UI settings
         self.show_levels = True
+        
+        self.analyzer = DatasetAnalyzer(self.config)  # Create once and reuse
+        self._invalidate_analysis_cache()  # Track if cache needs refresh
     
     def _load_dataset_cache(self) -> Dict[str, Any]:
         """Load cached dataset information."""
@@ -167,8 +197,12 @@ class ThroatMicRecorder:
     def record_audio(self, device_index: int, prompt: str) -> Tuple[Optional[Path], bool]:
         """Record audio and save to file. Returns (filepath, should_quit)"""
         file_number = self.get_next_file_number()
-        filename = f"{file_number:03d}_{prompt[:30].lower().replace(' ', '_')}.wav"
+        filename = f"{file_number:05d}_{prompt[:30].lower().replace(' ', '_')}.wav"
         filepath = self.recordings_dir / filename
+
+        # Get estimated duration for this sentence
+        estimated_duration = self.sentence_filter.estimate_duration(prompt)
+        recording_duration = estimated_duration  # Removed the 0.85 multiplier
 
         while True:
             stream = self.p.open(
@@ -181,6 +215,7 @@ class ThroatMicRecorder:
             )
 
             print(f"\nRecording prompt: {prompt}")
+            print(f"Estimated speaking time: {estimated_duration:.1f}s (Recording for: {recording_duration:.1f}s)")
             print("Starting in: ", end='', flush=True)
             for count in [3, 2, 1]:
                 print(f"{count}...", end='', flush=True)
@@ -191,22 +226,30 @@ class ThroatMicRecorder:
 
             frames = []
             clipping_detected = False
+            
+            # Calculate total chunks based on estimated duration
+            total_chunks = int(recording_duration * self.RATE / self.CHUNK)
+            
             try:
-                for _ in range(0, int(self.RATE / self.CHUNK * self.RECORD_SECONDS)):
-                    try:
-                        chunk = stream.read(self.CHUNK, exception_on_overflow=False)
-                        frames.append(chunk)
-                        
-                        if self.show_levels:
-                            level_info = self._check_clipping(chunk)
-                            if level_info['is_clipping']:
-                                clipping_detected = True
-                            print(f"{level_info['level_indicator']}", end='', flush=True)
+                with tqdm(total=total_chunks, desc="Recording", position=1) as pbar:
+                    for _ in range(total_chunks):
+                        try:
+                            chunk = stream.read(self.CHUNK, exception_on_overflow=False)
+                            frames.append(chunk)
                             
-                    except OSError as e:
-                        print(f"\nWarning: Buffer overflow detected - some audio may be lost")
-                        continue
-                        
+                            if self.show_levels:
+                                level_info = self._check_clipping(chunk)
+                                if level_info['is_clipping']:
+                                    clipping_detected = True
+                                print(f"\r{level_info['level_indicator']}", end='', flush=True)
+                                print("\033[K", end='')  # Clear to end of line
+                            
+                            pbar.update(1)
+                                
+                        except OSError as e:
+                            print(f"\nWarning: Buffer overflow detected - some audio may be lost")
+                            continue
+                            
             except KeyboardInterrupt:
                 print("\nRecording stopped by user")
                 stream.stop_stream()
@@ -234,39 +277,53 @@ class ThroatMicRecorder:
                 print("3. Save and continue to next")
                 print("4. Save and quit to menu")
                 print("5. Discard and quit to menu")
+                print("6. Trash sentence and continue to next")
                 print("\nPress Enter for option 3 (Save and continue)")
+                print("Press Space for option 6 (Trash and continue)")
                 
-                choice = input("\nSelect option: ").strip().lower()
+                fd = sys.stdin.fileno()
+                old_settings = termios.tcgetattr(fd)
+                try:
+                    tty.setraw(sys.stdin.fileno())
+                    ch = sys.stdin.read(1)
+                finally:
+                    termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
                 
-                if choice == "" or choice == "3":
+                if ch == '\r' or ch == '3':  # Enter key or '3'
                     print("\nSaving recording and continuing...")
                     self._add_to_metadata(filepath, prompt)
+                    self._invalidate_analysis_cache()  # New recording added
                     return filepath, False
                     
-                elif choice == "1":
+                elif ch == ' ' or ch == '6':  # Space or 6
+                    print("\nTrashing sentence and continuing...")
+                    filepath.unlink(missing_ok=True)  # Delete the recording
+                    self.repo.trash_sentence(prompt)  # Move sentence to trash
+                    return None, False  # Continue to next sentence
+                    
+                elif ch == '1':
                     print("\nPlaying back recording...")
                     sd.play(np.frombuffer(b''.join(frames), dtype=np.int16), self.RATE)
                     sd.wait()
                     continue
                     
-                elif choice == "2":
+                elif ch == '2':
                     print("\nRe-recording...")
-                    # Delete the file before re-recording
                     filepath.unlink(missing_ok=True)
                     break
                     
-                elif choice == "4":
+                elif ch == '4':
                     print("\nSaving recording and returning to menu...")
                     self._add_to_metadata(filepath, prompt)
                     return filepath, True
                     
-                elif choice == "5":
+                elif ch == '5':
                     print("\nDiscarding recording and returning to menu...")
                     filepath.unlink(missing_ok=True)
                     return None, True
                     
                 else:
-                    print("Invalid option. Enter 1-5, or press Enter to save and continue.")
+                    print("Invalid option. Enter 1-6, or press Enter to save and continue.")
 
     def toggle_level_meter(self) -> None:
         """Toggle the level meter display"""
@@ -286,8 +343,8 @@ class ThroatMicRecorder:
                 frames_per_buffer=self.CHUNK
             )
             
-            print("Recording 3 second test...")
-            for _ in range(0, int(self.RATE / self.CHUNK * 3)):  # 3 seconds test
+            print("Recording 1 second test...")
+            for _ in range(0, int(self.RATE / self.CHUNK * 1)):  # 1 second test
                 stream.read(self.CHUNK, exception_on_overflow=False)
             
             stream.stop_stream()
@@ -326,12 +383,13 @@ class ThroatMicRecorder:
                 print("2. View progress")
                 print("3. Toggle level meter")
                 print("4. Manage sentences")
-                print("5. Exit")
+                print("5. Analyze dataset")
+                print("6. Exit")
                 
                 choice = input("\nSelect option: ").strip()
                 
                 if choice == '1':
-                    if self.repo.get_remaining_count() == 0:
+                    if self.repo.get_stats()['remaining_sentences'] == 0:
                         print("\nNo sentences available. Please download or add some sentences first.")
                         continue
                     recording_session = True
@@ -352,11 +410,47 @@ class ThroatMicRecorder:
                     self.manage_sentences()
                         
                 elif choice == '5':
-                    print("\nThank you for using Throat Mic Recording Tool!")
+                    print("\nAnalyzing dataset...")
+                    try:
+                        if self.analysis_needs_refresh:
+                            results = self.analyzer.analyze_dataset(self.config.dataset.metadata_file)
+                            self.analysis_needs_refresh = False
+                        else:
+                            results = self.analyzer.last_analysis
+                            print("Using cached analysis results...")
+                            print(self.analyzer._format_analysis_display(self.analyzer.last_analysis))
+                        
+                        print("\nPress Space to generate a detailed report, or Enter to continue...")
+                        import sys, tty, termios
+                        fd = sys.stdin.fileno()
+                        old_settings = termios.tcgetattr(fd)
+                        try:
+                            tty.setraw(sys.stdin.fileno())
+                            ch = sys.stdin.read(1)
+                        finally:
+                            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+                        if ch == ' ':  # Only generate report on Space
+                            try:
+                                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                                report_file = Path(self.config.dataset.recordings_dir).parent / f"analysis_report_{timestamp}.txt"
+                                # Will use cached results if available
+                                self.analyzer.generate_report(self.config.dataset.metadata_file, str(report_file))
+                                print(f"\nReport saved to: {report_file}")
+                            except Exception as e:
+                                print(f"\nError generating report: {e}")
+                    
+                    except Exception as e:
+                        print(f"\nError analyzing dataset: {e}")
+                        # Don't show report option if analysis failed
+                    
+                    input("\nPress Enter to continue...")
+                    continue
+                elif choice == '6':
                     return
                 
                 else:
-                    print("\nInvalid option. Please enter a number between 1 and 5.")
+                    print("\nInvalid option. Please enter a number between 1 and 6.")
                     continue
             
             else:  # Recording session
@@ -402,7 +496,8 @@ class ThroatMicRecorder:
             print("2. Add custom sentences")
             print("3. View sentence stats")
             print("4. View trashed sentences")
-            print("5. Back to main menu")
+            print("5. Analyze dataset")
+            print("6. Back to main menu")
             
             choice = input("\nSelect option: ").strip()
             
@@ -453,14 +548,47 @@ class ThroatMicRecorder:
                         print(f"{i}. {sentence}")
             
             elif choice == '5':
+                print("\nAnalyzing dataset...")
+                try:
+                    results = self.analyzer.analyze_dataset(self.config.dataset.metadata_file)
+                    
+                    print("\nPress Space to generate a detailed report, or Enter to continue...")
+                    import sys, tty, termios
+                    fd = sys.stdin.fileno()
+                    old_settings = termios.tcgetattr(fd)
+                    try:
+                        tty.setraw(sys.stdin.fileno())
+                        ch = sys.stdin.read(1)
+                    finally:
+                        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+                    if ch == ' ':  # Only generate report on Space
+                        try:
+                            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                            report_file = Path(self.config.dataset.recordings_dir).parent / f"analysis_report_{timestamp}.txt"
+                            # Will use cached results if available
+                            self.analyzer.generate_report(self.config.dataset.metadata_file, str(report_file))
+                            print(f"\nReport saved to: {report_file}")
+                        except Exception as e:
+                            print(f"\nError generating report: {e}")
+                    
+                except Exception as e:
+                    print(f"\nError analyzing dataset: {e}")
+                    # Don't show report option if analysis failed
+                
+                input("\nPress Enter to continue...")
+                continue
+            
+            elif choice == '6':
                 return
             
             else:
-                print("\nInvalid option. Please enter a number between 1 and 5.")
+                print("\nInvalid option. Please enter a number between 1 and 6.")
 
     def __del__(self) -> None:
         """Cleanup PyAudio"""
-        self.p.terminate()
+        if hasattr(self, 'p'):
+            self.p.terminate()
 
     def _sync_with_metadata(self) -> None:
         """Sync sentence repository with existing metadata."""
@@ -489,6 +617,75 @@ class ThroatMicRecorder:
         except Exception as e:
             print(f"Warning: Error syncing with metadata: {e}")
             # Continue anyway - this is not fatal
+
+    def record_sentence(self, sentence: str) -> Optional[str]:
+        """Record a single sentence."""
+        try:
+            # Estimate duration for this specific sentence
+            estimated_duration = self.sentence_filter.estimate_duration(sentence)
+            # Add a small buffer (e.g., 20% extra time)
+            recording_duration = estimated_duration * 1.2
+
+            print(f"\nPlease read: {sentence}")
+            print(f"Estimated duration: {estimated_duration:.1f}s (Recording for: {recording_duration:.1f}s)")
+            print("Press Enter to start recording...")
+            input()
+
+            # Use estimated duration instead of fixed 10s
+            frames = self._record_audio(duration=recording_duration)
+            if not frames:
+                return None
+
+            # Save the recording
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"{timestamp}.wav"
+            filepath = os.path.join(self.config.dataset.recordings_dir, filename)
+            
+            self._save_audio(frames, filepath)
+            
+            return filepath
+
+        except Exception as e:
+            logger.error(f"Error recording sentence: {e}")
+            return None
+
+    def _record_audio(self, duration: float) -> Optional[List[bytes]]:
+        """Record audio for specified duration."""
+        try:
+            frames = []
+            stream = self.audio.open(
+                format=pyaudio.paFloat32,
+                channels=self.audio_config.channels,
+                rate=self.audio_config.sample_rate,
+                input=True,
+                frames_per_buffer=self.audio_config.chunk_size,
+                input_device_index=self.device_index
+            )
+
+            # Calculate number of chunks based on estimated duration
+            num_chunks = int((duration * self.audio_config.sample_rate) / self.audio_config.chunk_size)
+            
+            print("\nRecording...")
+            progress = tqdm(total=num_chunks, desc="Recording")
+            
+            for _ in range(num_chunks):
+                data = stream.read(self.audio_config.chunk_size)
+                frames.append(data)
+                progress.update(1)
+            
+            progress.close()
+            stream.stop_stream()
+            stream.close()
+            
+            return frames
+
+        except Exception as e:
+            logger.error(f"Error during recording: {e}")
+            return None
+
+    def _invalidate_analysis_cache(self):
+        """Mark the analysis cache as needing refresh."""
+        self.analysis_needs_refresh = True
 
 def main():
     """Main entry point for the recording CLI."""
