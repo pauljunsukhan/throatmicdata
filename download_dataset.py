@@ -15,6 +15,7 @@ import logging
 import argparse
 from tqdm import tqdm
 from huggingface_hub import hf_hub_download
+import json
 
 # Add src directory to path
 src_dir = str(Path(__file__).parent / "src")
@@ -162,7 +163,7 @@ def download_dataset(repo_id: str, token: str, metadata_file: Path) -> pd.DataFr
                 
                 # Create filename from text
                 safe_text = "".join(c.lower() for c in row['text'][:30] if c.isalnum() or c == ' ')
-                filename = f"{current_index:03d}_{safe_text.replace(' ', '_')}.wav"
+                filename = f"{current_index:05d}_{safe_text.replace(' ', '_')}.wav"
                 rel_path = str(Path("data/recordings") / filename)
                 
                 # Get audio data
@@ -191,6 +192,20 @@ def download_dataset(repo_id: str, token: str, metadata_file: Path) -> pd.DataFr
                 continue
         
         logger.info(f"Download complete! Added {new_files} new recordings, skipped {skipped_files} existing recordings")
+        
+        # Load existing used sentences
+        used_sentences_path = Path('data/repository/used_sentences.json')
+        if used_sentences_path.exists():
+            with open(used_sentences_path, 'r') as f:
+                used_sentences = json.load(f)
+        else:
+            used_sentences = []
+
+        # Update used sentences
+        used_sentences.extend(existing_texts)
+        with open(used_sentences_path, 'w') as f:
+            json.dump(used_sentences, f, indent=4)
+        
         return df
         
     except (DownloadError, DataError) as e:
