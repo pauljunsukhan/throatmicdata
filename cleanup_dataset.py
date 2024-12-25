@@ -15,6 +15,8 @@ from tqdm import tqdm
 from collections import OrderedDict
 import contextlib
 import os
+import pandas as pd
+from src.sentence_filter import SentenceFilter
 
 class RecordingCleaner:
     def __init__(self, config_path: str = "config.yaml"):
@@ -40,7 +42,8 @@ class RecordingCleaner:
             print("1. Review recordings")
             print("2. Show statistics")
             print("3. Export cleanup report")
-            print("4. Exit")
+            print("4. Standardize British to American spellings in metadata.csv")
+            print("5. Exit")
             
             choice = input("\nSelect option: ").strip()
             
@@ -51,6 +54,8 @@ class RecordingCleaner:
             elif choice == '3':
                 self.export_report()
             elif choice == '4':
+                standardize_metadata_spelling(self.metadata_file)
+            elif choice == '5':
                 print("\nExiting cleanup tool...")
                 break
             else:
@@ -573,6 +578,21 @@ class RecordingCleaner:
         if num < 1:  # Only check that it's positive
             return False
         return True
+
+def standardize_metadata_spelling(metadata_path: str):
+    """Standardize British spellings to American in the metadata CSV."""
+    # Load the metadata CSV
+    df = pd.read_csv(metadata_path)
+
+    # Initialize SentenceFilter for spelling standardization
+    sentence_filter = SentenceFilter()
+
+    # Standardize spellings in the 'text' column
+    df['text'] = df['text'].apply(sentence_filter.standardize_spelling)
+
+    # Save the updated DataFrame back to CSV
+    df.to_csv(metadata_path, index=False)
+    print(f"Updated British spellings to American in {metadata_path}")
 
 def main():
     parser = argparse.ArgumentParser(description="Clean up recorded dataset")
