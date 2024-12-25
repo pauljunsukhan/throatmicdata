@@ -1,72 +1,72 @@
 Dataset Analysis Report
-Generated: 2024-12-25 03:21:57
+Generated: 2024-12-25 05:47:44
 
 Quality Analysis:
-Total Recordings: 731
-Total Duration: 121.1 minutes
-Recordings with Issues: 731 (100.0%)
+Total Recordings: 724
+Total Duration: 120.1 minutes
+Recordings with Issues: 724 (100.0%)
 
 Duration Statistics:
   Mean: 9.9s
   Median: 10.0s
   Range: 5.9s - 11.0s
-  Std Dev: 0.4s
+  Std Dev: 0.3s
 
 Duration Distribution:
   <6s:    1 recordings (0.1%)
-  6-8s:   8 recordings (1.1%)
-  8-10s:  719 recordings (98.4%)
+  6-8s:   6 recordings (0.8%)
+  8-10s:  714 recordings (98.6%)
   10-12s: 3 recordings (0.4%)
   12-15s: 0 recordings (0.0%)
   >15s:   0 recordings (0.0%)
 
 Coverage Analysis:
 Vocabulary:
-  Total Words: 9425
-  Unique Words: 3657
+  Total Words: 9334
+  Unique Words: 3629
   Vocabulary Density: 0.39
 
 Top 20 Most Frequent Words:
-  the: 597
-  and: 357
-  of: 246
-  a: 200
+  the: 591
+  and: 351
+  of: 243
+  a: 198
   in: 193
-  was: 175
-  to: 159
-  is: 129
-  for: 103
+  was: 174
+  to: 156
+  is: 128
+  for: 102
   as: 95
   are: 90
   he: 85
   it: 71
   by: 70
   his: 60
-  with: 58
+  with: 57
   on: 55
   that: 53
-  also: 45
+  also: 44
   this: 42
 
 Sentence Structure:
   Average Length: 13.0 words
   Length Range: 9 - 18 words
-  Unique Patterns: 731
+  Unique Patterns: 724
 
 Part of Speech Distribution:
-  ADJ: 862 (9.1%)
-  ADP: 1078 (11.4%)
-  ADV: 404 (4.3%)
-  AUX: 603 (6.4%)
-  CCONJ: 426 (4.5%)
-  DET: 932 (9.8%)
-  NOUN: 2132 (22.5%)
-  NUM: 95 (1.0%)
-  PART: 156 (1.6%)
+  ADJ: 854 (9.1%)
+  ADP: 1069 (11.4%)
+  ADV: 402 (4.3%)
+  AUX: 599 (6.4%)
+  CCONJ: 420 (4.5%)
+  DET: 920 (9.8%)
+  NOUN: 2105 (22.4%)
+  NUM: 93 (1.0%)
+  PART: 156 (1.7%)
   PRON: 491 (5.2%)
-  PROPN: 1151 (12.1%)
-  SCONJ: 117 (1.2%)
-  VERB: 1042 (11.0%)
+  PROPN: 1141 (12.1%)
+  SCONJ: 116 (1.2%)
+  VERB: 1031 (11.0%)
 
 Sentence Complexity:
 Average Complexity Score: 8.0
@@ -74,13 +74,13 @@ Average Complexity Score: 8.0
 Complexity Distribution:
   Simple: 0 sentences
   Moderate: 47 sentences
-  Complex: 437 sentences
-  Very Complex: 247 sentences
+  Complex: 432 sentences
+  Very Complex: 245 sentences
 
 Syntactic Features:
   Average Tree Depth: 5.5
-  Subordinate Clauses: 9.6%
-  Relative Clauses: 9.6%
+  Subordinate Clauses: 9.7%
+  Relative Clauses: 9.7%
   Adverbial Clauses: 14.5%
 
 Vocabulary Features:
@@ -95,16 +95,16 @@ Logical Features:
   Conditionals: 0.7%
 
 Quality Issues:
-001_the_tourists_now_start_a_three.wav:
-  - Recording too quiet (mean -33.7dB < 0.1dB)
+001_it_is_also_known_for_its_white.wav:
+  - Recording too quiet (mean -28.7dB < 0.1dB)
   - Too much silence (100.0% > 30.0%)
   - Poor signal-to-noise ratio (0.0dB < 10.0dB)
 002_the_yeast_extract_will_typical.wav:
   - Recording too quiet (mean -33.8dB < 0.1dB)
   - Too much silence (100.0% > 30.0%)
   - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-003_the_absence_of_the_auditory_os.wav:
-  - Recording too quiet (mean -32.0dB < 0.1dB)
+003_admiral_lord_nelson_appeared_i.wav:
+  - Recording too quiet (mean -29.0dB < 0.1dB)
   - Too much silence (100.0% > 30.0%)
   - Poor signal-to-noise ratio (0.0dB < 10.0dB)
 004_he_was_cremated_at_kensal_gree.wav:
@@ -2990,33 +2990,5 @@ Quality Issues:
   - Poor signal-to-noise ratio (0.0dB < 10.0dB)
 724_therefore,_beams_do_not_usuall.wav:
   - Recording too quiet (mean -27.1dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-725_admiral_lord_nelson_appeared_i.wav:
-  - Recording too quiet (mean -29.0dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-726_it_is_also_known_for_its_white.wav:
-  - Recording too quiet (mean -28.7dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-727_nights_and_weekends,_the_stati.wav:
-  - Recording too quiet (mean -29.9dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-728_phil_kramer_is_promoted_to_kin.wav:
-  - Recording too quiet (mean -25.2dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-729_an_additional_contract_and_roy.wav:
-  - Recording too quiet (mean -27.4dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-730_stage_roles_became_infrequent_.wav:
-  - Recording too quiet (mean -26.1dB < 0.1dB)
-  - Too much silence (100.0% > 30.0%)
-  - Poor signal-to-noise ratio (0.0dB < 10.0dB)
-731_the_original_kumru_was_ring-sh.wav:
-  - Recording too quiet (mean -26.7dB < 0.1dB)
   - Too much silence (100.0% > 30.0%)
   - Poor signal-to-noise ratio (0.0dB < 10.0dB)

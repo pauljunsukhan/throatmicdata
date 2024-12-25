@@ -9,6 +9,7 @@ import logging
 from pathlib import Path
 import csv
 from typing import Optional
+from logging.handlers import RotatingFileHandler
 
 # Add src directory to path
 src_dir = str(Path(__file__).parent / "src")
@@ -27,6 +28,7 @@ from src import (
 def setup_logging() -> logging.Logger:
     """
     Configure logging based on config settings.
+    Uses a rotating file handler to limit log file size to ~5000 lines.
     
     Returns:
         logging.Logger: Configured logger instance
@@ -35,7 +37,11 @@ def setup_logging() -> logging.Logger:
         level=getattr(logging, config.logging.level),
         format=config.logging.format,
         handlers=[
-            logging.FileHandler(config.logging.file),
+            RotatingFileHandler(
+                config.logging.file,
+                maxBytes=1024*1024,  # 1MB ~ 5000 lines of typical log entries
+                backupCount=1
+            ),
             logging.StreamHandler()
         ]
     )

@@ -124,6 +124,48 @@ Options:
   --metadata TEXT   Path to metadata CSV file
                     (default: data/metadata/metadata.csv)
   --help           Show this help message
+  --help-more      Show detailed help about the download process
+```
+
+The download script provides several smart features:
+
+1. **Incremental Downloads**
+   - Automatically skips existing recordings
+   - Maintains sequential file numbering (001, 002, etc.)
+   - Continues from the last used index
+
+2. **File Organization**
+   - Saves recordings to `data/recordings/` as WAV files
+   - Creates metadata CSV at `data/metadata/metadata.csv`
+   - Names files using pattern: `NNNNN_first_few_words.wav` (5 digits) or `NNN_first_few_words.wav` (3 digits)
+   - Supports both legacy 3-digit (001-999) and new 5-digit (00001-99999) formats
+   - Automatically detects and maintains the appropriate format
+
+3. **Data Handling**
+   - Converts Hugging Face audio format to 16kHz WAV
+   - Preserves all metadata (text, duration)
+   - Handles special characters in filenames
+   - Ensures consistent file structure
+
+4. **Error Handling**
+   - Validates downloaded data
+   - Continues on individual file errors
+   - Provides detailed error logging
+   - Creates necessary directories automatically
+
+Common Usage:
+```bash
+# Basic download (skips existing files)
+python download_dataset.py
+
+# Download with custom repository
+python download_dataset.py --repo-id "username/dataset-name"
+
+# Use custom metadata location
+python download_dataset.py --metadata "path/to/metadata.csv"
+
+# Show detailed help
+python download_dataset.py --help-more
 ```
 
 ### Dataset Upload
@@ -140,9 +182,71 @@ Options:
                      (default: data/metadata/metadata.csv)
   --dataset-card TEXT  Path to dataset card markdown file
                      (default: DATASET_CARD.md)
+  --replace         Replace entire dataset with local version
   --cleanup         Clean up duplicates in the dataset
   --help            Show this help message
 ```
+
+Common Usage:
+- Basic upload (adds new files only):
+  ```bash
+  python upload_dataset.py
+  ```
+
+- Replace entire dataset with local version:
+  ```bash
+  python upload_dataset.py --replace
+  ```
+
+- Remove duplicate recordings from the remote dataset:
+  ```bash
+  python upload_dataset.py --cleanup
+  ```
+  The cleanup flag scans the remote dataset for duplicate recordings (based on filenames) and removes them, keeping only the first occurrence of each recording.
+
+
+
+
+## 🧹 Dataset Cleanup Tool
+
+The cleanup tool (`cleanup_dataset.py`) helps maintain dataset quality by allowing you to review, delete, and replace recordings interactively.
+
+```bash
+python cleanup_dataset.py
+```
+
+### Features
+
+- 🎵 Interactive audio playback (press Enter to skip)
+- 🗑️ Delete problematic recordings
+- 🔄 Replace deleted recordings with new ones
+- 📊 Automatic metadata management
+- 🔢 Smart file renumbering (supports both 3-digit and 5-digit formats)
+
+### Usage
+
+1. **Review Recordings**
+   - Listen to each recording
+   - See sentence text and metadata
+   - Press Enter to skip playback
+   - Choose to keep or delete
+
+2. **Replace Recordings**
+   - After deleting, record a new version
+   - Metadata is automatically updated
+   - Files are renumbered to maintain sequence
+   - Preserves existing numbering format (3 or 5 digits)
+
+3. **View Statistics**
+   - Total recordings
+   - Dataset duration
+   - Recent changes
+
+The tool maintains dataset integrity by:
+- Preserving sequential file numbering
+- Updating metadata automatically
+- Moving replacement recordings to correct positions
+- Handling both 3-digit and 5-digit filename formats
 
 ## 🔍 Analysis Features
 
@@ -150,55 +254,128 @@ Options:
 ```bash
 python record_audio.py --analyze --quality
 ```
-Checks recordings for:
-- Duration within limits (8-12 seconds)
-- Proper amplitude levels (-50dB to 0dB)
-- Silence ratio (<30%)
-- Signal-to-noise ratio (>10dB)
+
+The analyzer checks and reports on recording quality:
+
+1. **Audio Requirements**
+   - Duration: 6-30 seconds (automatically adjusted based on complexity)
+   - Audio levels: -50dB to 0dB
+   - Silence ratio: <30% of recording
+   - Signal-to-noise ratio: >10dB
+   - No clipping or distortion
+
+2. **Analysis Metrics**
+   - Mean and max amplitude in dB
+   - Silence distribution analysis
+   - Background noise assessment
+   - Signal clarity measurements
+   - Detailed quality issue reports
 
 ### Coverage Analysis
 ```bash
 python record_audio.py --analyze --coverage
 ```
-Shows dataset statistics:
+Provides dataset-wide statistics:
 - Total recordings and duration
-- Sentence length distribution
-- Sentence complexity metrics
-- Recording duration stats
+- Sentence complexity distribution
+- Vocabulary sophistication metrics
+- Syntactic feature coverage
+- Logical structure analysis
 
-## 📝 Sentence Selection Pipeline
+## 📝 Sentence Processing Pipeline
 
-### Stage 1: Quick Text Filtering
-- Capitalization check (must start with capital letter)
-- Punctuation check (must end with ., !, or ?)
-- Character length (60-200 chars)
-- Basic formatting validation
+### Stage 1: Text Validation
 
-### Stage 2: spaCy-based Quick Validation
-- Word count (5-30 words)
-- Named Entity limits (using spaCy's NER):
-  - Max 2 persons (PERSON)
-  - Max 1 location (GPE)
-  - Max 2 organizations (ORG)
-  - Max 3 total entities
+1. **Basic Requirements**
+   - Length: 12-25 words per sentence
+   - Format:
+     - Must start with capital letter
+     - Must end with proper punctuation (., !, ?)
+     - No special characters (except punctuation)
+     - No numbers (write them out as words)
+     - No all-caps (except common acronyms)
 
-### Stage 3: Full Complexity Analysis
-Uses spaCy's medium English model (en_core_web_md) with flexible ranges:
-
-1. **Part-of-Speech Distribution**
-   - Verbs: 10-35% of content words
-   - Nouns: 20-45% of content words
-   - Adjectives: 5-25% of content words
-
-2. **Structural Complexity**
-   - Clause count: 1-4 clauses
-   - Parse tree depth: 2-5 levels
+2. **Character Limits**
+   - Total characters: 60-200
    - Average word length: 3-12 characters
 
-3. **Required Elements** (must have at least one):
-   - Coordinating conjunction (dep_ == 'cc')
-   - Subordinating clause marker (dep_ == 'mark')
-   - Relative clause (dep_ == 'relcl')
+### Stage 2: Linguistic Analysis
+Uses spaCy's medium English model (en_core_web_md) for:
+
+1. **Entity Validation**
+   - Max 2 persons (PERSON)
+   - Max 1 location (GPE)
+   - Max 2 organizations (ORG)
+   - Max 3 total entities
+
+2. **Structural Requirements**
+   - Clause count: 1-4 clauses
+   - Parse tree depth: 2-5 levels
+   - Part-of-speech distribution:
+     - Verbs: 10-35% of content words
+     - Nouns: 20-45% of content words
+     - Adjectives: 5-25% of content words
+
+3. **Complex Elements** (must have at least two):
+   - **Proper Comma Usage**
+     - Separating clauses
+     - After introductory phrases
+     - In lists (max 4 commas)
+   
+   - **Clause Types**
+     - Subordinate clauses
+     - Relative clauses
+     - Adverbial clauses
+   
+   - **Conjunctions**
+     - Subordinating (before, after, when, because, although, etc.)
+     - Coordinating (and, but, or, nor, for, yet, so)
+     - Relative pronouns (that, which, who, whom, whose, where, when)
+
+### Stage 3: Complexity Scoring
+
+Each sentence receives a weighted score (0-13) based on:
+
+1. **Syntactic Complexity** (0-5 points)
+   - Clause count: 1.0 points per clause
+   - Tree depth: 0.5 points per level
+
+2. **Vocabulary Sophistication** (0-5 points)
+   - Rare words (frequency >10000): 0.5 points each
+   - Technical terms: 1.0 points each
+   - Abstract concepts: 1.0 points each
+
+3. **Logical Complexity** (0-3 points)
+   - Causal relationships: 1.0 point
+   - Comparisons: 1.0 point
+   - Conditional structures: 1.0 point
+
+Final complexity ratings:
+- <3: "Simple but clear"
+- 3-5: "Moderately complex"
+- 6-8: "Complex academic/technical"
+- >8: "Highly complex"
+
+### Stage 4: Duration Estimation
+
+The tool automatically calculates expected duration using:
+
+1. **Base Timing**
+   - Syllable duration: 300ms per syllable
+   - Word boundary pauses: 100ms
+   
+2. **Punctuation Pauses**
+   - Period/Question/Exclamation: 700ms
+   - Comma: 300ms
+   - Semicolon/Colon: 400ms
+   - Parentheses: 300ms
+
+3. **Adjustments**
+   - Long word penalty: +200ms for words >6 chars
+   - Comprehension buffer: 20% extra time
+   - Final range: 6-30 seconds
+
+This ensures natural speech patterns without rushing or excessive pauses.
 
 ### Example Sentences
 ✅ Good Examples:
@@ -242,108 +419,67 @@ Each source goes through the same validation pipeline to ensure consistent quali
 All sentence selection criteria can be adjusted in `config.yaml`:
 ```yaml
 sentence_filter:
+  # Basic text constraints
   min_chars: 60
   max_chars: 200
   min_words: 5
   max_words: 30
+  
+  # Entity limits
   max_entities: 3
   max_persons: 2
   max_locations: 1
   max_organizations: 2
+  
+  # Complexity requirements
+  min_complexity_score: 3
+  min_total_complexity: 6
+  
+  # Part-of-speech ratios [min, max]
   pos_ratios:
-    VERB: [0.1, 0.35]
-    NOUN: [0.2, 0.45]
-    ADJ: [0.05, 0.25]
+    VERB: [0.1, 0.35]   # Verbs: 10-35% of content words
+    NOUN: [0.2, 0.45]   # Nouns: 20-45% of content words
+    ADJ: [0.05, 0.25]   # Adjectives: 5-25% of content words
+  
+  # Structural complexity ranges
   complexity_ranges:
-    clause_count: [1, 4]
-    word_length: [3, 12]
-    tree_depth: [2, 5]
+    clause_count: [1, 4]      # Number of clauses
+    word_length: [3, 12]      # Average word length
+    tree_depth: [2, 5]        # Parse tree depth levels
+  
+  # Duration estimation parameters
+  timing:
+    syllable_duration: 0.3     # 300ms per syllable
+    word_boundary_pause: 0.1   # 100ms between words
+    long_word_penalty: 0.2     # Extra time for words >6 chars
+    comprehension_buffer: 1.2  # Overall timing multiplier
+    min_duration: 6.0         # Minimum recording duration
+    max_duration: 30.0        # Maximum recording duration
+
+audio:
+  # Recording parameters
+  sample_rate: 16000          # 16kHz
+  channels: 1                 # Mono
+  format: wav                 # File format
+  
+  # Quality thresholds
+  min_level_threshold: -50    # Minimum amplitude (dB)
+  clipping_threshold: 0       # Maximum amplitude (dB)
+  min_duration: 6.0          # Minimum duration (seconds)
+  max_duration: 30.0         # Maximum duration (seconds)
+  buffer_ratio: 1.2          # Recording buffer multiplier
 ```
 
 ### Technical Implementation
 - Uses spaCy's medium English model (en_core_web_md)
 - Multi-stage validation for efficiency:
   1. Quick text filtering (regex/string operations)
-  2. Basic spaCy checks (entities, length)
-  3. Full linguistic analysis (POS, complexity)
-- Comprehensive error handling and logging
-- Configurable ranges for natural language variation
-
-## 📋 Sentence Criteria
-
-### Basic Requirements
-
-- **Length**: 12-25 words per sentence
-- **Duration**: 8-12 seconds when spoken naturally
-- **Format**:
-  - Must start with capital letter
-  - Must end with proper punctuation (., !, ?)
-  - No special characters (except standard punctuation)
-  - No numbers (write them out as words)
-  - No all-caps (except common acronyms)
-
-### Complexity Requirements
-
-Each sentence should have at least two of these elements:
-
-1. **Proper Comma Usage**
-   - Separating clauses
-   - After introductory phrases
-   - In lists
-   - Maximum 4 commas per sentence
-
-2. **Complex Structure**
-   - **Subordinating Conjunctions**:
-     - Time: before, after, when, whenever, while, since
-     - Cause/Effect: because, since, as, unless
-     - Contrast: although, though, whereas
-     - Condition: if, unless, whether
-   - **Coordinating Conjunctions**:
-     - and, but, or, nor, for, yet, so
-   - **Relative Pronouns**:
-     - that, which, who, whom, whose, where, when
-
-3. **Natural Flow**
-   - Balanced clause structure
-   - Natural speaking rhythm
-   - No run-on sentences
-   - Clear subject-verb relationships
-
-### Quality Thresholds
-
-Audio recordings must meet these criteria:
-- Duration: 6-30 seconds (automatically adjusted based on sentence complexity)
-- Audio levels: -50dB to 0dB
-- Silence ratio: <30% of recording
-- Signal-to-noise ratio: >10dB
-
-### Variable Recording Length
-
-The tool automatically adjusts recording duration based on sentence complexity:
-
-- Analyzes sentence structure, syllables, and pauses
-- Estimates natural speaking time for each prompt
-- Adds buffer time for comfortable pacing
-- Supports sentences from 6-30 seconds (matching Whisper's capabilities)
-- Smart timing features:
-  - Syllable-based duration calculation
-  - Pause detection for punctuation
-  - Word boundary timing
-  - Natural speech rhythm adaptation
-
-This ensures recordings are neither rushed nor padded with silence, leading to more natural speech patterns and better training data.
-
-## 🛠️ Technical Details
-
-- Uses spaCy's medium English model (en_core_web_md) for linguistic analysis
-- Multi-stage sentence validation pipeline:
-  1. Quick text filtering (regex/string operations)
   2. Entity and complexity validation (spaCy)
   3. Full linguistic analysis (spaCy)
-- Efficient batch processing with random sampling
-- Comprehensive audio quality checks
-- Automated metadata generation for Hugging Face datasets
+- Comprehensive error handling and logging
+- Automated duration estimation
+- Detailed quality analysis
 
-## 📝 License
+## 📋 License
 
 MIT License - feel free to use and modify as needed!
