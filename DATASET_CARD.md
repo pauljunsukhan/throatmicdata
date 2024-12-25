@@ -34,6 +34,15 @@ dataset_info:
 - 🤗 [pauljunsukhan/throatmic_subvocalization_whisper](https://huggingface.co/pauljunsukhan/throatmic_subvocalization_whisper)
 - 📦 [pauljunsukhan/whisper_finetuning](https://github.com/pauljunsukhan/whisper_finetuning)
 
+🔐 **Dataset Access**:
+- **Downloading**: The dataset is publicly available. Use `download_dataset.py` (see instructions below)
+
+
+- **Contributing**: Contributions are very welcome! 
+  1. Request write access through the Hugging Face dataset page - I'd love to have more contributors!
+  2. Once approved, use your Hugging Face token:
+
+
 ## Dataset Description
 
 - **Homepage:** [GitHub Repository](https://github.com/pauljunsukhan/throatmicdata)

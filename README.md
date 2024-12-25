@@ -44,20 +44,26 @@ cp config.yaml.example config.yaml
 # Edit config.yaml with your settings
 ```
 
-3. **Get Some Sentences**
+3.  **Contributing**: Contributions are very welcome! - I'd love to have more contributors!
+  - Request write access: [pauljunsukhan/throatmic_codered](https://huggingface.co/datasets/pauljunsukhan/throatmic_codered)
+  - Create your token at: https://huggingface.co/settings/tokens
+  - Set your token:
+
+
+4. **Get Some Sentences**
 ```bash
 python record_audio.py
 # Choose option 4 > 1 to download from Common Voice
 # or option 4 > 2 to add your own
 ```
 
-4. **Start Recording!**
+5. **Start Recording!**
 ```bash
 python record_audio.py
 # Choose option 1 and follow the prompts
 ```
 
-5. **Upload to Hugging Face**
+6. **Upload to Hugging Face**
 ```bash
 python upload_dataset.py
 # Your dataset will be uploaded with proper metadata

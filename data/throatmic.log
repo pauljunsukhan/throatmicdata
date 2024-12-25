@@ -22,3 +22,13 @@
 2024-12-25 05:57:52,647 - INFO - Found existing dataset with 1 examples
 2024-12-25 05:57:52,647 - INFO - Creating new dataset (no existing dataset found: The features can't be aligned because the key audio of features {'audio': Audio(sampling_rate=16000, mono=True, decode=True, id=None), 'text': Value(dtype='string', id=None), 'duration': Value(dtype='float32', id=None)} has unexpected type - Audio(sampling_rate=16000, mono=True, decode=True, id=None) (expected either Audio(sampling_rate=None, mono=True, decode=True, id=None) or Value("null").)
 2024-12-25 05:59:06,646 - INFO - Successfully uploaded dataset!
+2024-12-25 06:09:53,530 - INFO - Found 723 existing recordings
+2024-12-25 06:09:53,530 - INFO - Loading metadata from data/metadata/metadata.csv
+2024-12-25 06:09:53,539 - INFO - Preparing dataset for upload
+2024-12-25 06:09:53,545 - INFO - Found 1 new recordings to upload
+2024-12-25 06:09:53,552 - INFO - Uploading dataset to pauljunsukhan/throatmic_codered
+2024-12-25 06:09:53,553 - INFO - Uploading dataset card...
+2024-12-25 06:09:54,056 - INFO - Dataset card uploaded successfully
+2024-12-25 06:09:55,828 - INFO - Found existing dataset with 723 examples
+2024-12-25 06:09:55,830 - INFO - Creating new dataset (no existing dataset found: The features can't be aligned because the key audio of features {'audio': Audio(sampling_rate=16000, mono=True, decode=True, id=None), 'text': Value(dtype='string', id=None), 'duration': Value(dtype='float32', id=None)} has unexpected type - Audio(sampling_rate=16000, mono=True, decode=True, id=None) (expected either Audio(sampling_rate=None, mono=True, decode=True, id=None) or Value("null").)
+2024-12-25 06:09:56,852 - INFO - Successfully uploaded dataset!
