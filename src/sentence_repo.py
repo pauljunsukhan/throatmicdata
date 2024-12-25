@@ -11,6 +11,7 @@ from .sentence_filter import SentenceFilter, ComplexityAnalyzer
 from .nlp_manager import NLPManager
 from .config import Config, config
 from .exceptions import DataError
+import enchant
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +49,10 @@ class SentenceRepository:
         
         # Get config from sentence filter
         self.config = self.sentence_filter.config
+        
+        # Initialize British and American English dictionaries
+        self.british_dict = enchant.Dict("en_GB")
+        self.american_dict = enchant.Dict("en_US")
     
     def download_sentences(self, count: int = 100) -> int:
         """Download sentences from Common Voice with optimized two-stage validation."""
@@ -144,11 +149,11 @@ class SentenceRepository:
     
     def add_sentences(self, new_sentences: List[str]) -> int:
         """Add custom sentences to the repository."""
-        # Filter out duplicates and already used sentences
+        # Standardize and filter sentences
+        standardized_sentences = [self.standardize_spelling(s.strip()) for s in new_sentences]
         filtered_sentences = [
-            s.strip() for s in new_sentences
-            if s.strip() 
-            and self.sentence_filter.is_good_sentence(s.strip())
+            s for s in standardized_sentences
+            if s and self.sentence_filter.is_good_sentence(s)
             and s not in self.sentences 
             and s not in self.used_sentences
         ]
@@ -316,3 +321,21 @@ class SentenceRepository:
         except Exception as e:
             logger.warning(f"Error in _is_good_sentence: {e}")
             return False
+    
+    def standardize_spelling(self, sentence: str) -> str:
+        """Standardize British spellings to American spellings in a sentence."""
+        words = sentence.split()
+        standardized_words = []
+        
+        for word in words:
+            # Check if the word is British and has an American equivalent
+            if self.british_dict.check(word) and not self.american_dict.check(word):
+                suggestions = self.american_dict.suggest(word)
+                if suggestions:
+                    standardized_words.append(suggestions[0])
+                else:
+                    standardized_words.append(word)
+            else:
+                standardized_words.append(word)
+        
+        return ' '.join(standardized_words)

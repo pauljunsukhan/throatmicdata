@@ -32,3 +32,49 @@
 2024-12-25 06:09:55,828 - INFO - Found existing dataset with 723 examples
 2024-12-25 06:09:55,830 - INFO - Creating new dataset (no existing dataset found: The features can't be aligned because the key audio of features {'audio': Audio(sampling_rate=16000, mono=True, decode=True, id=None), 'text': Value(dtype='string', id=None), 'duration': Value(dtype='float32', id=None)} has unexpected type - Audio(sampling_rate=16000, mono=True, decode=True, id=None) (expected either Audio(sampling_rate=None, mono=True, decode=True, id=None) or Value("null").)
 2024-12-25 06:09:56,852 - INFO - Successfully uploaded dataset!
+2024-12-25 10:55:27,884 - INFO - Starting recording session
+2024-12-25 10:56:00,997 - INFO - Downloading 10 Common Voice sentences...
+2024-12-25 10:56:01,001 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-25 10:56:14,793 - INFO - Stage 1: Quick filtering...
+2024-12-25 10:56:15,099 - INFO - Found 1164891 potential sentences after basic filtering
+2024-12-25 10:56:15,116 - INFO - Processing random sample of 100 sentences
+2024-12-25 10:56:15,116 - INFO - Stage 2: Full validation...
+2024-12-25 10:56:15,116 - INFO - Loading spaCy model...
+2024-12-25 10:56:15,677 - INFO - spaCy model loaded successfully
+2024-12-25 10:56:16,044 - INFO - Quick validation passed: 20
+2024-12-25 10:56:16,044 - INFO - Full validation passed: 20
+2024-12-25 10:56:16,045 - INFO - Added 10 new sentences
+2024-12-25 11:00:13,430 - INFO - Starting recording session
+2024-12-25 11:00:23,154 - INFO - Downloading 10 Common Voice sentences...
+2024-12-25 11:00:23,157 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-25 11:00:25,926 - INFO - Stage 1: Quick filtering...
+2024-12-25 11:00:26,251 - INFO - Found 1164891 potential sentences after basic filtering
+2024-12-25 11:00:26,267 - INFO - Processing random sample of 100 sentences
+2024-12-25 11:00:26,267 - INFO - Stage 2: Full validation...
+2024-12-25 11:00:26,267 - INFO - Loading spaCy model...
+2024-12-25 11:00:26,842 - INFO - spaCy model loaded successfully
+2024-12-25 11:00:27,191 - INFO - Quick validation passed: 20
+2024-12-25 11:00:27,191 - INFO - Full validation passed: 20
+2024-12-25 11:00:27,191 - INFO - Added 10 new sentences
+2024-12-25 11:00:56,601 - INFO - Downloading 200 Common Voice sentences...
+2024-12-25 11:00:56,604 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-25 11:01:00,856 - INFO - Stage 1: Quick filtering...
+2024-12-25 11:01:01,169 - INFO - Found 1164891 potential sentences after basic filtering
+2024-12-25 11:01:01,181 - INFO - Processing random sample of 2000 sentences
+2024-12-25 11:01:01,181 - INFO - Stage 2: Full validation...
+2024-12-25 11:01:07,314 - INFO - Quick validation passed: 400
+2024-12-25 11:01:07,315 - INFO - Full validation passed: 400
+2024-12-25 11:01:07,318 - INFO - Added 200 new sentences
+2024-12-25 11:04:51,946 - INFO - Starting recording session
+2024-12-25 11:05:19,601 - INFO - Downloading 10 Common Voice sentences...
+2024-12-25 11:05:19,603 - INFO - Downloading from https://raw.githubusercontent.com/common-voice/common-voice/main/server/data/en/wiki.en.txt
+2024-12-25 11:05:24,644 - INFO - Stage 1: Quick filtering...
+2024-12-25 11:05:24,954 - INFO - Found 1164891 potential sentences after basic filtering
+2024-12-25 11:05:24,968 - INFO - Processing random sample of 100 sentences
+2024-12-25 11:05:24,968 - INFO - Stage 2: Full validation...
+2024-12-25 11:05:24,968 - INFO - Loading spaCy model...
+2024-12-25 11:05:25,510 - INFO - spaCy model loaded successfully
+2024-12-25 11:05:25,845 - INFO - Quick validation passed: 20
+2024-12-25 11:05:25,845 - INFO - Full validation passed: 20
+2024-12-25 11:05:25,846 - INFO - Added 10 new sentences
+2024-12-25 11:09:30,061 - INFO - Starting recording session

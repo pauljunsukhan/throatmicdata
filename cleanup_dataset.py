@@ -85,7 +85,8 @@ class RecordingCleaner:
                     if choice == 'y':
                         recording.unlink()
                         print(f"Deleted orphaned recording {recording.name}")
-                        break  # Restart the loop with fresh recording list
+                        current_idx += 1  # Continue to the next recording
+                        continue  # Refresh the list without breaking the loop
                     current_idx += 1
                     continue
                 
@@ -108,6 +109,7 @@ class RecordingCleaner:
                 print("3. Replay audio")
                 print("4. Previous recording")
                 print("5. Return to menu")
+                print("6. Jump to recording number")
                 
                 choice = input("\nChoice: ").strip()
                 
@@ -128,6 +130,29 @@ class RecordingCleaner:
                     current_idx = max(0, current_idx - 1)
                 elif choice == '5':
                     return
+                elif choice == '6':
+                    try:
+                        target_num = int(input("Enter recording number to jump to: ").strip())
+                        if target_num < 1:
+                            print("\nInvalid recording number. Must be positive.")
+                            continue
+                            
+                        # Find the recording with this number
+                        target_recording = None
+                        for idx, rec in enumerate(recordings):
+                            try:
+                                rec_num = int(rec.stem.split('_')[0])
+                                if rec_num == target_num:
+                                    target_recording = rec
+                                    current_idx = idx
+                                    break
+                            except ValueError:
+                                continue
+                                
+                        if target_recording is None:
+                            print(f"\nNo recording found with number {target_num}")
+                    except ValueError:
+                        print("\nInvalid input. Please enter a number.")
                 else:
                     print("\nInvalid option. Please try again.")
 

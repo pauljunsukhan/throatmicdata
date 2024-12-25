@@ -2,9 +2,12 @@
 
 import logging
 import spacy
+import json
+from pathlib import Path
 from typing import Dict, Optional
 from .config import Config, config  # Direct import since it's in same directory
 from .nlp_manager import NLPManager
+import enchant
 
 logger = logging.getLogger(__name__)
 
@@ -195,7 +198,42 @@ class SentenceFilter:
         
         # Validate required config sections
         self._validate_config()
-    
+
+        # Load existing sentences
+        self.sentences_file = Path("data/repository/sentences.json")
+        self.used_sentences_file = Path("data/repository/used_sentences.json")
+        self.trashed_sentences_file = Path("data/repository/trashed_sentences.json")
+        self._load_existing_sentences()
+
+        # Initialize British and American English dictionaries
+        self.british_dict = enchant.Dict("en_GB")
+        self.american_dict = enchant.Dict("en_US")
+
+    def _load_existing_sentences(self):
+        """Load existing sentences from JSON files."""
+        self.existing_sentences = set()
+        for file_path in [self.sentences_file, self.used_sentences_file, self.trashed_sentences_file]:
+            if file_path.exists():
+                with open(file_path) as f:
+                    self.existing_sentences.update(json.load(f))
+
+    def standardize_spelling(self, sentence: str) -> str:
+        """Standardize British spellings to American spellings in a sentence."""
+        words = sentence.split()
+        standardized_words = []
+        
+        for word in words:
+            if self.british_dict.check(word) and not self.american_dict.check(word):
+                suggestions = self.american_dict.suggest(word)
+                if suggestions:
+                    standardized_words.append(suggestions[0])
+                else:
+                    standardized_words.append(word)
+            else:
+                standardized_words.append(word)
+        
+        return ' '.join(standardized_words)
+
     def estimate_duration(self, text: str) -> float:
         """Estimate the duration of speaking this sentence without using NLP."""
         total_duration = 0.0
@@ -252,28 +290,36 @@ class SentenceFilter:
     def is_good_sentence(self, sentence: str) -> bool:
         """Two-stage sentence validation."""
         try:
+            # Standardize spelling before any checks
+            sentence = self.standardize_spelling(sentence)
+
+            # Quick filter: Check if sentence is already used or trashed
+            if sentence in self.existing_sentences:
+                logger.debug("Sentence already exists in one of the JSON files")
+                return False
+
             # Stage 1: Quick checks first (no NLP)
             logger.debug("Stage 1: Quick filtering")
             if not self._check_basic_length(sentence):
                 return False
-            
+
             # Get NLP doc once for all subsequent checks
             doc = self.nlp_manager.get_nlp()(sentence)
-            
+
             # Stage 2: Detailed NLP analysis
             logger.debug("Stage 2: Detailed NLP analysis")
             if not self._is_good_sentence(doc):
                 return False
-            
+
             # Final stage: Duration check
             if hasattr(self.config, 'timing'):
                 estimated_duration = self.estimate_duration(sentence)
                 if not (self.config.timing.min_duration <= estimated_duration <= self.config.timing.max_duration):
                     logger.debug(f"Failed duration check: {estimated_duration:.1f}s")
                     return False
-            
+
             return True
-            
+
         except Exception as e:
             logger.warning(f"Error in sentence validation: {e}")
             return False

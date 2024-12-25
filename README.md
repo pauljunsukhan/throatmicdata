@@ -38,17 +38,32 @@ uv pip install -r requirements.txt
 uv pip install "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl"
 ```
 
+> **Note**: If you encounter an error related to the `enchant` C library when using `pyenchant`, you may need to install the `enchant` library on your system:
+> - **macOS**: Use Homebrew to install `enchant`:
+>   ```bash
+>   brew install enchant
+>   ```
+>   Additionally, permanently set the `DYLD_LIBRARY_PATH` environment variable to ensure the library is found:
+>   ```bash
+>   echo 'export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"' >> ~/.zshrc && source ~/.zshrc
+>   ```
+>   If you're using `bash`, replace `~/.zshrc` with `~/.bashrc` or `~/.bash_profile`.
+> - **Linux**: Use your package manager. For example, on Ubuntu:
+>   ```bash
+>   sudo apt-get install libenchant-2-dev
+>   ```
+> - **Windows**: You may need to download and install the library manually or use a package manager like `choco`.
+
 2. **Configure Settings**
 ```bash
 cp config.yaml.example config.yaml
 # Edit config.yaml with your settings
 ```
 
-3.  **Contributing**: Contributions are very welcome! - I'd love to have more contributors!
+3. **Contributing**: Contributions are very welcome! - I'd love to have more contributors!
   - Request write access: [pauljunsukhan/throatmic_codered](https://huggingface.co/datasets/pauljunsukhan/throatmic_codered)
   - Create your token at: https://huggingface.co/settings/tokens
   - Set your token:
-
 
 4. **Get Some Sentences**
 ```bash
@@ -317,6 +332,9 @@ Provides dataset-wide statistics:
 2. **Character Limits**
    - Total characters: 60-200
    - Average word length: 3-12 characters
+
+> **Note**: The `SentenceFilter` class performs an initial quick filter to check if a sentence already exists in `sentences.json`, `used_sentences.json`, or `trashed_sentences.json`. This ensures that duplicate or previously discarded sentences are not reprocessed, maintaining dataset quality and diversity.
+> Additionally, all British spellings are converted to American spellings using `pyenchant` to ensure consistency across the dataset.
 
 ### Stage 2: Linguistic Analysis
 Uses spaCy's medium English model (en_core_web_md) for:
